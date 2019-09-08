@@ -19,6 +19,8 @@
 #include "rocksdb/utilities/object_registry.h"
 #include "util/autovector.h"
 
+#include <rock/io_abstract/MemoryMappedFileBuffer.h>
+
 namespace rocksdb {
 
 Env::~Env() {

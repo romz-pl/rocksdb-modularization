@@ -26,6 +26,8 @@
 #include "util/mutexlock.h"
 #include "util/random.h"
 
+#include <rock/io_abstract/RandomRWFile.h>
+
 namespace rocksdb {
 class SequentialFile;
 class SequentialFileReader;

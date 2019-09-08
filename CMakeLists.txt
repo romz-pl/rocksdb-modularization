@@ -478,7 +478,7 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
-    status
+    io_abstract
 )
 
 # Main library source code

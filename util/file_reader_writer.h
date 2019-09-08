@@ -19,6 +19,8 @@
 #include "util/aligned_buffer.h"
 
 #include <rock/numeric_limits/numeric_limits.h>
+#include <rock/io_abstract/SequentialFile.h>
+#include <rock/io_abstract/RandomAccessFile.h>
 
 namespace rocksdb {
 

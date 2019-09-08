@@ -20,6 +20,8 @@
 #include "test_util/sync_point.h"
 #include "util/rate_limiter.h"
 
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 Options SanitizeOptions(const std::string& dbname, const Options& src) {
   auto db_options = SanitizeOptions(dbname, DBOptions(src));

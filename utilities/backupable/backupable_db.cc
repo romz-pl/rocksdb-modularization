@@ -41,6 +41,7 @@
 
 #include <rock/string/ToString.h>
 #include <rock/string/AppendHumanBytes.h>
+#include <rock/io_abstract/Directory.h>
 
 namespace rocksdb {
 

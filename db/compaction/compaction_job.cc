@@ -57,6 +57,7 @@
 #include "util/random.h"
 #include "util/stop_watch.h"
 
+#include <rock/io_abstract/Directory.h>
 
 namespace rocksdb {
 

@@ -11,6 +11,10 @@
 
 #include "rocksdb/utilities/env_mirror.h"
 
+#include <rock/io_abstract/SequentialFile.h>
+#include <rock/io_abstract/RandomAccessFile.h>
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 
 // An implementation of Env that mirrors all work over two backend

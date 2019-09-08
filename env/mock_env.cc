@@ -16,6 +16,11 @@
 #include "util/random.h"
 #include "util/rate_limiter.h"
 
+#include <rock/io_abstract/SequentialFile.h>
+#include <rock/io_abstract/RandomAccessFile.h>
+#include <rock/io_abstract/RandomRWFile.h>
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 
 class MemFile {

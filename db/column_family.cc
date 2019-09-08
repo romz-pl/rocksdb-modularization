@@ -35,6 +35,8 @@
 #include "util/autovector.h"
 #include "util/compression.h"
 
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 
 ColumnFamilyHandleImpl::ColumnFamilyHandleImpl(

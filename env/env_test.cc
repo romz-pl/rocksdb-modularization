@@ -47,6 +47,8 @@
 #include "util/coding.h"
 #include "util/mutexlock.h"
 
+#include <rock/io_abstract/MemoryMappedFileBuffer.h>
+
 
 #ifdef OS_LINUX
 static const size_t kPageSize = sysconf(_SC_PAGESIZE);

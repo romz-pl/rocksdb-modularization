@@ -24,6 +24,9 @@
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"
 
+#include <rock/io_abstract/Directory.h>
+#include <rock/io_abstract/RandomRWFile.h>
+
 namespace rocksdb {
 
 Status ExternalSstFileIngestionJob::Prepare(

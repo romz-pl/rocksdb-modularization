@@ -28,6 +28,8 @@
 #include "../libs/status/include/rock/status/Status.h"
 #include "rocksdb/thread_status.h"
 
+#include <rock/io_abstract/kDefaultPageSize.h>
+
 #ifdef _WIN32
 // Windows API macro interference
 #undef DeleteFile
@@ -60,7 +62,7 @@ class RateLimiter;
 class ThreadStatusUpdater;
 struct ThreadStatus;
 
-const size_t kDefaultPageSize = 4 * 1024;
+
 
 // Options while opening a file to read/write
 struct EnvOptions {
@@ -541,159 +543,14 @@ class Env {
 // constructor to initialize thread_status_updater_.
 ThreadStatusUpdater* CreateThreadStatusUpdater();
 
-// A file abstraction for reading sequentially through a file
-class SequentialFile {
- public:
-  SequentialFile() {}
-  virtual ~SequentialFile();
 
-  // Read up to "n" bytes from the file.  "scratch[0..n-1]" may be
-  // written by this routine.  Sets "*result" to the data that was
-  // read (including if fewer than "n" bytes were successfully read).
-  // May set "*result" to point at data in "scratch[0..n-1]", so
-  // "scratch[0..n-1]" must be live when "*result" is used.
-  // If an error was encountered, returns a non-OK status.
-  //
-  // REQUIRES: External synchronization
-  virtual Status Read(size_t n, Slice* result, char* scratch) = 0;
 
-  // Skip "n" bytes from the file. This is guaranteed to be no
-  // slower that reading the same data, but may be faster.
-  //
-  // If end of file is reached, skipping will stop at the end of the
-  // file, and Skip will return OK.
-  //
-  // REQUIRES: External synchronization
-  virtual Status Skip(uint64_t n) = 0;
 
-  // Indicates the upper layers if the current SequentialFile implementation
-  // uses direct IO.
-  virtual bool use_direct_io() const { return false; }
 
-  // Use the returned alignment value to allocate
-  // aligned buffer for Direct I/O
-  virtual size_t GetRequiredBufferAlignment() const { return kDefaultPageSize; }
 
-  // Remove any kind of caching of data from the offset to offset+length
-  // of this file. If the length is 0, then it refers to the end of file.
-  // If the system is not caching the file contents, then this is a noop.
-  virtual Status InvalidateCache(size_t /*offset*/, size_t /*length*/) {
-    return Status::NotSupported("InvalidateCache not supported.");
-  }
 
-  // Positioned Read for direct I/O
-  // If Direct I/O enabled, offset, n, and scratch should be properly aligned
-  virtual Status PositionedRead(uint64_t /*offset*/, size_t /*n*/,
-                                Slice* /*result*/, char* /*scratch*/) {
-    return Status::NotSupported();
-  }
 
-  // If you're adding methods here, remember to add them to
-  // SequentialFileWrapper too.
-};
 
-// A read IO request structure for use in MultiRead
-struct ReadRequest {
-  // File offset in bytes
-  uint64_t offset;
-
-  // Length to read in bytes
-  size_t len;
-
-  // A buffer that MultiRead()  can optionally place data in. It can
-  // ignore this and allocate its own buffer
-  char* scratch;
-
-  // Output parameter set by MultiRead() to point to the data buffer, and
-  // the number of valid bytes
-  Slice result;
-
-  // Status of read
-  Status status;
-};
-
-// A file abstraction for randomly reading the contents of a file.
-class RandomAccessFile {
- public:
-  RandomAccessFile() {}
-  virtual ~RandomAccessFile();
-
-  // Read up to "n" bytes from the file starting at "offset".
-  // "scratch[0..n-1]" may be written by this routine.  Sets "*result"
-  // to the data that was read (including if fewer than "n" bytes were
-  // successfully read).  May set "*result" to point at data in
-  // "scratch[0..n-1]", so "scratch[0..n-1]" must be live when
-  // "*result" is used.  If an error was encountered, returns a non-OK
-  // status.
-  //
-  // Safe for concurrent use by multiple threads.
-  // If Direct I/O enabled, offset, n, and scratch should be aligned properly.
-  virtual Status Read(uint64_t offset, size_t n, Slice* result,
-                      char* scratch) const = 0;
-
-  // Readahead the file starting from offset by n bytes for caching.
-  virtual Status Prefetch(uint64_t /*offset*/, size_t /*n*/) {
-    return Status::OK();
-  }
-
-  // Read a bunch of blocks as described by reqs. The blocks can
-  // optionally be read in parallel. This is a synchronous call, i.e it
-  // should return after all reads have completed. The reads will be
-  // non-overlapping. If the function return Status is not ok, status of
-  // individual requests will be ignored and return status will be assumed
-  // for all read requests. The function return status is only meant for any
-  // any errors that occur before even processing specific read requests
-  virtual Status MultiRead(ReadRequest* reqs, size_t num_reqs) {
-    assert(reqs != nullptr);
-    for (size_t i = 0; i < num_reqs; ++i) {
-      ReadRequest& req = reqs[i];
-      req.status = Read(req.offset, req.len, &req.result, req.scratch);
-    }
-    return Status::OK();
-  }
-
-  // Tries to get an unique ID for this file that will be the same each time
-  // the file is opened (and will stay the same while the file is open).
-  // Furthermore, it tries to make this ID at most "max_size" bytes. If such an
-  // ID can be created this function returns the length of the ID and places it
-  // in "id"; otherwise, this function returns 0, in which case "id"
-  // may not have been modified.
-  //
-  // This function guarantees, for IDs from a given environment, two unique ids
-  // cannot be made equal to each other by adding arbitrary bytes to one of
-  // them. That is, no unique ID is the prefix of another.
-  //
-  // This function guarantees that the returned ID will not be interpretable as
-  // a single varint.
-  //
-  // Note: these IDs are only valid for the duration of the process.
-  virtual size_t GetUniqueId(char* /*id*/, size_t /*max_size*/) const {
-    return 0;  // Default implementation to prevent issues with backwards
-               // compatibility.
-  };
-
-  enum AccessPattern { NORMAL, RANDOM, SEQUENTIAL, WILLNEED, DONTNEED };
-
-  virtual void Hint(AccessPattern /*pattern*/) {}
-
-  // Indicates the upper layers if the current RandomAccessFile implementation
-  // uses direct IO.
-  virtual bool use_direct_io() const { return false; }
-
-  // Use the returned alignment value to allocate
-  // aligned buffer for Direct I/O
-  virtual size_t GetRequiredBufferAlignment() const { return kDefaultPageSize; }
-
-  // Remove any kind of caching of data from the offset to offset+length
-  // of this file. If the length is 0, then it refers to the end of file.
-  // If the system is not caching the file contents, then this is a noop.
-  virtual Status InvalidateCache(size_t /*offset*/, size_t /*length*/) {
-    return Status::NotSupported("InvalidateCache not supported.");
-  }
-
-  // If you're adding methods here, remember to add them to
-  // RandomAccessFileWrapper too.
-};
 
 // A file abstraction for sequential writing.  The implementation
 // must provide buffering since callers may append small fragments
@@ -882,83 +739,9 @@ class WritableFile {
   const bool strict_bytes_per_sync_;
 };
 
-// A file abstraction for random reading and writing.
-class RandomRWFile {
- public:
-  RandomRWFile() {}
-  virtual ~RandomRWFile() {}
 
-  // Indicates if the class makes use of direct I/O
-  // If false you must pass aligned buffer to Write()
-  virtual bool use_direct_io() const { return false; }
 
-  // Use the returned alignment value to allocate
-  // aligned buffer for Direct I/O
-  virtual size_t GetRequiredBufferAlignment() const { return kDefaultPageSize; }
 
-  // Write bytes in `data` at  offset `offset`, Returns Status::OK() on success.
-  // Pass aligned buffer when use_direct_io() returns true.
-  virtual Status Write(uint64_t offset, const Slice& data) = 0;
-
-  // Read up to `n` bytes starting from offset `offset` and store them in
-  // result, provided `scratch` size should be at least `n`.
-  // Returns Status::OK() on success.
-  virtual Status Read(uint64_t offset, size_t n, Slice* result,
-                      char* scratch) const = 0;
-
-  virtual Status Flush() = 0;
-
-  virtual Status Sync() = 0;
-
-  virtual Status Fsync() { return Sync(); }
-
-  virtual Status Close() = 0;
-
-  // If you're adding methods here, remember to add them to
-  // RandomRWFileWrapper too.
-
-  // No copying allowed
-  RandomRWFile(const RandomRWFile&) = delete;
-  RandomRWFile& operator=(const RandomRWFile&) = delete;
-};
-
-// MemoryMappedFileBuffer object represents a memory-mapped file's raw buffer.
-// Subclasses should release the mapping upon destruction.
-class MemoryMappedFileBuffer {
- public:
-  MemoryMappedFileBuffer(void* _base, size_t _length)
-      : base_(_base), length_(_length) {}
-
-  virtual ~MemoryMappedFileBuffer() = 0;
-
-  // We do not want to unmap this twice. We can make this class
-  // movable if desired, however, since
-  MemoryMappedFileBuffer(const MemoryMappedFileBuffer&) = delete;
-  MemoryMappedFileBuffer& operator=(const MemoryMappedFileBuffer&) = delete;
-
-  void* GetBase() const { return base_; }
-  size_t GetLen() const { return length_; }
-
- protected:
-  void* base_;
-  const size_t length_;
-};
-
-// Directory object represents collection of files and implements
-// filesystem operations that can be executed on directories.
-class Directory {
- public:
-  virtual ~Directory() {}
-  // Fsync directory. Can be called concurrently from multiple threads.
-  virtual Status Fsync() = 0;
-
-  virtual size_t GetUniqueId(char* /*id*/, size_t /*max_size*/) const {
-    return 0;
-  }
-
-  // If you're adding methods here, remember to add them to
-  // DirectoryWrapper too.
-};
 
 enum InfoLogLevel : unsigned char {
   DEBUG_LEVEL = 0,
@@ -1367,60 +1150,6 @@ class EnvWrapper : public Env {
   Env* target_;
 };
 
-class SequentialFileWrapper : public SequentialFile {
- public:
-  explicit SequentialFileWrapper(SequentialFile* target) : target_(target) {}
-
-  Status Read(size_t n, Slice* result, char* scratch) override {
-    return target_->Read(n, result, scratch);
-  }
-  Status Skip(uint64_t n) override { return target_->Skip(n); }
-  bool use_direct_io() const override { return target_->use_direct_io(); }
-  size_t GetRequiredBufferAlignment() const override {
-    return target_->GetRequiredBufferAlignment();
-  }
-  Status InvalidateCache(size_t offset, size_t length) override {
-    return target_->InvalidateCache(offset, length);
-  }
-  Status PositionedRead(uint64_t offset, size_t n, Slice* result,
-                        char* scratch) override {
-    return target_->PositionedRead(offset, n, result, scratch);
-  }
-
- private:
-  SequentialFile* target_;
-};
-
-class RandomAccessFileWrapper : public RandomAccessFile {
- public:
-  explicit RandomAccessFileWrapper(RandomAccessFile* target)
-      : target_(target) {}
-
-  Status Read(uint64_t offset, size_t n, Slice* result,
-              char* scratch) const override {
-    return target_->Read(offset, n, result, scratch);
-  }
-  Status MultiRead(ReadRequest* reqs, size_t num_reqs) override {
-    return target_->MultiRead(reqs, num_reqs);
-  }
-  Status Prefetch(uint64_t offset, size_t n) override {
-    return target_->Prefetch(offset, n);
-  }
-  size_t GetUniqueId(char* id, size_t max_size) const override {
-    return target_->GetUniqueId(id, max_size);
-  };
-  void Hint(AccessPattern pattern) override { target_->Hint(pattern); }
-  bool use_direct_io() const override { return target_->use_direct_io(); }
-  size_t GetRequiredBufferAlignment() const override {
-    return target_->GetRequiredBufferAlignment();
-  }
-  Status InvalidateCache(size_t offset, size_t length) override {
-    return target_->InvalidateCache(offset, length);
-  }
-
- private:
-  RandomAccessFile* target_;
-};
 
 class WritableFileWrapper : public WritableFile {
  public:
@@ -1490,43 +1219,6 @@ class WritableFileWrapper : public WritableFile {
 
  private:
   WritableFile* target_;
-};
-
-class RandomRWFileWrapper : public RandomRWFile {
- public:
-  explicit RandomRWFileWrapper(RandomRWFile* target) : target_(target) {}
-
-  bool use_direct_io() const override { return target_->use_direct_io(); }
-  size_t GetRequiredBufferAlignment() const override {
-    return target_->GetRequiredBufferAlignment();
-  }
-  Status Write(uint64_t offset, const Slice& data) override {
-    return target_->Write(offset, data);
-  }
-  Status Read(uint64_t offset, size_t n, Slice* result,
-              char* scratch) const override {
-    return target_->Read(offset, n, result, scratch);
-  }
-  Status Flush() override { return target_->Flush(); }
-  Status Sync() override { return target_->Sync(); }
-  Status Fsync() override { return target_->Fsync(); }
-  Status Close() override { return target_->Close(); }
-
- private:
-  RandomRWFile* target_;
-};
-
-class DirectoryWrapper : public Directory {
- public:
-  explicit DirectoryWrapper(Directory* target) : target_(target) {}
-
-  Status Fsync() override { return target_->Fsync(); }
-  size_t GetUniqueId(char* id, size_t max_size) const override {
-    return target_->GetUniqueId(id, max_size);
-  }
-
- private:
-  Directory* target_;
 };
 
 class LoggerWrapper : public Logger {

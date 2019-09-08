@@ -41,6 +41,8 @@
 #include "utilities/blob_db/blob_db_listener.h"
 #include "utilities/blob_db/blob_index.h"
 
+#include <rock/io_abstract/Directory.h>
+
 namespace {
 int kBlockBasedTableVersionFormat = 2;
 }  // end namespace

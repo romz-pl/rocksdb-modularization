@@ -15,6 +15,8 @@
 #include "options/options_helper.h"
 #include "test_util/sync_point.h"
 
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 // Convenience methods
 Status DBImpl::Put(const WriteOptions& o, ColumnFamilyHandle* column_family,

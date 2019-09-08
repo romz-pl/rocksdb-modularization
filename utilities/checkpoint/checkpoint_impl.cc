@@ -27,6 +27,8 @@
 #include "rocksdb/utilities/checkpoint.h"
 #include "test_util/sync_point.h"
 
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 
 Status Checkpoint::Create(DB* db, Checkpoint** checkpoint_ptr) {

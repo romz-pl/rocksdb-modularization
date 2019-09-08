@@ -15,6 +15,10 @@
 #include "util/coding.h"
 #include "util/random.h"
 
+#include <rock/io_abstract/SequentialFile.h>
+#include <rock/io_abstract/RandomAccessFile.h>
+#include <rock/io_abstract/RandomRWFile.h>
+
 #endif
 
 namespace rocksdb {

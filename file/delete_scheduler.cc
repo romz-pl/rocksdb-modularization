@@ -17,6 +17,8 @@
 #include "test_util/sync_point.h"
 #include "util/mutexlock.h"
 
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 
 DeleteScheduler::DeleteScheduler(Env* env, int64_t rate_bytes_per_sec,

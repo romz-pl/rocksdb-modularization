@@ -13,6 +13,12 @@
 #include <string>
 #include "rocksdb/env.h"
 
+#include <rock/io_abstract/Directory.h>
+#include <rock/io_abstract/MemoryMappedFileBuffer.h>
+#include <rock/io_abstract/RandomAccessFile.h>
+#include <rock/io_abstract/RandomRWFile.h>
+#include <rock/io_abstract/SequentialFile.h>
+
 // For non linux platform, the following macros are used only as place
 // holder.
 #if !(defined OS_LINUX) && !(defined CYGWIN) && !(defined OS_AIX)
@@ -220,6 +226,8 @@ class PosixMmapFile : public WritableFile {
   virtual Status Allocate(uint64_t offset, uint64_t len) override;
 #endif
 };
+
+
 
 class PosixRandomRWFile : public RandomRWFile {
  public:

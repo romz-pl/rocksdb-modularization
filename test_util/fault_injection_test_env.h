@@ -25,6 +25,9 @@
 #include "util/mutexlock.h"
 #include "util/random.h"
 
+#include <rock/io_abstract/RandomRWFile.h>
+#include <rock/io_abstract/Directory.h>
+
 namespace rocksdb {
 
 class TestWritableFile;

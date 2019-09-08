@@ -12,6 +12,8 @@
 #include "rocksdb/env.h"
 #include "test_util/testharness.h"
 
+#include <rock/io_abstract/RandomAccessFile.h>
+
 namespace rocksdb {
 
 class MockEnvTest : public testing::Test {

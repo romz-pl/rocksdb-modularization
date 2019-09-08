@@ -68,6 +68,7 @@ int main() {
 #include "util/random.h"
 
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/io_abstract/MemoryMappedFileBuffer.h>
 
 // SyncPoint is not supported in Released Windows Mode.
 #if !(defined NDEBUG) || !defined(OS_WIN)

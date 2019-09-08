@@ -13,6 +13,8 @@
 #include "rocksdb/env.h"
 #include "util/coding.h"
 
+#include <rock/io_abstract/SequentialFile.h>
+
 namespace rocksdb {
 
 bool DbDumpTool::Run(const DumpOptions& dump_options,

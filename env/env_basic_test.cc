@@ -13,6 +13,9 @@
 #include "rocksdb/env.h"
 #include "test_util/testharness.h"
 
+#include <rock/io_abstract/SequentialFile.h>
+#include <rock/io_abstract/RandomAccessFile.h>
+
 namespace rocksdb {
 
 // Normalizes trivial differences across Envs such that these test cases can
