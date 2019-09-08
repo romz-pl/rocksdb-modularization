@@ -12,7 +12,7 @@
 #include <mutex>
 #include <string>
 
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/env.h"
 #include "util/aligned_buffer.h"
 

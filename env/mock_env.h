@@ -13,7 +13,7 @@
 #include <string>
 #include <vector>
 #include "rocksdb/env.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "port/port.h"
 #include "util/mutexlock.h"
 

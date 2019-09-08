@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/iterator.h"
 
 namespace rocksdb {

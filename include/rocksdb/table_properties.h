@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include <map>
 #include <string>
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/types.h"
 
 namespace rocksdb {

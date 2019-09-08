@@ -15,7 +15,7 @@
 
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/types.h"
 
 namespace rocksdb {

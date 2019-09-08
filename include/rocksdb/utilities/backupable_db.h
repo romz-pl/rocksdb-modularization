@@ -19,7 +19,7 @@
 #include "rocksdb/utilities/stackable_db.h"
 
 #include "rocksdb/env.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 namespace rocksdb {
 

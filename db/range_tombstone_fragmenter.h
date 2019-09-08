@@ -13,7 +13,7 @@
 
 #include "db/dbformat.h"
 #include "db/pinned_iterators_manager.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "table/internal_iterator.h"
 
 namespace rocksdb {

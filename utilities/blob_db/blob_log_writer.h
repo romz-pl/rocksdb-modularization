@@ -13,7 +13,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/slice.h"
 #include "rocksdb/statistics.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/types.h"
 #include "utilities/blob_db/blob_log_format.h"
 

@@ -478,7 +478,7 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
-    slice
+    status
 )
 
 # Main library source code
@@ -651,7 +651,6 @@ set(SOURCES
         util/random.cc
         util/rate_limiter.cc
         util/slice.cc
-        util/status.cc
         util/thread_local.cc
         util/threadpool_imp.cc
         util/xxhash.cc

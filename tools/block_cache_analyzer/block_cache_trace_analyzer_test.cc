@@ -19,7 +19,7 @@ int main() {
 #include <vector>
 
 #include "rocksdb/env.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/trace_reader_writer.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"

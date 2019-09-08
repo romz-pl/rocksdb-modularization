@@ -1,20 +1,65 @@
-//  Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
-//  This source code is licensed under both the GPLv2 (found in the
-//  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
-//
-// Copyright (c) 2011 The LevelDB Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file. See the AUTHORS file for names of contributors.
+#include <rock/status/Status.h>
 
-#include "rocksdb/status.h"
-#include <stdio.h>
-#ifdef OS_WIN
-#include <string.h>
-#endif
-#include <cstring>
 
 namespace rocksdb {
+
+
+Status::Status(const Status& s)
+    : code_(s.code_), subcode_(s.subcode_), sev_(s.sev_) {
+  state_ = (s.state_ == nullptr) ? nullptr : CopyState(s.state_);
+}
+Status::Status(const Status& s, Severity sev)
+    : code_(s.code_), subcode_(s.subcode_), sev_(sev) {
+  state_ = (s.state_ == nullptr) ? nullptr : CopyState(s.state_);
+}
+Status& Status::operator=(const Status& s) {
+  // The following condition catches both aliasing (when this == &s),
+  // and the common case where both s and *this are ok.
+  if (this != &s) {
+    code_ = s.code_;
+    subcode_ = s.subcode_;
+    sev_ = s.sev_;
+    delete[] state_;
+    state_ = (s.state_ == nullptr) ? nullptr : CopyState(s.state_);
+  }
+  return *this;
+}
+
+Status::Status(Status&& s)
+#if !(defined _MSC_VER) || ((defined _MSC_VER) && (_MSC_VER >= 1900))
+    noexcept
+#endif
+    : Status() {
+  *this = std::move(s);
+}
+
+Status& Status::operator=(Status&& s)
+#if !(defined _MSC_VER) || ((defined _MSC_VER) && (_MSC_VER >= 1900))
+    noexcept
+#endif
+{
+  if (this != &s) {
+    code_ = std::move(s.code_);
+    s.code_ = kOk;
+    subcode_ = std::move(s.subcode_);
+    s.subcode_ = kNone;
+    sev_ = std::move(s.sev_);
+    s.sev_ = kNoError;
+    delete[] state_;
+    state_ = nullptr;
+    std::swap(state_, s.state_);
+  }
+  return *this;
+}
+
+bool Status::operator==(const Status& rhs) const {
+  return (code_ == rhs.code_);
+}
+
+bool Status::operator!=(const Status& rhs) const {
+  return !(*this == rhs);
+}
+
 
 const char* Status::CopyState(const char* state) {
 #ifdef OS_WIN
@@ -131,3 +176,4 @@ std::string Status::ToString() const {
 }
 
 }  // namespace rocksdb
+

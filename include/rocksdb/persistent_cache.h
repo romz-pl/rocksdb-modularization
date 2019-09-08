@@ -14,7 +14,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/slice.h"
 #include "rocksdb/statistics.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 namespace rocksdb {
 

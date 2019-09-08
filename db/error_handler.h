@@ -7,7 +7,7 @@
 #include "monitoring/instrumented_mutex.h"
 #include "options/db_options.h"
 #include "rocksdb/listener.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 namespace rocksdb {
 

@@ -15,7 +15,7 @@
 #include "db/column_family.h"
 #include "db/job_context.h"
 #include "db/version_set.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 namespace rocksdb {
 

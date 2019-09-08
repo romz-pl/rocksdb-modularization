@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 #include "rocksdb/db.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/utilities/stackable_db.h"
 
 namespace rocksdb {

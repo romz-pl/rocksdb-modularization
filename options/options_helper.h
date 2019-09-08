@@ -13,7 +13,7 @@
 #include "options/cf_options.h"
 #include "options/db_options.h"
 #include "rocksdb/options.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "rocksdb/universal_compaction.h"
 

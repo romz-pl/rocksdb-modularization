@@ -22,7 +22,7 @@
 #include "rocksdb/options.h"
 #include "rocksdb/persistent_cache.h"
 #include "rocksdb/statistics.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "table/block_based/block.h"
 #include "table/block_based/block_based_table_factory.h"

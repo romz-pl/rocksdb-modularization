@@ -29,7 +29,7 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/write_batch_base.h"
 
 namespace rocksdb {

@@ -14,7 +14,7 @@
 #include "db/column_family.h"
 #include "db/db_impl/db_impl.h"
 #include "rocksdb/db.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/utilities/transaction_db.h"
 #include "util/cast_util.h"
 #include "utilities/transactions/pessimistic_transaction.h"

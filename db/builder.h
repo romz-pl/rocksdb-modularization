@@ -17,7 +17,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/listener.h"
 #include "rocksdb/options.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table_properties.h"
 #include "rocksdb/types.h"
 #include "table/scoped_arena_iterator.h"

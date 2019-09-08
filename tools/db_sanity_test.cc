@@ -12,7 +12,7 @@
 #include "rocksdb/options.h"
 #include "rocksdb/env.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/comparator.h"
 #include "rocksdb/table.h"
 #include "rocksdb/slice_transform.h"

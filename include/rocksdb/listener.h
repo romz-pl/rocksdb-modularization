@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <vector>
 #include "rocksdb/compaction_job_stats.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table_properties.h"
 
 namespace rocksdb {

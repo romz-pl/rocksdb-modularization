@@ -13,7 +13,7 @@
 #include "db/db_impl/db_impl.h"
 #include "rocksdb/comparator.h"
 #include "rocksdb/db.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/utilities/optimistic_transaction_db.h"
 #include "util/cast_util.h"
 

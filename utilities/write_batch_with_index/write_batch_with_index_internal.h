@@ -15,7 +15,7 @@
 #include "rocksdb/comparator.h"
 #include "rocksdb/iterator.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/utilities/write_batch_with_index.h"
 
 #include <rock/numeric_limits/numeric_limits.h>

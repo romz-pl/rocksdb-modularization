@@ -27,7 +27,7 @@
 #include "rocksdb/rate_limiter.h"
 #include "rocksdb/slice_transform.h"
 #include "rocksdb/statistics.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "rocksdb/universal_compaction.h"
 #include "rocksdb/utilities/backupable_db.h"

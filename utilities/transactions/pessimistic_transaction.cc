@@ -17,7 +17,7 @@
 #include "rocksdb/comparator.h"
 #include "rocksdb/db.h"
 #include "rocksdb/snapshot.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/utilities/transaction_db.h"
 #include "test_util/sync_point.h"
 #include "util/cast_util.h"

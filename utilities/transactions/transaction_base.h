@@ -15,7 +15,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/slice.h"
 #include "rocksdb/snapshot.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/types.h"
 #include "rocksdb/utilities/transaction.h"
 #include "rocksdb/utilities/transaction_db.h"

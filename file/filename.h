@@ -19,7 +19,7 @@
 #include "port/port.h"
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/transaction_log.h"
 
 namespace rocksdb {

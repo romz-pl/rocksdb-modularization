@@ -19,7 +19,7 @@
 #include "rocksdb/comparator.h"
 #include "rocksdb/iterator.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/write_batch.h"
 #include "rocksdb/write_batch_base.h"
 

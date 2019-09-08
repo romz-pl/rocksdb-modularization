@@ -28,7 +28,7 @@ int main() { return 0; }
 #include "port/port.h"
 #include "rocksdb/cache.h"
 #include "rocksdb/db.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "test_util/testharness.h"
 #include "util/gflags_compat.h"

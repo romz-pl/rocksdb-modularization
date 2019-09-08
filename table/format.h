@@ -19,7 +19,7 @@
 #endif
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table.h"
 
 #include "memory/memory_allocator.h"

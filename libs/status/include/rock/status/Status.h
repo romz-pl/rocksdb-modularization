@@ -1,26 +1,18 @@
-// Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
-//  This source code is licensed under both the GPLv2 (found in the
-//  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
-// Copyright (c) 2011 The LevelDB Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file. See the AUTHORS file for names of contributors.
-//
-// A Status encapsulates the result of an operation.  It may indicate success,
-// or it may indicate an error with an associated error message.
-//
-// Multiple threads can invoke const methods on a Status without
-// external synchronization, but if any of the threads may call a
-// non-const method, all threads accessing the same Status must use
-// external synchronization.
-
 #pragma once
 
-#include <string>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 namespace rocksdb {
 
+///
+/// A Status encapsulates the result of an operation.  It may indicate success,
+/// or it may indicate an error with an associated error message.
+///
+/// Multiple threads can invoke const methods on a Status without
+/// external synchronization, but if any of the threads may call a
+/// non-const method, all threads accessing the same Status must use
+/// external synchronization.
+///
 class Status {
  public:
   // Create a success status.
@@ -320,60 +312,5 @@ class Status {
   static const char* CopyState(const char* s);
 };
 
-inline Status::Status(const Status& s)
-    : code_(s.code_), subcode_(s.subcode_), sev_(s.sev_) {
-  state_ = (s.state_ == nullptr) ? nullptr : CopyState(s.state_);
-}
-inline Status::Status(const Status& s, Severity sev)
-    : code_(s.code_), subcode_(s.subcode_), sev_(sev) {
-  state_ = (s.state_ == nullptr) ? nullptr : CopyState(s.state_);
-}
-inline Status& Status::operator=(const Status& s) {
-  // The following condition catches both aliasing (when this == &s),
-  // and the common case where both s and *this are ok.
-  if (this != &s) {
-    code_ = s.code_;
-    subcode_ = s.subcode_;
-    sev_ = s.sev_;
-    delete[] state_;
-    state_ = (s.state_ == nullptr) ? nullptr : CopyState(s.state_);
-  }
-  return *this;
-}
 
-inline Status::Status(Status&& s)
-#if !(defined _MSC_VER) || ((defined _MSC_VER) && (_MSC_VER >= 1900))
-    noexcept
-#endif
-    : Status() {
-  *this = std::move(s);
 }
-
-inline Status& Status::operator=(Status&& s)
-#if !(defined _MSC_VER) || ((defined _MSC_VER) && (_MSC_VER >= 1900))
-    noexcept
-#endif
-{
-  if (this != &s) {
-    code_ = std::move(s.code_);
-    s.code_ = kOk;
-    subcode_ = std::move(s.subcode_);
-    s.subcode_ = kNone;
-    sev_ = std::move(s.sev_);
-    s.sev_ = kNoError;
-    delete[] state_;
-    state_ = nullptr;
-    std::swap(state_, s.state_);
-  }
-  return *this;
-}
-
-inline bool Status::operator==(const Status& rhs) const {
-  return (code_ == rhs.code_);
-}
-
-inline bool Status::operator!=(const Status& rhs) const {
-  return !(*this == rhs);
-}
-
-}  // namespace rocksdb

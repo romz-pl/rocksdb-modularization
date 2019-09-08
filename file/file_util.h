@@ -9,7 +9,7 @@
 #include "file/filename.h"
 #include "options/db_options.h"
 #include "rocksdb/env.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/types.h"
 
 namespace rocksdb {

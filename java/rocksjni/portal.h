@@ -25,7 +25,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/rate_limiter.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "rocksdb/utilities/backupable_db.h"
 #include "rocksdb/utilities/memory_util.h"

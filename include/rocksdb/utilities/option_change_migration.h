@@ -7,7 +7,7 @@
 
 #include <string>
 #include "rocksdb/options.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 namespace rocksdb {
 // Try to migrate DB created with old_opts to be use new_opts.

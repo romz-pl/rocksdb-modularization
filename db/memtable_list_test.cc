@@ -11,7 +11,7 @@
 #include "db/version_set.h"
 #include "db/write_controller.h"
 #include "rocksdb/db.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/write_buffer_manager.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"

@@ -23,7 +23,7 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/thread_status.h"
 
 #ifdef _WIN32

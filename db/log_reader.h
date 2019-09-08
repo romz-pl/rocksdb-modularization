@@ -13,7 +13,7 @@
 
 #include "db/log_format.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/options.h"
 
 namespace rocksdb {

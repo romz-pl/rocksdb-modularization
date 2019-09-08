@@ -19,7 +19,7 @@
 #include "db/write_callback.h"
 #include "monitoring/instrumented_mutex.h"
 #include "rocksdb/options.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/types.h"
 #include "rocksdb/write_batch.h"
 #include "util/autovector.h"

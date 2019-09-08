@@ -22,7 +22,7 @@
 #include "options/db_options.h"
 #include "port/port.h"
 #include "rocksdb/env.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/transaction_log.h"
 #include "rocksdb/types.h"
 

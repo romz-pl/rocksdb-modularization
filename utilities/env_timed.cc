@@ -5,7 +5,7 @@
 
 #include "monitoring/perf_context_imp.h"
 #include "rocksdb/env.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 namespace rocksdb {
 

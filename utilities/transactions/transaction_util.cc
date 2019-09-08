@@ -12,7 +12,7 @@
 #include <vector>
 
 #include "db/db_impl/db_impl.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 #include "rocksdb/utilities/write_batch_with_index.h"
 
 

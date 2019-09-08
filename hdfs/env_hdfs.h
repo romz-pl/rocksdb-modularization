@@ -11,7 +11,7 @@
 #include <iostream>
 #include "port/sys_time.h"
 #include "rocksdb/env.h"
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 #ifdef USE_HDFS
 #include <hdfs.h>

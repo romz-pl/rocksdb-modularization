@@ -15,7 +15,7 @@
 #include "monitoring/instrumented_mutex.h"
 #include "port/port.h"
 
-#include "rocksdb/status.h"
+#include <rock/status/Status.h>
 
 namespace rocksdb {
 
