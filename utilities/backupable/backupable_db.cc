@@ -20,7 +20,7 @@
 #include "util/coding.h"
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"
-#include "util/string_util.h"
+
 #include "utilities/checkpoint/checkpoint_impl.h"
 
 #include <cinttypes>

@@ -12,7 +12,7 @@
 #include "rocksdb/slice.h"
 #include "rocksdb/write_batch.h"
 #include "util/coding.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

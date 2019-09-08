@@ -35,7 +35,7 @@
 #include "rocksdb/slice.h"
 #include "test_util/sync_point.h"
 #include "util/coding.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/ToString.h>
 

@@ -14,6 +14,7 @@
 #include "util/hash.h"
 #include "util/string_util.h"
 
+
 namespace rocksdb {
 
 class TestFilterBitsBuilder : public FilterBitsBuilder {

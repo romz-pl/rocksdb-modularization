@@ -19,7 +19,7 @@
 #include <sstream>
 #include "logging/logging.h"
 #include "rocksdb/status.h"
-#include "util/string_util.h"
+
 
 #define HDFS_EXISTS 0
 #define HDFS_DOESNT_EXIST -1

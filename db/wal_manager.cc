@@ -30,7 +30,7 @@
 #include "util/coding.h"
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

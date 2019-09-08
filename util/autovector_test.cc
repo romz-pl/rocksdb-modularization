@@ -12,7 +12,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/autovector.h"
-#include "util/string_util.h"
+
 
 using std::cout;
 using std::endl;

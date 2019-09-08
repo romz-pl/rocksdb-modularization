@@ -19,7 +19,7 @@
 #include "rocksdb/slice_transform.h"
 #include "test_util/testharness.h"
 #include "util/stop_watch.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
 
 #include <rock/string/ToString.h>

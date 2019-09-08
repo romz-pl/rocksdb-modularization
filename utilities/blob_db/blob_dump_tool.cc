@@ -16,7 +16,7 @@
 #include "table/format.h"
 #include "util/coding.h"
 #include "util/file_reader_writer.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 namespace blob_db {

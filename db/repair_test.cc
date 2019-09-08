@@ -15,7 +15,7 @@
 #include "rocksdb/comparator.h"
 #include "rocksdb/db.h"
 #include "rocksdb/transaction_log.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

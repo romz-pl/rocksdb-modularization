@@ -19,7 +19,7 @@
 #include "rocksdb/write_buffer_manager.h"
 #include "table/scoped_arena_iterator.h"
 #include "test_util/testharness.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/NumberToString.h>
 

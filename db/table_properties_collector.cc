@@ -7,7 +7,7 @@
 
 #include "db/dbformat.h"
 #include "util/coding.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

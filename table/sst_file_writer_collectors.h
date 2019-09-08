@@ -8,7 +8,7 @@
 #include "db/dbformat.h"
 #include "db/table_properties_collector.h"
 #include "rocksdb/types.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/ToString.h>
 

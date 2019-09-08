@@ -23,7 +23,7 @@
 #include "table/block_based/block_based_table_reader.h"
 #include "table/format.h"
 #include "util/mutexlock.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/UnescapeOptionString.h>
 #include <rock/string/ParseSizeT.h>

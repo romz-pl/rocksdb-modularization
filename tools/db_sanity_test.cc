@@ -18,7 +18,7 @@
 #include "rocksdb/slice_transform.h"
 #include "rocksdb/filter_policy.h"
 #include "port/port.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/ToString.h>
 

@@ -58,7 +58,7 @@
 #include "util/coding.h"
 #include "util/compression_context_cache.h"
 #include "util/random.h"
-#include "util/string_util.h"
+
 #include "util/thread_local.h"
 #include "util/threadpool_imp.h"
 

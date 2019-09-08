@@ -38,7 +38,7 @@
 #include "util/hash.h"
 #include "util/murmurhash.h"
 #include "util/stop_watch.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

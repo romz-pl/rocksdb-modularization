@@ -66,7 +66,7 @@ int main() {
 #include "util/gflags_compat.h"
 #include "util/mutexlock.h"
 #include "util/random.h"
-#include "util/string_util.h"
+
 // SyncPoint is not supported in Released Windows Mode.
 #if !(defined NDEBUG) || !defined(OS_WIN)
 #include "test_util/sync_point.h"

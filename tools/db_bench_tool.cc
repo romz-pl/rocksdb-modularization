@@ -66,7 +66,7 @@
 #include "util/mutexlock.h"
 #include "util/random.h"
 #include "util/stderr_logger.h"
-#include "util/string_util.h"
+
 #include "util/xxhash.h"
 #include "utilities/blob_db/blob_db.h"
 #include "utilities/merge_operators.h"

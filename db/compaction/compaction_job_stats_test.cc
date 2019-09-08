@@ -56,7 +56,7 @@
 #include "util/hash.h"
 #include "util/mutexlock.h"
 #include "util/rate_limiter.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
 
 #include <rock/string/NumberToString.h>

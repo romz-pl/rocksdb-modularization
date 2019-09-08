@@ -15,7 +15,7 @@
 #include <vector>
 #include "db/column_family.h"
 #include "logging/log_buffer.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/AppendHumanBytes.h>
 

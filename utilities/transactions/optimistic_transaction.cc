@@ -16,7 +16,7 @@
 #include "rocksdb/status.h"
 #include "rocksdb/utilities/optimistic_transaction_db.h"
 #include "util/cast_util.h"
-#include "util/string_util.h"
+
 #include "utilities/transactions/transaction_util.h"
 
 namespace rocksdb {

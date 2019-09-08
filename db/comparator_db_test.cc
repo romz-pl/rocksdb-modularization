@@ -13,7 +13,7 @@
 #include "test_util/testutil.h"
 #include "util/hash.h"
 #include "util/kv_map.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
 
 using std::unique_ptr;

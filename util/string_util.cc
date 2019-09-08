@@ -3,7 +3,7 @@
 //  COPYING file in the root directory) and Apache 2.0 License
 //  (found in the LICENSE.Apache file in the root directory).
 //
-#include "util/string_util.h"
+
 
 #include <errno.h>
 #include <stdarg.h>
@@ -74,14 +74,7 @@ bool ConsumeDecimalNumber(Slice* in, uint64_t* val) {
 #ifndef ROCKSDB_LITE
 
 
-int32_t ParseInt32(const std::string& value) {
-  int64_t num = ParseInt64(value);
-  if (num <= port::kMaxInt32 && num >= port::kMinInt32) {
-    return static_cast<int32_t>(num);
-  } else {
-    throw std::out_of_range(value);
-  }
-}
+
 
 #endif
 

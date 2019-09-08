@@ -27,7 +27,7 @@
 #include "test_util/testutil.h"
 #include "util/random.h"
 #include "util/stderr_logger.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators/bytesxor.h"
 
 #include <rock/string/UnescapeChar.h>
@@ -40,6 +40,7 @@
 #include <rock/string/UnescapeOptionString.h>
 #include <rock/string/EscapeOptionString.h>
 #include <rock/string/ParseInt.h>
+#include <rock/string/ParseInt32.h>
 
 #ifndef GFLAGS
 bool FLAGS_enable_print = false;

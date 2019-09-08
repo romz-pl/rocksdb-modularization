@@ -19,7 +19,7 @@
 #include "db/write_batch_internal.h"
 #include "port/port.h"
 #include "port/stack_trace.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
 
 namespace rocksdb {

@@ -15,7 +15,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/status.h"
 #include "util/cast_util.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

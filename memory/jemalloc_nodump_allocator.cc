@@ -10,7 +10,7 @@
 
 #include "port/likely.h"
 #include "port/port.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

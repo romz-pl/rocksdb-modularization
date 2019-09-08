@@ -21,7 +21,7 @@
 #include "monitoring/statistics.h"
 #include "test_util/sync_point.h"
 #include "util/random.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

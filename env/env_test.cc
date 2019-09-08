@@ -46,7 +46,7 @@
 #include "test_util/testutil.h"
 #include "util/coding.h"
 #include "util/mutexlock.h"
-#include "util/string_util.h"
+
 
 #ifdef OS_LINUX
 static const size_t kPageSize = sysconf(_SC_PAGESIZE);

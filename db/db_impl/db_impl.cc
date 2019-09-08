@@ -98,7 +98,7 @@
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
 #include "util/stop_watch.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 const std::string kDefaultColumnFamilyName("default");

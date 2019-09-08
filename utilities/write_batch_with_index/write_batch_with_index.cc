@@ -19,7 +19,7 @@
 #include "rocksdb/comparator.h"
 #include "rocksdb/iterator.h"
 #include "util/cast_util.h"
-#include "util/string_util.h"
+
 #include "utilities/write_batch_with_index/write_batch_with_index_internal.h"
 
 namespace rocksdb {

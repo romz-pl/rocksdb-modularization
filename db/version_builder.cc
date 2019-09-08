@@ -27,7 +27,7 @@
 #include "db/version_set.h"
 #include "port/port.h"
 #include "table/table_reader.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/NumberToString.h>
 

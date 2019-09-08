@@ -11,7 +11,7 @@
 #include "table/block_based/block.h"
 #include "table/internal_iterator.h"
 #include "table/table_properties_internal.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

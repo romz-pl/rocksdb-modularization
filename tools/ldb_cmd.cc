@@ -29,7 +29,7 @@
 #include "util/cast_util.h"
 #include "util/coding.h"
 #include "util/stderr_logger.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
 #include "utilities/ttl/db_ttl_impl.h"
 

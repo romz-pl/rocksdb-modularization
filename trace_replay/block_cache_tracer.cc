@@ -14,7 +14,7 @@
 #include "rocksdb/slice.h"
 #include "util/coding.h"
 #include "util/hash.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/ParseUint64.h>
 

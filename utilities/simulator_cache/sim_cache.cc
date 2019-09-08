@@ -10,7 +10,7 @@
 #include "rocksdb/env.h"
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/AppendNumberTo.h>
 

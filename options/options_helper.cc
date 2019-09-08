@@ -24,7 +24,7 @@
 #include "table/block_based/block_based_table_factory.h"
 #include "table/plain/plain_table_factory.h"
 #include "util/cast_util.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/ParseUint64.h>
 #include <rock/string/trim.h>
@@ -40,6 +40,7 @@
 #include <rock/string/EscapeOptionString.h>
 #include <rock/string/ParseInt64.h>
 #include <rock/string/SerializeIntVector.h>
+#include <rock/string/ParseInt32.h>
 
 namespace rocksdb {
 

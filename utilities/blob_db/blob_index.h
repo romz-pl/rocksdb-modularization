@@ -7,7 +7,7 @@
 
 #include "rocksdb/options.h"
 #include "util/coding.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 namespace blob_db {

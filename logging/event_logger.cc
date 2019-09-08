@@ -11,7 +11,7 @@
 #include <string>
 
 #include "logging/logging.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

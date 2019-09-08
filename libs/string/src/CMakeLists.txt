@@ -1,32 +1,33 @@
 set( LIB_NAME string )
 
 add_library( ${LIB_NAME} STATIC
-    ToString.cpp
-    StringSplit.cpp
-    AppendNumberTo.cpp
-    NumberToString.cpp
-    NumberToHumanString.cpp
-    BytesToHumanString.cpp
-    TimeToHumanString.cpp
-    AppendHumanMicros.cpp
     AppendHumanBytes.cpp
-    isSpecialChar.cpp
-    UnescapeChar.cpp
+    AppendHumanMicros.cpp
+    AppendNumberTo.cpp
+    BytesToHumanString.cpp
     EscapeChar.cpp
     EscapeOptionString.cpp
-    UnescapeOptionString.cpp
-    trim.cpp
+    NumberToHumanString.cpp
+    NumberToString.cpp
     ParseBoolean.cpp
-    ParseUint32.cpp
-    ParseInt32.cpp
-    ParseUint64.cpp
-    ParseInt64.cpp
-    ParseInt.cpp
     ParseDouble.cpp
+    ParseInt.cpp
+    ParseInt32.cpp
+    ParseInt32.cpp
+    ParseInt64.cpp
     ParseSizeT.cpp
+    ParseUint32.cpp
+    ParseUint64.cpp
     ParseVectorInt.cpp
     SerializeIntVector.cpp
+    StringSplit.cpp
+    TimeToHumanString.cpp
+    ToString.cpp
+    UnescapeChar.cpp
+    UnescapeOptionString.cpp
+    isSpecialChar.cpp
     kNullptrString.cpp
+    trim.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -40,6 +41,7 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
+    numeric_limits
     PRIVATE
 )
 

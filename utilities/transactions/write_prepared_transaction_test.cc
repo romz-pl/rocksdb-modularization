@@ -30,7 +30,7 @@
 #include "test_util/transaction_test_util.h"
 #include "util/mutexlock.h"
 #include "util/random.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
 #include "utilities/merge_operators/string_append/stringappend.h"
 #include "utilities/transactions/pessimistic_transaction_db.h"

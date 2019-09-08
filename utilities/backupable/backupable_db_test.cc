@@ -29,7 +29,7 @@
 #include "util/mutexlock.h"
 #include "util/random.h"
 #include "util/stderr_logger.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 

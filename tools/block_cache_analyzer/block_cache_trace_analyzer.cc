@@ -19,7 +19,7 @@
 
 #include "monitoring/histogram.h"
 #include "util/gflags_compat.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/ParseUint32.h>
 #include <rock/string/ParseUint64.h>

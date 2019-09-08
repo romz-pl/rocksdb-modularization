@@ -478,7 +478,6 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
-    numeric_limits
     string
 )
 

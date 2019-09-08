@@ -22,7 +22,7 @@
 #include "util/autovector.h"
 #include "util/file_reader_writer.h"
 #include "util/random.h"
-#include "util/string_util.h"
+
 
 namespace rocksdb {
 const std::string CuckooTablePropertyNames::kEmptyKey =

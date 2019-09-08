@@ -10,7 +10,7 @@
 #include <algorithm>
 #include "rocksdb/slice_transform.h"
 #include "rocksdb/slice.h"
-#include "util/string_util.h"
+
 #include <stdio.h>
 
 #include <rock/string/ToString.h>

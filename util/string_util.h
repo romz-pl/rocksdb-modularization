@@ -6,10 +6,7 @@
 
 #pragma once
 
-#include <sstream>
 #include <string>
-#include <unordered_map>
-#include <vector>
 
 namespace rocksdb {
 
@@ -31,11 +28,5 @@ extern std::string EscapeString(const Slice& value);
 // unspecified state.
 extern bool ConsumeDecimalNumber(Slice* in, uint64_t* val);
 
-
-#ifndef ROCKSDB_LITE
-
-int32_t ParseInt32(const std::string& value);
-
-#endif
 
 }  // namespace rocksdb
