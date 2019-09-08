@@ -18,6 +18,8 @@
 #include "util/coding.h"
 #include "util/hash.h"
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+
 namespace rocksdb {
 
 std::map<uint64_t, Slice> slices;

@@ -16,6 +16,8 @@
 #include "db/forward_iterator.h"
 #include "port/stack_trace.h"
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+
 namespace rocksdb {
 
 class DBTestTailingIterator : public DBTestBase {

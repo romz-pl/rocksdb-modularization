@@ -38,6 +38,7 @@
 #include "utilities/merge_operators.h"
 
 #include <rock/string/NumberToString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 using std::unique_ptr;
 

@@ -17,6 +17,8 @@
 #include "test_util/sync_point.h"
 #endif
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+
 namespace rocksdb {
 
 class DBBasicTest : public DBTestBase {

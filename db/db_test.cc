@@ -69,6 +69,8 @@
 #include "utilities/merge_operators.h"
 
 #include <rock/slice/EscapeString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/slice/NewNoopTransform.h>
 
 namespace rocksdb {
 
