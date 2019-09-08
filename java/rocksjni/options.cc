@@ -31,7 +31,7 @@
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/options.h"
 #include "rocksdb/rate_limiter.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/statistics.h"
 #include "rocksdb/table.h"
 #include "utilities/merge_operators.h"

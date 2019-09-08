@@ -18,6 +18,10 @@
 #include "port/port.h"
 #include "util/file_reader_writer.h"
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/slice/NewNoopTransform.h>
+
 namespace rocksdb {
 namespace test {
 

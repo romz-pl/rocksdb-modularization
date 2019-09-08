@@ -11,7 +11,7 @@
 #include "db/range_del_aggregator.h"
 #include "port/stack_trace.h"
 #include "rocksdb/memtablerep.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 
 namespace rocksdb {
 

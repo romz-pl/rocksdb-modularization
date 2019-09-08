@@ -46,6 +46,7 @@
 #include <rock/string/StringSplit.h>
 #include <rock/string/TimeToHumanString.h>
 #include <rock/string/NumberToString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 namespace rocksdb {
 

@@ -14,6 +14,7 @@
 #include "util/hash.h"
 
 #include <rock/slice/EscapeString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 namespace rocksdb {
 

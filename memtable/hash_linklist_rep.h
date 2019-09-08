@@ -8,7 +8,7 @@
 
 #pragma once
 #ifndef ROCKSDB_LITE
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/memtablerep.h"
 
 namespace rocksdb {

@@ -9,7 +9,7 @@
 //
 #pragma once
 #include "rocksdb/env.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 
 namespace rocksdb {
 

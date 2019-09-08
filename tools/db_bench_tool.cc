@@ -48,7 +48,7 @@
 #include "rocksdb/persistent_cache.h"
 #include "rocksdb/rate_limiter.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/stats_history.h"
 #include "rocksdb/utilities/object_registry.h"
 #include "rocksdb/utilities/optimistic_transaction_db.h"
@@ -76,6 +76,8 @@
 
 #include <rock/string/StringSplit.h>
 #include <rock/string/TimeToHumanString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
 
 #ifdef OS_WIN
 #include <io.h>  // open/close

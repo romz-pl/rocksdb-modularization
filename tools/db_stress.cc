@@ -50,7 +50,7 @@ int main() {
 #include "rocksdb/cache.h"
 #include "rocksdb/env.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/statistics.h"
 #include "rocksdb/utilities/backupable_db.h"
 #include "rocksdb/utilities/checkpoint.h"
@@ -66,6 +66,8 @@ int main() {
 #include "util/gflags_compat.h"
 #include "util/mutexlock.h"
 #include "util/random.h"
+
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 // SyncPoint is not supported in Released Windows Mode.
 #if !(defined NDEBUG) || !defined(OS_WIN)

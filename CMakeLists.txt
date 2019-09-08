@@ -650,7 +650,6 @@ set(SOURCES
         util/murmurhash.cc
         util/random.cc
         util/rate_limiter.cc
-        util/slice.cc
         util/thread_local.cc
         util/threadpool_imp.cc
         util/xxhash.cc
@@ -1053,6 +1052,7 @@ if(WITH_TESTS)
     table/table_reader_bench.cc
     utilities/persistent_cache/hash_table_bench.cc)
   add_library(testharness OBJECT test_util/testharness.cc)
+  target_link_libraries(testharness PUBLIC gtest ${LIBS} ${ROCKSDB_COMPONENT_LIBS} )
   foreach(sourcefile ${BENCHMARKS})
     get_filename_component(exename ${sourcefile} NAME_WE)
     add_executable(${exename}${ARTIFACT_SUFFIX} ${sourcefile}

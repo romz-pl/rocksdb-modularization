@@ -39,7 +39,7 @@
 #include "rocksdb/options.h"
 #include "rocksdb/perf_context.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "rocksdb/table_properties.h"
 #include "rocksdb/thread_status.h"

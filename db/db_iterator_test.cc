@@ -17,6 +17,8 @@
 #include "rocksdb/perf_context.h"
 #include "table/block_based/flush_block_policy.h"
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+
 namespace rocksdb {
 
 // A dumb ReadCallback which saying every key is committed.

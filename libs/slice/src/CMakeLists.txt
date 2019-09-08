@@ -6,6 +6,13 @@ add_library( ${LIB_NAME} STATIC
     AppendEscapedStringTo.cpp
     EscapeString.cpp
     ConsumeDecimalNumber.cpp
+    SliceTransform.cpp
+    FixedPrefixTransform.cpp
+    CappedPrefixTransform.cpp
+    NoopTransform.cpp
+    NewFixedPrefixTransform.cpp
+    NewCappedPrefixTransform.cpp
+    NewNoopTransform.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )

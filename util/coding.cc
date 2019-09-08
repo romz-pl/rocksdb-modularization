@@ -11,7 +11,7 @@
 
 #include <algorithm>
 #include "rocksdb/slice.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 
 namespace rocksdb {
 

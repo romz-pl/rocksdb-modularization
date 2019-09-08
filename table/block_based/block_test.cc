@@ -18,7 +18,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/iterator.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "table/block_based/block.h"
 #include "table/block_based/block_builder.h"
@@ -26,6 +26,8 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/random.h"
+
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 namespace rocksdb {
 

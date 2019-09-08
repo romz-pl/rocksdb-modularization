@@ -30,12 +30,14 @@ int main() {
 #include "rocksdb/comparator.h"
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/write_buffer_manager.h"
 #include "test_util/testutil.h"
 #include "util/gflags_compat.h"
 #include "util/mutexlock.h"
 #include "util/stop_watch.h"
+
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 using GFLAGS_NAMESPACE::RegisterFlagValidator;

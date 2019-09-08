@@ -15,7 +15,7 @@ int main() {
 #include "db/dbformat.h"
 #include "monitoring/histogram.h"
 #include "rocksdb/db.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "table/block_based/block_based_table_factory.h"
 #include "table/get_context.h"
@@ -26,6 +26,8 @@ int main() {
 #include "test_util/testutil.h"
 #include "util/file_reader_writer.h"
 #include "util/gflags_compat.h"
+
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 using GFLAGS_NAMESPACE::SetUsageMessage;

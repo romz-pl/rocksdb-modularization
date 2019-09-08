@@ -15,12 +15,13 @@
 #include <rock/status/Status.h>
 #include "rocksdb/comparator.h"
 #include "rocksdb/table.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/filter_policy.h"
 #include "port/port.h"
 
 
 #include <rock/string/ToString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 namespace rocksdb {
 

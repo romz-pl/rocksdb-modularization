@@ -16,7 +16,7 @@
 #include "port/port.h"
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "util/hash.h"
 
 namespace rocksdb {

@@ -31,7 +31,7 @@
 #include "rocksdb/iterator.h"
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/perf_context.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/statistics.h"
 #include "rocksdb/write_buffer_manager.h"
 #include "table/block_based/block.h"
@@ -55,6 +55,8 @@
 #include "utilities/merge_operators.h"
 
 #include <rock/slice/EscapeString.h>
+#include <rock/slice/NewNoopTransform.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 namespace rocksdb {
 

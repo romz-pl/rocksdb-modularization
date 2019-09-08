@@ -7,7 +7,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
@@ -15,6 +15,8 @@
 #include "rocksdb/statistics.h"
 #include "rocksdb/table.h"
 #include "test_util/testharness.h"
+
+#include <rock/slice/NewCappedPrefixTransform.h>
 
 namespace rocksdb {
 

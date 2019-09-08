@@ -42,6 +42,9 @@
 #include <rock/string/ParseInt.h>
 #include <rock/string/ParseInt32.h>
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
+
 #ifndef GFLAGS
 bool FLAGS_enable_print = false;
 #else

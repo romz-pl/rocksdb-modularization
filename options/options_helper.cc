@@ -18,7 +18,7 @@
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/options.h"
 #include "rocksdb/rate_limiter.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "rocksdb/utilities/object_registry.h"
 #include "table/block_based/block_based_table_factory.h"
@@ -41,6 +41,10 @@
 #include <rock/string/ParseInt64.h>
 #include <rock/string/SerializeIntVector.h>
 #include <rock/string/ParseInt32.h>
+
+#include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/slice/NewNoopTransform.h>
 
 namespace rocksdb {
 

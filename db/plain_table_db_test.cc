@@ -22,7 +22,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "table/meta_blocks.h"
 #include "table/plain/plain_table_bloom.h"

@@ -19,7 +19,7 @@
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/statistics.h"
 #include "rocksdb/table.h"
 #include "rocksjni/portal.h"

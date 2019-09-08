@@ -22,7 +22,7 @@
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/slice.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/sst_file_manager.h"
 #include "rocksdb/table.h"
 #include "rocksdb/table_properties.h"

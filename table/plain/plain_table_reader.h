@@ -16,7 +16,7 @@
 #include "memory/arena.h"
 #include "rocksdb/env.h"
 #include "rocksdb/iterator.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "rocksdb/table_properties.h"
 #include "table/plain/plain_table_bloom.h"

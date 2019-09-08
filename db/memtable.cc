@@ -28,7 +28,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/iterator.h"
 #include "rocksdb/merge_operator.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/write_buffer_manager.h"
 #include "table/internal_iterator.h"
 #include "table/iterator_wrapper.h"

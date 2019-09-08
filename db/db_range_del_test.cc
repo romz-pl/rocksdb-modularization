@@ -8,6 +8,8 @@
 #include "test_util/testutil.h"
 #include "utilities/merge_operators.h"
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+
 namespace rocksdb {
 
 class DBRangeDelTest : public DBTestBase {

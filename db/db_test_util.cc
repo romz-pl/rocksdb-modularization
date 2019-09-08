@@ -13,6 +13,9 @@
 #include "rocksdb/utilities/object_registry.h"
 
 #include <rock/string/NumberToString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/slice/NewNoopTransform.h>
 
 namespace rocksdb {
 

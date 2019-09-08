@@ -22,6 +22,9 @@
 
 #include "utilities/merge_operators.h"
 
+#include <rock/slice/NewNoopTransform.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
+
 namespace rocksdb {
 
 static uint64_t TestGetTickerCount(const Options& options,

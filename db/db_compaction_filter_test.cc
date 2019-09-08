@@ -10,6 +10,8 @@
 #include "db/db_test_util.h"
 #include "port/stack_trace.h"
 
+#include <rock/slice/NewCappedPrefixTransform.h>
+
 namespace rocksdb {
 
 static int cfilter_count = 0;

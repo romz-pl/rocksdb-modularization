@@ -18,6 +18,7 @@
 #include "rocksdb/wal_filter.h"
 
 #include <rock/string/NumberToString.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
 
 namespace rocksdb {
 

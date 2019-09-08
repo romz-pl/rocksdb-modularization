@@ -11,6 +11,9 @@
 #include "port/stack_trace.h"
 #include "rocksdb/perf_context.h"
 
+#include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/slice/NewCappedPrefixTransform.h>
+
 namespace rocksdb {
 
 // DB tests related to bloom filter.

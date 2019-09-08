@@ -24,7 +24,7 @@ int main() {
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/perf_context.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "test_util/testharness.h"
 #include "util/coding.h"
@@ -33,6 +33,8 @@ int main() {
 #include "util/stop_watch.h"
 
 #include "utilities/merge_operators.h"
+
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 

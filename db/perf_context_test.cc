@@ -16,13 +16,14 @@
 #include "rocksdb/db.h"
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/perf_context.h"
-#include "rocksdb/slice_transform.h"
+#include <rock/slice/SliceTransform.h>
 #include "test_util/testharness.h"
 #include "util/stop_watch.h"
 
 #include "utilities/merge_operators.h"
 
 #include <rock/string/ToString.h>
+#include <rock/slice/NewFixedPrefixTransform.h>
 
 bool FLAGS_random_key = false;
 bool FLAGS_use_set_based_memetable = false;
