@@ -652,7 +652,6 @@ set(SOURCES
         util/rate_limiter.cc
         util/slice.cc
         util/status.cc
-        util/string_util.cc
         util/thread_local.cc
         util/threadpool_imp.cc
         util/xxhash.cc

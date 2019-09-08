@@ -51,8 +51,10 @@
 #include "test_util/testutil.h"
 #include "util/compression.h"
 #include "util/random.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
+
+#include <rock/slice/EscapeString.h>
 
 namespace rocksdb {
 

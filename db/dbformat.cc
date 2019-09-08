@@ -13,7 +13,8 @@
 #include "monitoring/perf_context_imp.h"
 #include "port/port.h"
 #include "util/coding.h"
-#include "util/string_util.h"
+
+#include <rock/slice/EscapeString.h>
 
 namespace rocksdb {
 

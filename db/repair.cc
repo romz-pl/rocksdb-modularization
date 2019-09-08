@@ -79,7 +79,8 @@
 #include "rocksdb/write_buffer_manager.h"
 #include "table/scoped_arena_iterator.h"
 #include "util/file_reader_writer.h"
-#include "util/string_util.h"
+
+#include <rock/slice/EscapeString.h>
 
 namespace rocksdb {
 

@@ -65,8 +65,10 @@
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
 #include "util/rate_limiter.h"
-#include "util/string_util.h"
+
 #include "utilities/merge_operators.h"
+
+#include <rock/slice/EscapeString.h>
 
 namespace rocksdb {
 

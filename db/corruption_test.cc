@@ -30,7 +30,9 @@
 #include "table/meta_blocks.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
-#include "util/string_util.h"
+
+#include <rock/slice/ConsumeDecimalNumber.h>
+
 
 namespace rocksdb {
 

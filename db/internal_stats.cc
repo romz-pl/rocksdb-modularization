@@ -20,11 +20,12 @@
 #include "db/column_family.h"
 #include "db/db_impl/db_impl.h"
 #include "table/block_based/block_based_table_factory.h"
-#include "util/string_util.h"
+
 
 #include <rock/string/BytesToHumanString.h>
 #include <rock/string/NumberToHumanString.h>
 #include <rock/string/AppendHumanMicros.h>
+#include <rock/slice/ConsumeDecimalNumber.h>
 
 namespace rocksdb {
 
