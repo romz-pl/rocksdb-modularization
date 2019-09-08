@@ -74,6 +74,9 @@
 #include "utilities/merge_operators/sortlist.h"
 #include "utilities/persistent_cache/block_cache_tier.h"
 
+#include <rock/string/StringSplit.h>
+#include <rock/string/TimeToHumanString.h>
+
 #ifdef OS_WIN
 #include <io.h>  // open/close
 #endif

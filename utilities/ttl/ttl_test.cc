@@ -15,6 +15,8 @@
 #include <unistd.h>
 #endif
 
+#include <rock/string/AppendNumberTo.h>
+
 namespace rocksdb {
 
 namespace {

@@ -43,6 +43,10 @@
 #include <stdexcept>
 #include <string>
 
+#include <rock/string/StringSplit.h>
+#include <rock/string/TimeToHumanString.h>
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 const std::string LDBCommand::ARG_DB = "db";

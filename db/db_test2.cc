@@ -17,6 +17,8 @@
 #include "rocksdb/persistent_cache.h"
 #include "rocksdb/wal_filter.h"
 
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 class DBTest2 : public DBTestBase {

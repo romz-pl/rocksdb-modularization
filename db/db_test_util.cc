@@ -12,6 +12,8 @@
 #include "rocksdb/env_encryption.h"
 #include "rocksdb/utilities/object_registry.h"
 
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 // Special Env used to delay background operations

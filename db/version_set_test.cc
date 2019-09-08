@@ -16,6 +16,8 @@
 #include "test_util/testutil.h"
 #include "util/string_util.h"
 
+#include <rock/string/AppendNumberTo.h>
+
 namespace rocksdb {
 
 class GenerateLevelFilesBriefTest : public testing::Test {

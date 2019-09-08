@@ -17,6 +17,8 @@
 #include "test_util/sync_point.h"
 #endif
 
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 class DBErrorHandlingTest : public DBTestBase {

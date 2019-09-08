@@ -29,6 +29,8 @@
 #include "table/table_reader.h"
 #include "util/string_util.h"
 
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 bool NewestFirstBySeqNo(FileMetaData* a, FileMetaData* b) {

@@ -75,6 +75,8 @@ int main() {
 
 #include "utilities/merge_operators.h"
 
+#include <rock/string/NumberToString.h>
+
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 using GFLAGS_NAMESPACE::RegisterFlagValidator;
 using GFLAGS_NAMESPACE::SetUsageMessage;

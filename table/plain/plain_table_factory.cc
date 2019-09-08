@@ -16,6 +16,8 @@
 #include "table/plain/plain_table_reader.h"
 #include "util/string_util.h"
 
+#include <rock/string/StringSplit.h>
+
 namespace rocksdb {
 
 Status PlainTableFactory::NewTableReader(

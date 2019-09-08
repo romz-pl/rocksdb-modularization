@@ -15,37 +15,25 @@ namespace rocksdb {
 
 class Slice;
 
-extern std::vector<std::string> StringSplit(const std::string& arg, char delim);
 
 
 
-// Append a human-readable printout of "num" to *str
-extern void AppendNumberTo(std::string* str, uint64_t num);
+
+
 
 // Append a human-readable printout of "value" to *str.
 // Escapes any non-printable characters found in "value".
 extern void AppendEscapedStringTo(std::string* str, const Slice& value);
 
-// Return a string printout of "num"
-extern std::string NumberToString(uint64_t num);
 
-// Return a human-readable version of num.
-// for num >= 10.000, prints "xxK"
-// for num >= 10.000.000, prints "xxM"
-// for num >= 10.000.000.000, prints "xxG"
-extern std::string NumberToHumanString(int64_t num);
 
-// Return a human-readable version of bytes
-// ex: 1048576 -> 1.00 GB
-extern std::string BytesToHumanString(uint64_t bytes);
 
-// Return a human-readable version of unix time
-// ex: 1562116015 -> "Tue Jul  2 18:06:55 2019"
-extern std::string TimeToHumanString(int unixtime);
 
-// Append a human-readable time in micros.
-int AppendHumanMicros(uint64_t micros, char* output, int len,
-                      bool fixed_format);
+
+
+
+
+
 
 // Append a human-readable size in bytes
 int AppendHumanBytes(uint64_t bytes, char* output, int len);

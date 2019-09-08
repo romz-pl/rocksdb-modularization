@@ -12,6 +12,8 @@
 #include "util/mutexlock.h"
 #include "util/string_util.h"
 
+#include <rock/string/AppendNumberTo.h>
+
 namespace rocksdb {
 
 namespace {

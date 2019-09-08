@@ -11,6 +11,8 @@
 #include "util/string_util.h"
 #include "util/thread_operation.h"
 
+#include <rock/string/AppendHumanMicros.h>
+
 namespace rocksdb {
 
 #ifdef ROCKSDB_USING_THREAD_STATUS

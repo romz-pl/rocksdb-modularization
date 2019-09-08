@@ -37,6 +37,8 @@
 #include "util/string_util.h"
 #include "utilities/merge_operators.h"
 
+#include <rock/string/NumberToString.h>
+
 using std::unique_ptr;
 
 namespace rocksdb {

@@ -26,41 +26,8 @@ namespace rocksdb {
 
 const std::string kNullptrString = "nullptr";
 
-std::vector<std::string> StringSplit(const std::string& arg, char delim) {
-  std::vector<std::string> splits;
-  std::stringstream ss(arg);
-  std::string item;
-  while (std::getline(ss, item, delim)) {
-    splits.push_back(item);
-  }
-  return splits;
-}
 
-// for micros < 10ms, print "XX us".
-// for micros < 10sec, print "XX ms".
-// for micros >= 10 sec, print "XX sec".
-// for micros <= 1 hour, print Y:X M:S".
-// for micros > 1 hour, print Z:Y:X H:M:S".
-int AppendHumanMicros(uint64_t micros, char* output, int len,
-                      bool fixed_format) {
-  if (micros < 10000 && !fixed_format) {
-    return snprintf(output, len, "%" PRIu64 " us", micros);
-  } else if (micros < 10000000 && !fixed_format) {
-    return snprintf(output, len, "%.3lf ms",
-                    static_cast<double>(micros) / 1000);
-  } else if (micros < 1000000l * 60 && !fixed_format) {
-    return snprintf(output, len, "%.3lf sec",
-                    static_cast<double>(micros) / 1000000);
-  } else if (micros < 1000000ll * 60 * 60 && !fixed_format) {
-    return snprintf(output, len, "%02" PRIu64 ":%05.3f M:S",
-                    micros / 1000000 / 60,
-                    static_cast<double>(micros % 60000000) / 1000000);
-  } else {
-    return snprintf(output, len, "%02" PRIu64 ":%02" PRIu64 ":%05.3f H:M:S",
-                    micros / 1000000 / 3600, (micros / 1000000 / 60) % 60,
-                    static_cast<double>(micros % 60000000) / 1000000);
-  }
-}
+
 
 // for sizes >=10TB, print "XXTB"
 // for sizes >=10GB, print "XXGB"
@@ -81,11 +48,7 @@ int AppendHumanBytes(uint64_t bytes, char* output, int len) {
   }
 }
 
-void AppendNumberTo(std::string* str, uint64_t num) {
-  char buf[30];
-  snprintf(buf, sizeof(buf), "%" PRIu64, num);
-  str->append(buf);
-}
+
 
 void AppendEscapedStringTo(std::string* str, const Slice& value) {
   for (size_t i = 0; i < value.size(); i++) {
@@ -101,55 +64,12 @@ void AppendEscapedStringTo(std::string* str, const Slice& value) {
   }
 }
 
-std::string NumberToString(uint64_t num) {
-  std::string r;
-  AppendNumberTo(&r, num);
-  return r;
-}
 
-std::string NumberToHumanString(int64_t num) {
-  char buf[19];
-  int64_t absnum = num < 0 ? -num : num;
-  if (absnum < 10000) {
-    snprintf(buf, sizeof(buf), "%" PRIi64, num);
-  } else if (absnum < 10000000) {
-    snprintf(buf, sizeof(buf), "%" PRIi64 "K", num / 1000);
-  } else if (absnum < 10000000000LL) {
-    snprintf(buf, sizeof(buf), "%" PRIi64 "M", num / 1000000);
-  } else {
-    snprintf(buf, sizeof(buf), "%" PRIi64 "G", num / 1000000000);
-  }
-  return std::string(buf);
-}
 
-std::string BytesToHumanString(uint64_t bytes) {
-  const char* size_name[] = {"KB", "MB", "GB", "TB"};
-  double final_size = static_cast<double>(bytes);
-  size_t size_idx;
 
-  // always start with KB
-  final_size /= 1024;
-  size_idx = 0;
 
-  while (size_idx < 3 && final_size >= 1024) {
-    final_size /= 1024;
-    size_idx++;
-  }
 
-  char buf[20];
-  snprintf(buf, sizeof(buf), "%.2f %s", final_size, size_name[size_idx]);
-  return std::string(buf);
-}
 
-std::string TimeToHumanString(int unixtime) {
-  char time_buffer[80];
-  time_t rawtime = unixtime;
-  struct tm tInfo;
-  struct tm* timeinfo = localtime_r(&rawtime, &tInfo);
-  assert(timeinfo == &tInfo);
-  strftime(time_buffer, 80, "%c", timeinfo);
-  return std::string(time_buffer);
-}
 
 std::string EscapeString(const Slice& value) {
   std::string r;

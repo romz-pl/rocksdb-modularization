@@ -16,6 +16,8 @@
 #include "util/coding.h"
 #include "util/string_util.h"
 
+#include <rock/string/AppendNumberTo.h>
+
 namespace rocksdb {
 
 // Mask for an identified tag from the future which can be safely ignored.

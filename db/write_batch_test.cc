@@ -21,6 +21,8 @@
 #include "test_util/testharness.h"
 #include "util/string_util.h"
 
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 static std::string PrintContents(WriteBatch* b) {

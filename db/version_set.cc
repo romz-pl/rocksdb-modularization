@@ -52,6 +52,8 @@
 #include "util/string_util.h"
 #include "util/user_comparator_wrapper.h"
 
+#include <rock/string/AppendNumberTo.h>
+
 namespace rocksdb {
 
 namespace {

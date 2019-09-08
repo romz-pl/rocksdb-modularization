@@ -22,6 +22,10 @@
 #include "table/block_based/block_based_table_factory.h"
 #include "util/string_util.h"
 
+#include <rock/string/BytesToHumanString.h>
+#include <rock/string/NumberToHumanString.h>
+#include <rock/string/AppendHumanMicros.h>
+
 namespace rocksdb {
 
 #ifndef ROCKSDB_LITE

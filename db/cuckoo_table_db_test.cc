@@ -15,6 +15,8 @@
 #include "test_util/testutil.h"
 #include "util/string_util.h"
 
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 class CuckooTableDBTest : public testing::Test {

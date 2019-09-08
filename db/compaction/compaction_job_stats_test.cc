@@ -59,6 +59,8 @@
 #include "util/string_util.h"
 #include "utilities/merge_operators.h"
 
+#include <rock/string/NumberToString.h>
+
 #if !defined(IOS_CROSS_COMPILE)
 #ifndef ROCKSDB_LITE
 namespace rocksdb {

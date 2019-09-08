@@ -15,6 +15,8 @@
 #include "tools/ldb_cmd_impl.h"
 #include "util/string_util.h"
 
+#include <rock/string/NumberToString.h>
+
 namespace rocksdb {
 
 class ReduceLevelTest : public testing::Test {
