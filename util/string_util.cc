@@ -21,34 +21,10 @@
 #include "rocksdb/slice.h"
 
 #include <rock/string/ToString.h>
+#include <rock/string/ParseInt64.h>
+
 
 namespace rocksdb {
-
-const std::string kNullptrString = "nullptr";
-
-
-
-
-// for sizes >=10TB, print "XXTB"
-// for sizes >=10GB, print "XXGB"
-// etc.
-// append file size summary to output and return the len
-int AppendHumanBytes(uint64_t bytes, char* output, int len) {
-  const uint64_t ull10 = 10;
-  if (bytes >= ull10 << 40) {
-    return snprintf(output, len, "%" PRIu64 "TB", bytes >> 40);
-  } else if (bytes >= ull10 << 30) {
-    return snprintf(output, len, "%" PRIu64 "GB", bytes >> 30);
-  } else if (bytes >= ull10 << 20) {
-    return snprintf(output, len, "%" PRIu64 "MB", bytes >> 20);
-  } else if (bytes >= ull10 << 10) {
-    return snprintf(output, len, "%" PRIu64 "KB", bytes >> 10);
-  } else {
-    return snprintf(output, len, "%" PRIu64 "B", bytes);
-  }
-}
-
-
 
 void AppendEscapedStringTo(std::string* str, const Slice& value) {
   for (size_t i = 0; i < value.size(); i++) {
@@ -63,13 +39,6 @@ void AppendEscapedStringTo(std::string* str, const Slice& value) {
     }
   }
 }
-
-
-
-
-
-
-
 
 std::string EscapeString(const Slice& value) {
   std::string r;
@@ -101,109 +70,9 @@ bool ConsumeDecimalNumber(Slice* in, uint64_t* val) {
   return (digits > 0);
 }
 
-bool isSpecialChar(const char c) {
-  if (c == '\\' || c == '#' || c == ':' || c == '\r' || c == '\n') {
-    return true;
-  }
-  return false;
-}
-
-namespace {
-using CharMap = std::pair<char, char>;
-}
-
-char UnescapeChar(const char c) {
-  static const CharMap convert_map[] = {{'r', '\r'}, {'n', '\n'}};
-
-  auto iter = std::find_if(std::begin(convert_map), std::end(convert_map),
-                           [c](const CharMap& p) { return p.first == c; });
-
-  if (iter == std::end(convert_map)) {
-    return c;
-  }
-  return iter->second;
-}
-
-char EscapeChar(const char c) {
-  static const CharMap convert_map[] = {{'\n', 'n'}, {'\r', 'r'}};
-
-  auto iter = std::find_if(std::begin(convert_map), std::end(convert_map),
-                           [c](const CharMap& p) { return p.first == c; });
-
-  if (iter == std::end(convert_map)) {
-    return c;
-  }
-  return iter->second;
-}
-
-std::string EscapeOptionString(const std::string& raw_string) {
-  std::string output;
-  for (auto c : raw_string) {
-    if (isSpecialChar(c)) {
-      output += '\\';
-      output += EscapeChar(c);
-    } else {
-      output += c;
-    }
-  }
-
-  return output;
-}
-
-std::string UnescapeOptionString(const std::string& escaped_string) {
-  bool escaped = false;
-  std::string output;
-
-  for (auto c : escaped_string) {
-    if (escaped) {
-      output += UnescapeChar(c);
-      escaped = false;
-    } else {
-      if (c == '\\') {
-        escaped = true;
-        continue;
-      }
-      output += c;
-    }
-  }
-  return output;
-}
-
-std::string trim(const std::string& str) {
-  if (str.empty()) return std::string();
-  size_t start = 0;
-  size_t end = str.size() - 1;
-  while (isspace(str[start]) != 0 && start < end) {
-    ++start;
-  }
-  while (isspace(str[end]) != 0 && start < end) {
-    --end;
-  }
-  if (start <= end) {
-    return str.substr(start, end - start + 1);
-  }
-  return std::string();
-}
 
 #ifndef ROCKSDB_LITE
 
-bool ParseBoolean(const std::string& type, const std::string& value) {
-  if (value == "true" || value == "1") {
-    return true;
-  } else if (value == "false" || value == "0") {
-    return false;
-  }
-  throw std::invalid_argument(type);
-}
-
-uint32_t ParseUint32(const std::string& value) {
-  uint64_t num = ParseUint64(value);
-  if ((num >> 32LL) == 0) {
-    return static_cast<uint32_t>(num);
-  } else {
-    throw std::out_of_range(value);
-  }
-}
 
 int32_t ParseInt32(const std::string& value) {
   int64_t num = ParseInt64(value);
@@ -215,117 +84,5 @@ int32_t ParseInt32(const std::string& value) {
 }
 
 #endif
-
-uint64_t ParseUint64(const std::string& value) {
-  size_t endchar;
-#ifndef CYGWIN
-  uint64_t num = std::stoull(value.c_str(), &endchar);
-#else
-  char* endptr;
-  uint64_t num = std::strtoul(value.c_str(), &endptr, 0);
-  endchar = endptr - value.c_str();
-#endif
-
-  if (endchar < value.length()) {
-    char c = value[endchar];
-    if (c == 'k' || c == 'K')
-      num <<= 10LL;
-    else if (c == 'm' || c == 'M')
-      num <<= 20LL;
-    else if (c == 'g' || c == 'G')
-      num <<= 30LL;
-    else if (c == 't' || c == 'T')
-      num <<= 40LL;
-  }
-
-  return num;
-}
-
-int64_t ParseInt64(const std::string& value) {
-  size_t endchar;
-#ifndef CYGWIN
-  int64_t num = std::stoll(value.c_str(), &endchar);
-#else
-  char* endptr;
-  int64_t num = std::strtoll(value.c_str(), &endptr, 0);
-  endchar = endptr - value.c_str();
-#endif
-
-  if (endchar < value.length()) {
-    char c = value[endchar];
-    if (c == 'k' || c == 'K')
-      num <<= 10LL;
-    else if (c == 'm' || c == 'M')
-      num <<= 20LL;
-    else if (c == 'g' || c == 'G')
-      num <<= 30LL;
-    else if (c == 't' || c == 'T')
-      num <<= 40LL;
-  }
-
-  return num;
-}
-
-int ParseInt(const std::string& value) {
-  size_t endchar;
-#ifndef CYGWIN
-  int num = std::stoi(value.c_str(), &endchar);
-#else
-  char* endptr;
-  int num = std::strtoul(value.c_str(), &endptr, 0);
-  endchar = endptr - value.c_str();
-#endif
-
-  if (endchar < value.length()) {
-    char c = value[endchar];
-    if (c == 'k' || c == 'K')
-      num <<= 10;
-    else if (c == 'm' || c == 'M')
-      num <<= 20;
-    else if (c == 'g' || c == 'G')
-      num <<= 30;
-  }
-
-  return num;
-}
-
-double ParseDouble(const std::string& value) {
-#ifndef CYGWIN
-  return std::stod(value);
-#else
-  return std::strtod(value.c_str(), 0);
-#endif
-}
-
-size_t ParseSizeT(const std::string& value) {
-  return static_cast<size_t>(ParseUint64(value));
-}
-
-std::vector<int> ParseVectorInt(const std::string& value) {
-  std::vector<int> result;
-  size_t start = 0;
-  while (start < value.size()) {
-    size_t end = value.find(':', start);
-    if (end == std::string::npos) {
-      result.push_back(ParseInt(value.substr(start)));
-      break;
-    } else {
-      result.push_back(ParseInt(value.substr(start, end - start)));
-      start = end + 1;
-    }
-  }
-  return result;
-}
-
-bool SerializeIntVector(const std::vector<int>& vec, std::string* value) {
-  *value = "";
-  for (size_t i = 0; i < vec.size(); ++i) {
-    if (i > 0) {
-      *value += ":";
-    }
-    *value += ToString(vec[i]);
-  }
-  return true;
-}
 
 }  // namespace rocksdb

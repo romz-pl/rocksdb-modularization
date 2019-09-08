@@ -17,6 +17,8 @@
 #include "logging/log_buffer.h"
 #include "util/string_util.h"
 
+#include <rock/string/AppendHumanBytes.h>
+
 namespace rocksdb {
 namespace {
 uint64_t GetTotalFilesSize(const std::vector<FileMetaData*>& files) {

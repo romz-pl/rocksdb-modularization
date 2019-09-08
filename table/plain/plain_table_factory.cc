@@ -17,6 +17,8 @@
 #include "util/string_util.h"
 
 #include <rock/string/StringSplit.h>
+#include <rock/string/ParseSizeT.h>
+#include <rock/string/UnescapeOptionString.h>
 
 namespace rocksdb {
 

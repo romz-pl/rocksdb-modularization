@@ -40,6 +40,7 @@
 #include <vector>
 
 #include <rock/string/ToString.h>
+#include <rock/string/AppendHumanBytes.h>
 
 namespace rocksdb {
 

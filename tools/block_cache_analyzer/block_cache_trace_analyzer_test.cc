@@ -26,6 +26,10 @@ int main() {
 #include "tools/block_cache_analyzer/block_cache_trace_analyzer.h"
 #include "trace_replay/block_cache_tracer.h"
 
+#include <rock/string/ParseDouble.h>
+#include <rock/string/ParseInt.h>
+#include <rock/string/ParseUint32.h>
+
 namespace rocksdb {
 
 namespace {

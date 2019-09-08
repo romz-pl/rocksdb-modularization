@@ -21,6 +21,9 @@
 #include "util/gflags_compat.h"
 #include "util/string_util.h"
 
+#include <rock/string/ParseUint32.h>
+#include <rock/string/ParseUint64.h>
+
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 
 DEFINE_string(block_cache_trace_path, "", "The trace file path.");

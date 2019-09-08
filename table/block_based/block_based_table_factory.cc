@@ -25,6 +25,12 @@
 #include "util/mutexlock.h"
 #include "util/string_util.h"
 
+#include <rock/string/UnescapeOptionString.h>
+#include <rock/string/ParseSizeT.h>
+#include <rock/string/trim.h>
+#include <rock/string/ParseInt.h>
+#include <rock/string/ParseBoolean.h>
+
 namespace rocksdb {
 
 void TailPrefetchStats::RecordEffectiveSize(size_t len) {

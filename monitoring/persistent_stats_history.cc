@@ -15,6 +15,8 @@
 #include "port/likely.h"
 #include "util/string_util.h"
 
+#include <rock/string/ParseUint64.h>
+
 namespace rocksdb {
 // 10 digit seconds timestamp => [Sep 9, 2001 ~ Nov 20, 2286]
 const int kNowSecondsStringLength = 10;

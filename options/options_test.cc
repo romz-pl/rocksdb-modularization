@@ -30,6 +30,17 @@
 #include "util/string_util.h"
 #include "utilities/merge_operators/bytesxor.h"
 
+#include <rock/string/UnescapeChar.h>
+#include <rock/string/isSpecialChar.h>
+#include <rock/string/ParseUint64.h>
+#include <rock/string/ParseUint32.h>
+#include <rock/string/ParseSizeT.h>
+#include <rock/string/ParseInt64.h>
+#include <rock/string/ParseDouble.h>
+#include <rock/string/UnescapeOptionString.h>
+#include <rock/string/EscapeOptionString.h>
+#include <rock/string/ParseInt.h>
+
 #ifndef GFLAGS
 bool FLAGS_enable_print = false;
 #else

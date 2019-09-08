@@ -23,6 +23,18 @@
 
 #include "port/port.h"
 
+#include <rock/string/EscapeOptionString.h>
+#include <rock/string/UnescapeOptionString.h>
+#include <rock/string/kNullptrString.h>
+#include <rock/string/ParseUint64.h>
+#include <rock/string/trim.h>
+#include <rock/string/ParseInt.h>
+#include <rock/string/ParseInt64.h>
+#include <rock/string/ParseVectorInt.h>
+#include <rock/string/ParseUint32.h>
+#include <rock/string/ParseUint64.h>
+#include <rock/string/SerializeIntVector.h>
+
 namespace rocksdb {
 
 static const std::string option_file_header =

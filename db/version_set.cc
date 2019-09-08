@@ -53,6 +53,7 @@
 #include "util/user_comparator_wrapper.h"
 
 #include <rock/string/AppendNumberTo.h>
+#include <rock/string/AppendHumanBytes.h>
 
 namespace rocksdb {
 
