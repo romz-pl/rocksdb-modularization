@@ -46,6 +46,8 @@
 #include <unordered_set>
 #include <map>
 
+#include <rock/slice/SliceParts.h>
+
 using rocksdb::BytewiseComparator;
 using rocksdb::Cache;
 using rocksdb::ColumnFamilyDescriptor;

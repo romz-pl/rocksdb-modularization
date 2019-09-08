@@ -13,7 +13,6 @@
 #include <string.h>
 #endif
 #include <cstring>
-#include "port/port.h"
 
 namespace rocksdb {
 

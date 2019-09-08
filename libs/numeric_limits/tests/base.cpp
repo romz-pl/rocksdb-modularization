@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
-// #include <innodb/numeric_limits/numeric_limits.h>
+
+#include <rock/numeric_limits/numeric_limits.h>
 
 
 //

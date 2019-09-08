@@ -21,6 +21,8 @@
 #include "rocksdb/write_batch.h"
 #include "port/port.h"
 
+#include <rock/slice/SliceParts.h>
+
 // Some processors does not allow unaligned access to memory
 #if defined(__sparc)
   #define PLATFORM_UNALIGNED_ACCESS_NOT_ALLOWED

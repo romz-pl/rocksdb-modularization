@@ -28,6 +28,8 @@ add_library( ${LIB_NAME} STATIC
     isSpecialChar.cpp
     kNullptrString.cpp
     trim.cpp
+    toHex.cpp
+    fromHex.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )

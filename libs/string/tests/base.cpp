@@ -1,12 +1,10 @@
 #include <gtest/gtest.h>
-// #include <innodb/string/string.h>
 
+#include <rock/string/EscapeChar.h>
 
 //
 //
-TEST( string, constructor )
+TEST( string, EscapeChar )
 {
-
+    EXPECT_NO_THROW( rocksdb::EscapeChar('a') );
 }
-
-
