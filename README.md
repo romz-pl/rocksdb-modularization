@@ -1,2 +1,2 @@
-# rocksdb-modularization
-Modularized version of rocksdb database
+# Modularized version of rocksdb database
+
