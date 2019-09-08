@@ -26,6 +26,8 @@
 #include "util/coding.h"
 #include "util/user_comparator_wrapper.h"
 
+#include <rock/numeric_limits/numeric_limits.h>
+
 namespace rocksdb {
 
 // The file declares data structures and functions that deal with internal

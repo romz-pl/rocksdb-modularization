@@ -16,6 +16,8 @@
 #include "port/port.h"
 #include "util/autovector.h"
 
+#include <rock/numeric_limits/numeric_limits.h>
+
 namespace rocksdb {
 
 class Comparator;

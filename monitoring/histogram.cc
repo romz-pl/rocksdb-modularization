@@ -17,6 +17,8 @@
 #include "port/port.h"
 #include "util/cast_util.h"
 
+#include <rock/numeric_limits/numeric_limits.h>
+
 namespace rocksdb {
 
 HistogramBucketMapper::HistogramBucketMapper() {

@@ -18,6 +18,8 @@
 #include "rocksdb/status.h"
 #include "rocksdb/utilities/write_batch_with_index.h"
 
+#include <rock/numeric_limits/numeric_limits.h>
+
 namespace rocksdb {
 
 class MergeContext;

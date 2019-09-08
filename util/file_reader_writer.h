@@ -18,6 +18,8 @@
 #include "test_util/sync_point.h"
 #include "util/aligned_buffer.h"
 
+#include <rock/numeric_limits/numeric_limits.h>
+
 namespace rocksdb {
 
 class Statistics;

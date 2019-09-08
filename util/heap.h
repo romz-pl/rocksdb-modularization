@@ -11,6 +11,8 @@
 #include "port/port.h"
 #include "util/autovector.h"
 
+#include <rock/numeric_limits/numeric_limits.h>
+
 namespace rocksdb {
 
 // Binary heap implementation optimized for use in multi-way merge sort.

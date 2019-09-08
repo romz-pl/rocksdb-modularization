@@ -62,6 +62,8 @@
 #include "util/stop_watch.h"
 #include "util/thread_local.h"
 
+#include <rock/numeric_limits/numeric_limits.h>
+
 namespace rocksdb {
 
 class Arena;

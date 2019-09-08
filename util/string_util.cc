@@ -22,7 +22,7 @@
 
 #include <rock/string/ToString.h>
 #include <rock/string/ParseInt64.h>
-
+#include <rock/numeric_limits/numeric_limits.h>
 
 namespace rocksdb {
 
