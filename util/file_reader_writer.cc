@@ -93,7 +93,7 @@ Status RandomAccessFileReader::Read(uint64_t offset, size_t n, Slice* result,
         if (for_compaction && rate_limiter_ != nullptr) {
           allowed = rate_limiter_->RequestToken(
               buf.Capacity() - buf.CurrentSize(), buf.Alignment(),
-              Env::IOPriority::IO_LOW, stats_, RateLimiter::OpType::kRead);
+              IOPriority::IO_LOW, stats_, RateLimiter::OpType::kRead);
         } else {
           assert(buf.CurrentSize() == 0);
           allowed = read_size;
@@ -139,7 +139,7 @@ Status RandomAccessFileReader::Read(uint64_t offset, size_t n, Slice* result,
             sw.DelayStart();
           }
           allowed = rate_limiter_->RequestToken(n - pos, 0 /* alignment */,
-                                                Env::IOPriority::IO_LOW, stats_,
+                                                IOPriority::IO_LOW, stats_,
                                                 RateLimiter::OpType::kRead);
           if (rate_limiter_->IsRateLimited(RateLimiter::OpType::kRead)) {
             sw.DelayStop();

@@ -36,7 +36,7 @@ class GenericRateLimiter : public RateLimiter {
   // the call is blocked. Caller is responsible to make sure
   // bytes <= GetSingleBurstBytes()
   using RateLimiter::Request;
-  virtual void Request(const int64_t bytes, const Env::IOPriority pri,
+  virtual void Request(const int64_t bytes, const IOPriority pri,
                        Statistics* stats) override;
 
   virtual int64_t GetSingleBurstBytes() const override {
@@ -44,20 +44,20 @@ class GenericRateLimiter : public RateLimiter {
   }
 
   virtual int64_t GetTotalBytesThrough(
-      const Env::IOPriority pri = Env::IO_TOTAL) const override {
+      const IOPriority pri = IO_TOTAL) const override {
     MutexLock g(&request_mutex_);
-    if (pri == Env::IO_TOTAL) {
-      return total_bytes_through_[Env::IO_LOW] +
-             total_bytes_through_[Env::IO_HIGH];
+    if (pri == IO_TOTAL) {
+      return total_bytes_through_[IO_LOW] +
+             total_bytes_through_[IO_HIGH];
     }
     return total_bytes_through_[pri];
   }
 
   virtual int64_t GetTotalRequests(
-      const Env::IOPriority pri = Env::IO_TOTAL) const override {
+      const IOPriority pri = IO_TOTAL) const override {
     MutexLock g(&request_mutex_);
-    if (pri == Env::IO_TOTAL) {
-      return total_requests_[Env::IO_LOW] + total_requests_[Env::IO_HIGH];
+    if (pri == IO_TOTAL) {
+      return total_requests_[IO_LOW] + total_requests_[IO_HIGH];
     }
     return total_requests_[pri];
   }
@@ -91,8 +91,8 @@ class GenericRateLimiter : public RateLimiter {
   port::CondVar exit_cv_;
   int32_t requests_to_wait_;
 
-  int64_t total_requests_[Env::IO_TOTAL];
-  int64_t total_bytes_through_[Env::IO_TOTAL];
+  int64_t total_requests_[IO_TOTAL];
+  int64_t total_bytes_through_[IO_TOTAL];
   int64_t available_bytes_;
   int64_t next_refill_us_;
 
@@ -101,7 +101,7 @@ class GenericRateLimiter : public RateLimiter {
 
   struct Req;
   Req* leader_;
-  std::deque<Req*> queue_[Env::IO_TOTAL];
+  std::deque<Req*> queue_[IO_TOTAL];
 
   bool auto_tuned_;
   int64_t num_drains_;

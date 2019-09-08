@@ -48,7 +48,7 @@
 #include "util/mutexlock.h"
 
 #include <rock/io_abstract/MemoryMappedFileBuffer.h>
-
+#include <rock/io_abstract/WritableFileWrapper.h>
 
 #ifdef OS_LINUX
 static const size_t kPageSize = sysconf(_SC_PAGESIZE);
@@ -1516,20 +1516,20 @@ TEST_P(EnvPosixTestWithParam, WritableFileWrapper) {
       return 0;
     }
 
-    void SetIOPriority(Env::IOPriority /*pri*/) override { inc(11); }
+    void SetIOPriority(IOPriority /*pri*/) override { inc(11); }
 
-    Env::IOPriority GetIOPriority() override {
+    IOPriority GetIOPriority() override {
       inc(12);
-      return Env::IOPriority::IO_LOW;
+      return IOPriority::IO_LOW;
     }
 
-    void SetWriteLifeTimeHint(Env::WriteLifeTimeHint /*hint*/) override {
+    void SetWriteLifeTimeHint(WriteLifeTimeHint /*hint*/) override {
       inc(13);
     }
 
-    Env::WriteLifeTimeHint GetWriteLifeTimeHint() override {
+    WriteLifeTimeHint GetWriteLifeTimeHint() override {
       inc(14);
-      return Env::WriteLifeTimeHint::WLTH_NOT_SET;
+      return WriteLifeTimeHint::WLTH_NOT_SET;
     }
 
     uint64_t GetFileSize() override {
@@ -1590,9 +1590,9 @@ TEST_P(EnvPosixTestWithParam, WritableFileWrapper) {
     w.IsSyncThreadSafe();
     w.use_direct_io();
     w.GetRequiredBufferAlignment();
-    w.SetIOPriority(Env::IOPriority::IO_HIGH);
+    w.SetIOPriority(IOPriority::IO_HIGH);
     w.GetIOPriority();
-    w.SetWriteLifeTimeHint(Env::WriteLifeTimeHint::WLTH_NOT_SET);
+    w.SetWriteLifeTimeHint(WriteLifeTimeHint::WLTH_NOT_SET);
     w.GetWriteLifeTimeHint();
     w.GetFileSize();
     w.SetPreallocationBlockSize(0);

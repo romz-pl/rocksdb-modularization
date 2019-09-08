@@ -18,6 +18,7 @@
 #include <rock/io_abstract/SequentialFile.h>
 #include <rock/io_abstract/RandomAccessFile.h>
 #include <rock/io_abstract/RandomRWFile.h>
+#include <rock/io_abstract/WritableFileWrapper.h>
 
 #endif
 

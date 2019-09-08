@@ -20,6 +20,7 @@
 #include <rock/io_abstract/RandomAccessFile.h>
 #include <rock/io_abstract/RandomRWFile.h>
 #include <rock/io_abstract/Directory.h>
+#include <rock/io_abstract/WritableFile.h>
 
 namespace rocksdb {
 
@@ -290,7 +291,7 @@ class MockWritableFile : public WritableFile {
 
  private:
   inline size_t RequestToken(size_t bytes) {
-    if (rate_limiter_ && io_priority_ < Env::IO_TOTAL) {
+    if (rate_limiter_ && io_priority_ < IO_TOTAL) {
       bytes = std::min(
           bytes, static_cast<size_t>(rate_limiter_->GetSingleBurstBytes()));
       rate_limiter_->Request(bytes, io_priority_);

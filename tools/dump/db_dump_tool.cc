@@ -14,6 +14,7 @@
 #include "util/coding.h"
 
 #include <rock/io_abstract/SequentialFile.h>
+#include <rock/io_abstract/WritableFile.h>
 
 namespace rocksdb {
 

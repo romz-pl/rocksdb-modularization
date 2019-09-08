@@ -13,6 +13,7 @@
 #include "test_util/testharness.h"
 
 #include <rock/io_abstract/RandomAccessFile.h>
+#include <rock/io_abstract/WritableFile.h>
 
 namespace rocksdb {
 

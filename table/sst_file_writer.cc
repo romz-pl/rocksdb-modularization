@@ -27,7 +27,7 @@ const size_t kFadviseTrigger = 1024 * 1024; // 1MB
 
 struct SstFileWriter::Rep {
   Rep(const EnvOptions& _env_options, const Options& options,
-      Env::IOPriority _io_priority, const Comparator* _user_comparator,
+      IOPriority _io_priority, const Comparator* _user_comparator,
       ColumnFamilyHandle* _cfh, bool _invalidate_page_cache, bool _skip_filters)
       : env_options(_env_options),
         ioptions(options),
@@ -44,7 +44,7 @@ struct SstFileWriter::Rep {
   EnvOptions env_options;
   ImmutableCFOptions ioptions;
   MutableCFOptions mutable_cf_options;
-  Env::IOPriority io_priority;
+  IOPriority io_priority;
   InternalKeyComparator internal_comparator;
   ExternalSstFileInfo file_info;
   InternalKey ikey;
@@ -161,7 +161,7 @@ SstFileWriter::SstFileWriter(const EnvOptions& env_options,
                              const Comparator* user_comparator,
                              ColumnFamilyHandle* column_family,
                              bool invalidate_page_cache,
-                             Env::IOPriority io_priority, bool skip_filters)
+                             IOPriority io_priority, bool skip_filters)
     : rep_(new Rep(env_options, options, io_priority, user_comparator,
                    column_family, invalidate_page_cache, skip_filters)) {
   rep_->file_info.file_size = 0;

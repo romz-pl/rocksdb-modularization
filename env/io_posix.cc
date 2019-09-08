@@ -834,7 +834,7 @@ Status PosixMmapFile::Allocate(uint64_t offset, uint64_t len) {
  */
 PosixWritableFile::PosixWritableFile(const std::string& fname, int fd,
                                      const EnvOptions& options)
-    : WritableFile(options),
+    : WritableFile(options.strict_bytes_per_sync),
       filename_(fname),
       use_direct_io_(options.use_direct_writes),
       fd_(fd),
@@ -976,7 +976,7 @@ bool PosixWritableFile::IsSyncThreadSafe() const { return true; }
 
 uint64_t PosixWritableFile::GetFileSize() { return filesize_; }
 
-void PosixWritableFile::SetWriteLifeTimeHint(Env::WriteLifeTimeHint hint) {
+void PosixWritableFile::SetWriteLifeTimeHint(WriteLifeTimeHint hint) {
 #ifdef OS_LINUX
 // Suppress Valgrind "Unimplemented functionality" error.
 #ifndef ROCKSDB_VALGRIND_RUN

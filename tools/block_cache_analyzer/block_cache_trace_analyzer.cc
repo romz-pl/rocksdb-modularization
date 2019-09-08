@@ -23,6 +23,7 @@
 
 #include <rock/string/ParseUint32.h>
 #include <rock/string/ParseUint64.h>
+#include <rock/io_abstract/WritableFile.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 

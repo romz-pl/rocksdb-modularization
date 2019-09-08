@@ -1446,7 +1446,7 @@ Status DBImpl::ThrottleLowPriWritesIfNeeded(const WriteOptions& write_options,
       // progress.
       PERF_TIMER_GUARD(write_delay_time);
       write_controller_.low_pri_rate_limiter()->Request(
-          my_batch->GetDataSize(), Env::IO_HIGH, nullptr /* stats */,
+          my_batch->GetDataSize(), IO_HIGH, nullptr /* stats */,
           RateLimiter::OpType::kWrite);
     }
   }

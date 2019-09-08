@@ -38,21 +38,21 @@ class RateLimiter {
   virtual void SetBytesPerSecond(int64_t bytes_per_second) = 0;
 
   // Deprecated. New RateLimiter derived classes should override
-  // Request(const int64_t, const Env::IOPriority, Statistics*) or
-  // Request(const int64_t, const Env::IOPriority, Statistics*, OpType)
+  // Request(const int64_t, const IOPriority, Statistics*) or
+  // Request(const int64_t, const IOPriority, Statistics*, OpType)
   // instead.
   //
   // Request for token for bytes. If this request can not be satisfied, the call
   // is blocked. Caller is responsible to make sure
   // bytes <= GetSingleBurstBytes()
-  virtual void Request(const int64_t /*bytes*/, const Env::IOPriority /*pri*/) {
+  virtual void Request(const int64_t /*bytes*/, const IOPriority /*pri*/) {
     assert(false);
   }
 
   // Request for token for bytes and potentially update statistics. If this
   // request can not be satisfied, the call is blocked. Caller is responsible to
   // make sure bytes <= GetSingleBurstBytes().
-  virtual void Request(const int64_t bytes, const Env::IOPriority pri,
+  virtual void Request(const int64_t bytes, const IOPriority pri,
                        Statistics* /* stats */) {
     // For API compatibility, default implementation calls the older API in
     // which statistics are unsupported.
@@ -63,7 +63,7 @@ class RateLimiter {
   //
   // If this request can not be satisfied, the call is blocked. Caller is
   // responsible to make sure bytes <= GetSingleBurstBytes().
-  virtual void Request(const int64_t bytes, const Env::IOPriority pri,
+  virtual void Request(const int64_t bytes, const IOPriority pri,
                        Statistics* stats, OpType op_type) {
     if (IsRateLimited(op_type)) {
       Request(bytes, pri, stats);
@@ -75,7 +75,7 @@ class RateLimiter {
   // direct I/O) to allocate an appropriate number of bytes, which may be less
   // than the number of bytes requested.
   virtual size_t RequestToken(size_t bytes, size_t alignment,
-                              Env::IOPriority io_priority, Statistics* stats,
+                              IOPriority io_priority, Statistics* stats,
                               RateLimiter::OpType op_type);
 
   // Max bytes can be granted in a single burst
@@ -83,11 +83,11 @@ class RateLimiter {
 
   // Total bytes that go through rate limiter
   virtual int64_t GetTotalBytesThrough(
-      const Env::IOPriority pri = Env::IO_TOTAL) const = 0;
+      const IOPriority pri = IO_TOTAL) const = 0;
 
   // Total # of requests that go through rate limiter
   virtual int64_t GetTotalRequests(
-      const Env::IOPriority pri = Env::IO_TOTAL) const = 0;
+      const IOPriority pri = IO_TOTAL) const = 0;
 
   virtual int64_t GetBytesPerSecond() const = 0;
 

@@ -41,20 +41,20 @@ TEST_F(RateLimiterTest, Modes) {
     GenericRateLimiter limiter(
         2000 /* rate_bytes_per_sec */, 1000 * 1000 /* refill_period_us */,
         10 /* fairness */, mode, Env::Default(), false /* auto_tuned */);
-    limiter.Request(1000 /* bytes */, Env::IO_HIGH, nullptr /* stats */,
+    limiter.Request(1000 /* bytes */, IO_HIGH, nullptr /* stats */,
                     RateLimiter::OpType::kRead);
     if (mode == RateLimiter::Mode::kWritesOnly) {
-      ASSERT_EQ(0, limiter.GetTotalBytesThrough(Env::IO_HIGH));
+      ASSERT_EQ(0, limiter.GetTotalBytesThrough(IO_HIGH));
     } else {
-      ASSERT_EQ(1000, limiter.GetTotalBytesThrough(Env::IO_HIGH));
+      ASSERT_EQ(1000, limiter.GetTotalBytesThrough(IO_HIGH));
     }
 
-    limiter.Request(1000 /* bytes */, Env::IO_HIGH, nullptr /* stats */,
+    limiter.Request(1000 /* bytes */, IO_HIGH, nullptr /* stats */,
                     RateLimiter::OpType::kWrite);
     if (mode == RateLimiter::Mode::kAllIo) {
-      ASSERT_EQ(2000, limiter.GetTotalBytesThrough(Env::IO_HIGH));
+      ASSERT_EQ(2000, limiter.GetTotalBytesThrough(IO_HIGH));
     } else {
-      ASSERT_EQ(1000, limiter.GetTotalBytesThrough(Env::IO_HIGH));
+      ASSERT_EQ(1000, limiter.GetTotalBytesThrough(IO_HIGH));
     }
   }
 }
@@ -82,10 +82,10 @@ TEST_F(RateLimiterTest, Rate) {
     while (thread_env->NowMicros() < until) {
       for (int i = 0; i < static_cast<int>(r.Skewed(arg->burst) + 1); ++i) {
         arg->limiter->Request(r.Uniform(arg->request_size - 1) + 1,
-                              Env::IO_HIGH, nullptr /* stats */,
+                              IO_HIGH, nullptr /* stats */,
                               RateLimiter::OpType::kWrite);
       }
-      arg->limiter->Request(r.Uniform(arg->request_size - 1) + 1, Env::IO_LOW,
+      arg->limiter->Request(r.Uniform(arg->request_size - 1) + 1, IO_LOW,
                             nullptr /* stats */, RateLimiter::OpType::kWrite);
     }
   };
@@ -130,11 +130,11 @@ TEST_F(RateLimiterTest, LimitChangeTest) {
   auto* env = Env::Default();
   rocksdb::SyncPoint::GetInstance()->EnableProcessing();
   struct Arg {
-    Arg(int32_t _request_size, Env::IOPriority _pri,
+    Arg(int32_t _request_size, IOPriority _pri,
         std::shared_ptr<RateLimiter> _limiter)
         : request_size(_request_size), pri(_pri), limiter(_limiter) {}
     int32_t request_size;
-    Env::IOPriority pri;
+    IOPriority pri;
     std::shared_ptr<RateLimiter> limiter;
   };
 
@@ -157,7 +157,7 @@ TEST_F(RateLimiterTest, LimitChangeTest) {
             "RateLimiterTest::LimitChangeTest:changeLimitStart"},
            {"RateLimiterTest::LimitChangeTest:changeLimitEnd",
             "GenericRateLimiter::Refill"}});
-      Arg arg(target, Env::IO_HIGH, limiter);
+      Arg arg(target, IO_HIGH, limiter);
       // The idea behind is to start a request first, then before it refills,
       // update limit to a different value (2X/0.5X). No starvation should
       // be guaranteed under any situation
@@ -204,11 +204,11 @@ TEST_F(RateLimiterTest, AutoTuneIncreaseWhenFull) {
   // verify rate limit increases after a sequence of periods where rate limiter
   // is always drained
   int64_t orig_bytes_per_sec = rate_limiter->GetSingleBurstBytes();
-  rate_limiter->Request(orig_bytes_per_sec, Env::IO_HIGH, stats.get(),
+  rate_limiter->Request(orig_bytes_per_sec, IO_HIGH, stats.get(),
                         RateLimiter::OpType::kWrite);
   while (std::chrono::microseconds(special_env.NowMicros()) <=
          kRefillsPerTune * kTimePerRefill) {
-    rate_limiter->Request(orig_bytes_per_sec, Env::IO_HIGH, stats.get(),
+    rate_limiter->Request(orig_bytes_per_sec, IO_HIGH, stats.get(),
                           RateLimiter::OpType::kWrite);
   }
   int64_t new_bytes_per_sec = rate_limiter->GetSingleBurstBytes();
@@ -221,7 +221,7 @@ TEST_F(RateLimiterTest, AutoTuneIncreaseWhenFull) {
   special_env.SleepForMicroseconds(static_cast<int>(
       kRefillsPerTune * std::chrono::microseconds(kTimePerRefill).count()));
   // make a request so tuner can be triggered
-  rate_limiter->Request(1 /* bytes */, Env::IO_HIGH, stats.get(),
+  rate_limiter->Request(1 /* bytes */, IO_HIGH, stats.get(),
                         RateLimiter::OpType::kWrite);
   new_bytes_per_sec = rate_limiter->GetSingleBurstBytes();
   ASSERT_LT(new_bytes_per_sec, orig_bytes_per_sec);

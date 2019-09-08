@@ -187,7 +187,7 @@ class CompactionJob {
   std::vector<Slice> boundaries_;
   // Stores the approx size of keys covered in the range of each subcompaction
   std::vector<uint64_t> sizes_;
-  Env::WriteLifeTimeHint write_hint_;
+  WriteLifeTimeHint write_hint_;
   Env::Priority thread_pri_;
 };
 

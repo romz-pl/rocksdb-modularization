@@ -19,9 +19,9 @@
 namespace rocksdb {
 
 size_t RateLimiter::RequestToken(size_t bytes, size_t alignment,
-                                 Env::IOPriority io_priority, Statistics* stats,
+                                 IOPriority io_priority, Statistics* stats,
                                  RateLimiter::OpType op_type) {
-  if (io_priority < Env::IO_TOTAL && IsRateLimited(op_type)) {
+  if (io_priority < IO_TOTAL && IsRateLimited(op_type)) {
     bytes = std::min(bytes, static_cast<size_t>(GetSingleBurstBytes()));
 
     if (alignment > 0) {
@@ -78,12 +78,12 @@ GenericRateLimiter::GenericRateLimiter(int64_t rate_bytes_per_sec,
 GenericRateLimiter::~GenericRateLimiter() {
   MutexLock g(&request_mutex_);
   stop_ = true;
-  requests_to_wait_ = static_cast<int32_t>(queue_[Env::IO_LOW].size() +
-                                           queue_[Env::IO_HIGH].size());
-  for (auto& r : queue_[Env::IO_HIGH]) {
+  requests_to_wait_ = static_cast<int32_t>(queue_[IO_LOW].size() +
+                                           queue_[IO_HIGH].size());
+  for (auto& r : queue_[IO_HIGH]) {
     r->cv.Signal();
   }
-  for (auto& r : queue_[Env::IO_LOW]) {
+  for (auto& r : queue_[IO_LOW]) {
     r->cv.Signal();
   }
   while (requests_to_wait_ > 0) {
@@ -100,7 +100,7 @@ void GenericRateLimiter::SetBytesPerSecond(int64_t bytes_per_second) {
       std::memory_order_relaxed);
 }
 
-void GenericRateLimiter::Request(int64_t bytes, const Env::IOPriority pri,
+void GenericRateLimiter::Request(int64_t bytes, const IOPriority pri,
                                  Statistics* stats) {
   assert(bytes <= refill_bytes_per_period_.load(std::memory_order_relaxed));
   TEST_SYNC_POINT("GenericRateLimiter::Request");
@@ -145,10 +145,10 @@ void GenericRateLimiter::Request(int64_t bytes, const Env::IOPriority pri,
     // (3) a previous waiter at the front of queue, who got notified by
     //     previous leader
     if (leader_ == nullptr &&
-        ((!queue_[Env::IO_HIGH].empty() &&
-            &r == queue_[Env::IO_HIGH].front()) ||
-         (!queue_[Env::IO_LOW].empty() &&
-            &r == queue_[Env::IO_LOW].front()))) {
+        ((!queue_[IO_HIGH].empty() &&
+            &r == queue_[IO_HIGH].front()) ||
+         (!queue_[IO_LOW].empty() &&
+            &r == queue_[IO_LOW].front()))) {
       leader_ = &r;
       int64_t delta = next_refill_us_ - NowMicrosMonotonic(env_);
       delta = delta > 0 ? delta : 0;
@@ -174,15 +174,15 @@ void GenericRateLimiter::Request(int64_t bytes, const Env::IOPriority pri,
 
     // Make sure the waken up request is always the header of its queue
     assert(r.granted ||
-           (!queue_[Env::IO_HIGH].empty() &&
-            &r == queue_[Env::IO_HIGH].front()) ||
-           (!queue_[Env::IO_LOW].empty() &&
-            &r == queue_[Env::IO_LOW].front()));
+           (!queue_[IO_HIGH].empty() &&
+            &r == queue_[IO_HIGH].front()) ||
+           (!queue_[IO_LOW].empty() &&
+            &r == queue_[IO_LOW].front()));
     assert(leader_ == nullptr ||
-           (!queue_[Env::IO_HIGH].empty() &&
-            leader_ == queue_[Env::IO_HIGH].front()) ||
-           (!queue_[Env::IO_LOW].empty() &&
-            leader_ == queue_[Env::IO_LOW].front()));
+           (!queue_[IO_HIGH].empty() &&
+            leader_ == queue_[IO_HIGH].front()) ||
+           (!queue_[IO_LOW].empty() &&
+            leader_ == queue_[IO_LOW].front()));
 
     if (leader_ == &r) {
       // Waken up from TimedWait()
@@ -198,14 +198,14 @@ void GenericRateLimiter::Request(int64_t bytes, const Env::IOPriority pri,
         if (r.granted) {
           // Current leader already got granted with quota. Notify header
           // of waiting queue to participate next round of election.
-          assert((queue_[Env::IO_HIGH].empty() ||
-                    &r != queue_[Env::IO_HIGH].front()) &&
-                 (queue_[Env::IO_LOW].empty() ||
-                    &r != queue_[Env::IO_LOW].front()));
-          if (!queue_[Env::IO_HIGH].empty()) {
-            queue_[Env::IO_HIGH].front()->cv.Signal();
-          } else if (!queue_[Env::IO_LOW].empty()) {
-            queue_[Env::IO_LOW].front()->cv.Signal();
+          assert((queue_[IO_HIGH].empty() ||
+                    &r != queue_[IO_HIGH].front()) &&
+                 (queue_[IO_LOW].empty() ||
+                    &r != queue_[IO_LOW].front()));
+          if (!queue_[IO_HIGH].empty()) {
+            queue_[IO_HIGH].front()->cv.Signal();
+          } else if (!queue_[IO_LOW].empty()) {
+            queue_[IO_LOW].front()->cv.Signal();
           }
           // Done
           break;
@@ -240,7 +240,7 @@ void GenericRateLimiter::Refill() {
 
   int use_low_pri_first = rnd_.OneIn(fairness_) ? 0 : 1;
   for (int q = 0; q < 2; ++q) {
-    auto use_pri = (use_low_pri_first == q) ? Env::IO_LOW : Env::IO_HIGH;
+    auto use_pri = (use_low_pri_first == q) ? IO_LOW : IO_HIGH;
     auto* queue = &queue_[use_pri];
     while (!queue->empty()) {
       auto* next_req = queue->front();

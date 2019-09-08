@@ -1,18 +1,22 @@
 set( LIB_NAME io_abstract )
 
 add_library( ${LIB_NAME} STATIC
-    SequentialFile.cpp
-    ReadRequest.cpp
-    RandomAccessFile.cpp
-    kDefaultPageSize.cpp
-    WritableFile.cpp
-    RandomRWFile.cpp
-    MemoryMappedFileBuffer.cpp
     Directory.cpp
-    SequentialFileWrapper.cpp
-    RandomAccessFileWrapper.cpp
-    RandomRWFileWrapper.cpp
     DirectoryWrapper.cpp
+    IOPriority.cpp
+    MemoryMappedFileBuffer.cpp
+    RandomAccessFile.cpp
+    RandomAccessFileWrapper.cpp
+    RandomRWFile.cpp
+    RandomRWFileWrapper.cpp
+    ReadRequest.cpp
+    SequentialFile.cpp
+    SequentialFileWrapper.cpp
+    WritableFile.cpp
+    WritableFile.cpp
+    WritableFileWrapper.cpp
+    WriteLifeTimeHint.cpp
+    kDefaultPageSize.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )

@@ -1284,7 +1284,7 @@ Status BackupEngineImpl::CopyOrCreateFile(
     }
     s = dest_writer->Append(data);
     if (rate_limiter != nullptr) {
-      rate_limiter->Request(data.size(), Env::IO_LOW, nullptr /* stats */,
+      rate_limiter->Request(data.size(), IO_LOW, nullptr /* stats */,
                             RateLimiter::OpType::kWrite);
     }
     if (processed_buffer_size > options_.callback_trigger_interval_size) {

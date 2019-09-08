@@ -18,6 +18,7 @@
 #include <rock/io_abstract/RandomAccessFile.h>
 #include <rock/io_abstract/RandomRWFile.h>
 #include <rock/io_abstract/SequentialFile.h>
+#include <rock/io_abstract/WritableFile.h>
 
 // For non linux platform, the following macros are used only as place
 // holder.
@@ -146,7 +147,7 @@ class PosixWritableFile : public WritableFile {
   virtual Status Fsync() override;
   virtual bool IsSyncThreadSafe() const override;
   virtual bool use_direct_io() const override { return use_direct_io_; }
-  virtual void SetWriteLifeTimeHint(Env::WriteLifeTimeHint hint) override;
+  virtual void SetWriteLifeTimeHint(WriteLifeTimeHint hint) override;
   virtual uint64_t GetFileSize() override;
   virtual Status InvalidateCache(size_t offset, size_t length) override;
   virtual size_t GetRequiredBufferAlignment() const override {

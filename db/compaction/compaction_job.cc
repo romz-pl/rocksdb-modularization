@@ -340,7 +340,7 @@ CompactionJob::CompactionJob(
       bottommost_level_(false),
       paranoid_file_checks_(paranoid_file_checks),
       measure_io_stats_(measure_io_stats),
-      write_hint_(Env::WLTH_NOT_SET),
+      write_hint_(WLTH_NOT_SET),
       thread_pri_(thread_pri) {
   assert(log_buffer_ != nullptr);
   const auto* cfd = compact_->compaction->column_family_data();
@@ -1466,7 +1466,7 @@ Status CompactionJob::OpenCompactionOutputFile(
   out.finished = false;
 
   sub_compact->outputs.push_back(out);
-  writable_file->SetIOPriority(Env::IO_LOW);
+  writable_file->SetIOPriority(IO_LOW);
   writable_file->SetWriteLifeTimeHint(write_hint_);
   writable_file->SetPreallocationBlockSize(static_cast<size_t>(
       sub_compact->compaction->OutputFilePreallocationSize()));

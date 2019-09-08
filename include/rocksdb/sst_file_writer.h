@@ -21,6 +21,8 @@
 #define ROCKSDB_DEPRECATED_FUNC __declspec(deprecated)
 #endif
 
+#include <rock/io_abstract/IOPriority.h>
+
 namespace rocksdb {
 
 class Comparator;
@@ -83,7 +85,7 @@ class SstFileWriter {
   SstFileWriter(const EnvOptions& env_options, const Options& options,
                 ColumnFamilyHandle* column_family = nullptr,
                 bool invalidate_page_cache = true,
-                Env::IOPriority io_priority = Env::IOPriority::IO_TOTAL,
+                IOPriority io_priority = IO_TOTAL,
                 bool skip_filters = false)
       : SstFileWriter(env_options, options, options.comparator, column_family,
                       invalidate_page_cache, io_priority, skip_filters) {}
@@ -93,7 +95,7 @@ class SstFileWriter {
                 const Comparator* user_comparator,
                 ColumnFamilyHandle* column_family = nullptr,
                 bool invalidate_page_cache = true,
-                Env::IOPriority io_priority = Env::IOPriority::IO_TOTAL,
+                IOPriority io_priority = IO_TOTAL,
                 bool skip_filters = false);
 
   ~SstFileWriter();

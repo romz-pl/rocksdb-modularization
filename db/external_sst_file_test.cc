@@ -2318,7 +2318,7 @@ TEST_F(ExternalSSTFileTest, SkipBloomFilter) {
   {
     std::string file_path = sst_files_dir_ + "sst_with_no_bloom.sst";
     SstFileWriter sst_file_writer(EnvOptions(), options, nullptr, true,
-                                  Env::IOPriority::IO_TOTAL,
+                                  IO_TOTAL,
                                   true /* skip_filters */);
     ASSERT_OK(sst_file_writer.Open(file_path));
     ASSERT_OK(sst_file_writer.Put("Key1", "Value1"));

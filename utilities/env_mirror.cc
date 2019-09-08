@@ -14,6 +14,7 @@
 #include <rock/io_abstract/SequentialFile.h>
 #include <rock/io_abstract/RandomAccessFile.h>
 #include <rock/io_abstract/Directory.h>
+#include <rock/io_abstract/WritableFile.h>
 
 namespace rocksdb {
 
@@ -103,7 +104,7 @@ class WritableFileMirror : public WritableFile {
   std::unique_ptr<WritableFile> a_, b_;
   std::string fname;
   explicit WritableFileMirror(std::string f, const EnvOptions& options)
-      : WritableFile(options), fname(f) {}
+      : WritableFile(options.strict_bytes_per_sync), fname(f) {}
 
   Status Append(const Slice& data) override {
     Status as = a_->Append(data);
@@ -152,11 +153,11 @@ class WritableFileMirror : public WritableFile {
     assert(as == b_->IsSyncThreadSafe());
     return as;
   }
-  void SetIOPriority(Env::IOPriority pri) override {
+  void SetIOPriority(IOPriority pri) override {
     a_->SetIOPriority(pri);
     b_->SetIOPriority(pri);
   }
-  Env::IOPriority GetIOPriority() override {
+  IOPriority GetIOPriority() override {
     // NOTE: we don't verify this one
     return a_->GetIOPriority();
   }

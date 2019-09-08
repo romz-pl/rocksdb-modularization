@@ -2678,11 +2678,11 @@ TEST_F(DBTest2, RateLimitedCompactionReads) {
     dbfull()->TEST_WaitForCompact();
     ASSERT_EQ(0, NumTableFilesAtLevel(0));
 
-    ASSERT_EQ(0, options.rate_limiter->GetTotalBytesThrough(Env::IO_HIGH));
+    ASSERT_EQ(0, options.rate_limiter->GetTotalBytesThrough(IO_HIGH));
     // should be slightly above 512KB due to non-data blocks read. Arbitrarily
     // chose 1MB as the upper bound on the total bytes read.
     size_t rate_limited_bytes =
-        options.rate_limiter->GetTotalBytesThrough(Env::IO_LOW);
+        options.rate_limiter->GetTotalBytesThrough(IO_LOW);
     // Include the explicit prefetch of the footer in direct I/O case.
     size_t direct_io_extra = use_direct_io ? 512 * 1024 : 0;
     ASSERT_GE(
@@ -2701,7 +2701,7 @@ TEST_F(DBTest2, RateLimitedCompactionReads) {
     // bytes read for user iterator shouldn't count against the rate limit.
     ASSERT_EQ(rate_limited_bytes,
               static_cast<size_t>(
-                  options.rate_limiter->GetTotalBytesThrough(Env::IO_LOW)));
+                  options.rate_limiter->GetTotalBytesThrough(IO_LOW)));
   }
 }
 #endif  // ROCKSDB_LITE

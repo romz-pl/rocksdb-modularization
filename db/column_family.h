@@ -489,7 +489,7 @@ class ColumnFamilyData {
     return initial_cf_options_;
   }
 
-  Env::WriteLifeTimeHint CalculateSSTWriteHint(int level);
+  WriteLifeTimeHint CalculateSSTWriteHint(int level);
 
   Status AddDirectories();
 

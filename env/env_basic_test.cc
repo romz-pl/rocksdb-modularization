@@ -15,6 +15,7 @@
 
 #include <rock/io_abstract/SequentialFile.h>
 #include <rock/io_abstract/RandomAccessFile.h>
+#include <rock/io_abstract/WritableFile.h>
 
 namespace rocksdb {
 

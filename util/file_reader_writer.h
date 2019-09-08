@@ -21,6 +21,7 @@
 #include <rock/numeric_limits/numeric_limits.h>
 #include <rock/io_abstract/SequentialFile.h>
 #include <rock/io_abstract/RandomAccessFile.h>
+#include <rock/io_abstract/WritableFile.h>
 
 namespace rocksdb {
 

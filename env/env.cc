@@ -103,16 +103,13 @@ Status Env::GetChildrenFileAttributes(const std::string& dir,
   return Status::OK();
 }
 
-SequentialFile::~SequentialFile() {
-}
 
-RandomAccessFile::~RandomAccessFile() {
-}
 
-WritableFile::~WritableFile() {
-}
 
-MemoryMappedFileBuffer::~MemoryMappedFileBuffer() {}
+
+
+
+
 
 Logger::~Logger() {}
 

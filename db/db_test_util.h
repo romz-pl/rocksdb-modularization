@@ -282,10 +282,10 @@ class SpecialEnv : public EnvWrapper {
 #endif  // !(defined NDEBUG) || !defined(OS_WIN)
         return s;
       }
-      void SetIOPriority(Env::IOPriority pri) override {
+      void SetIOPriority(IOPriority pri) override {
         base_->SetIOPriority(pri);
       }
-      Env::IOPriority GetIOPriority() override {
+      IOPriority GetIOPriority() override {
         return base_->GetIOPriority();
       }
       bool use_direct_io() const override {
