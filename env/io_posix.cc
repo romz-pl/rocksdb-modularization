@@ -37,6 +37,8 @@
 #include "util/coding.h"
 #include "util/string_util.h"
 
+#include <rock/string/ToString.h>
+
 #if defined(OS_LINUX) && !defined(F_SET_RW_HINT)
 #define F_LINUX_SPECIFIC_BASE 1024
 #define F_SET_RW_HINT (F_LINUX_SPECIFIC_BASE + 12)

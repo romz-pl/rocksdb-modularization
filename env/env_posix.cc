@@ -62,6 +62,8 @@
 #include "util/thread_local.h"
 #include "util/threadpool_imp.h"
 
+#include <rock/string/ToString.h>
+
 #if !defined(TMPFS_MAGIC)
 #define TMPFS_MAGIC 0x01021994
 #endif

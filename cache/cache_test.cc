@@ -20,6 +20,8 @@
 #include "util/coding.h"
 #include "util/string_util.h"
 
+#include <rock/string/ToString.h>
+
 namespace rocksdb {
 
 // Conversions between numeric keys/values and the types expected by Cache.

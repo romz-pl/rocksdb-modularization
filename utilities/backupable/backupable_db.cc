@@ -39,6 +39,8 @@
 #include <unordered_set>
 #include <vector>
 
+#include <rock/string/ToString.h>
+
 namespace rocksdb {
 
 void BackupStatistics::IncrementNumberSuccessBackup() {

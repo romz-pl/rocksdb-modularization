@@ -27,6 +27,8 @@
 #include "util/compression_context_cache.h"
 #include "util/string_util.h"
 
+#include <rock/string/ToString.h>
+
 #ifdef SNAPPY
 #include <snappy.h>
 #endif

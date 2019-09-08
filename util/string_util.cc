@@ -20,6 +20,8 @@
 #include "port/sys_time.h"
 #include "rocksdb/slice.h"
 
+#include <rock/string/ToString.h>
+
 namespace rocksdb {
 
 const std::string kNullptrString = "nullptr";

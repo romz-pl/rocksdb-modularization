@@ -22,6 +22,8 @@
 #include "util/string_util.h"
 #include "utilities/merge_operators.h"
 
+#include <rock/string/ToString.h>
+
 bool FLAGS_random_key = false;
 bool FLAGS_use_set_based_memetable = false;
 int FLAGS_total_keys = 100;

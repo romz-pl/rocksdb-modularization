@@ -474,6 +474,13 @@ if(WITH_FOLLY_DISTRIBUTED_MUTEX)
 endif()
 find_package(Threads REQUIRED)
 
+
+add_subdirectory( libs )
+
+SET( ROCKSDB_COMPONENT_LIBS
+    string
+)
+
 # Main library source code
 
 set(SOURCES
@@ -778,7 +785,7 @@ else()
 
   add_library(${ROCKSDB_SHARED_LIB} SHARED ${SOURCES})
   target_link_libraries(${ROCKSDB_SHARED_LIB}
-    ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
+    ${ROCKSDB_COMPONENT_LIBS} ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
   set_target_properties(${ROCKSDB_SHARED_LIB} PROPERTIES
                         LINKER_LANGUAGE CXX
                         VERSION ${rocksdb_VERSION}
@@ -789,7 +796,7 @@ endif()
 
 add_library(${ROCKSDB_STATIC_LIB} STATIC ${SOURCES})
 target_link_libraries(${ROCKSDB_STATIC_LIB}
-  ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
+   ${ROCKSDB_COMPONENT_LIBS} ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
 
 if(WIN32)
   add_library(${ROCKSDB_IMPORT_LIB} SHARED ${SOURCES})
@@ -813,69 +820,76 @@ else()
   message(STATUS "JNI library is disabled")
 endif()
 
+
+#
+# This causes the error
+# cmake failure: INTERFACE_INCLUDE_DIRECTORIES property contains path: "..." which is prefixed in the source directory
+#
 # Installation and packaging
-if(WIN32)
-  option(ROCKSDB_INSTALL_ON_WINDOWS "Enable install target on Windows" OFF)
-endif()
-if(NOT WIN32 OR ROCKSDB_INSTALL_ON_WINDOWS)
-  if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-    if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-      # Change default installation prefix on Linux to /usr
-      set(CMAKE_INSTALL_PREFIX /usr CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
-    endif()
-  endif()
-
-  include(GNUInstallDirs)
-  include(CMakePackageConfigHelpers)
-
-  set(package_config_destination ${CMAKE_INSTALL_LIBDIR}/cmake/rocksdb)
-
-  configure_package_config_file(
-    ${CMAKE_CURRENT_LIST_DIR}/cmake/RocksDBConfig.cmake.in RocksDBConfig.cmake
-    INSTALL_DESTINATION ${package_config_destination}
-  )
-
-  write_basic_package_version_file(
-    RocksDBConfigVersion.cmake
-    VERSION ${rocksdb_VERSION}
-    COMPATIBILITY SameMajorVersion
-  )
-
-  install(DIRECTORY include/rocksdb COMPONENT devel DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
-
-  install(
-    TARGETS ${ROCKSDB_STATIC_LIB}
-    EXPORT RocksDBTargets
-    COMPONENT devel
-    ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
-    INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
-  )
-
-  install(
-    TARGETS ${ROCKSDB_SHARED_LIB}
-    EXPORT RocksDBTargets
-    COMPONENT runtime
-    ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
-    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
-    LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
-    INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
-  )
-
-  install(
-    EXPORT RocksDBTargets
-    COMPONENT devel
-    DESTINATION ${package_config_destination}
-    NAMESPACE RocksDB::
-  )
-
-  install(
-    FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/RocksDBConfig.cmake
-    ${CMAKE_CURRENT_BINARY_DIR}/RocksDBConfigVersion.cmake
-    COMPONENT devel
-    DESTINATION ${package_config_destination}
-  )
-endif()
+#if(WIN32)
+#  option(ROCKSDB_INSTALL_ON_WINDOWS "Enable install target on Windows" OFF)
+#endif()
+#if(NOT WIN32 OR ROCKSDB_INSTALL_ON_WINDOWS)
+#  if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+#    if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+#      # Change default installation prefix on Linux to /usr
+#      set(CMAKE_INSTALL_PREFIX /usr CACHE PATH "Install path prefix, prepended onto install directories." FORCE)
+#    endif()
+#  endif()
+#
+#  include(GNUInstallDirs)
+#  include(CMakePackageConfigHelpers)
+#
+#  set(package_config_destination ${CMAKE_INSTALL_LIBDIR}/cmake/rocksdb)
+#
+#  configure_package_config_file(
+#    ${CMAKE_CURRENT_LIST_DIR}/cmake/RocksDBConfig.cmake.in RocksDBConfig.cmake
+#    INSTALL_DESTINATION ${package_config_destination}
+#  )
+#
+#  write_basic_package_version_file(
+#    RocksDBConfigVersion.cmake
+#    VERSION ${rocksdb_VERSION}
+#    COMPATIBILITY SameMajorVersion
+#  )
+#
+#  install(DIRECTORY include/rocksdb COMPONENT devel DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
+#
+#
+#
+#  install(
+#    TARGETS ${ROCKSDB_STATIC_LIB}
+#    EXPORT RocksDBTargets
+#    COMPONENT devel
+#    ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+#    INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+#  )
+#
+#  install(
+#    TARGETS ${ROCKSDB_SHARED_LIB}
+#    EXPORT RocksDBTargets
+#    COMPONENT runtime
+#    ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+#    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+#    LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
+#    INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+#  )
+#
+#  install(
+#    EXPORT RocksDBTargets
+#    COMPONENT devel
+#    DESTINATION ${package_config_destination}
+#    NAMESPACE RocksDB::
+#  )
+#
+#  install(
+#    FILES
+#    ${CMAKE_CURRENT_BINARY_DIR}/RocksDBConfig.cmake
+#    ${CMAKE_CURRENT_BINARY_DIR}/RocksDBConfigVersion.cmake
+#    COMPONENT devel
+#    DESTINATION ${package_config_destination}
+#  )
+#endif()
 
 option(WITH_TESTS "build with tests" ON)
 if(WITH_TESTS)
@@ -1062,6 +1076,7 @@ if(WITH_TESTS)
   add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND})
   set(TESTUTILLIB testutillib${ARTIFACT_SUFFIX})
   add_library(${TESTUTILLIB} STATIC ${TESTUTIL_SOURCE})
+  target_link_libraries(${TESTUTILLIB} PUBLIC ${ROCKSDB_COMPONENT_LIBS})
   if(MSVC)
     set_target_properties(${TESTUTILLIB} PROPERTIES COMPILE_FLAGS "/Fd${CMAKE_CFG_INTDIR}/testutillib${ARTIFACT_SUFFIX}.pdb")
   endif()

@@ -13,6 +13,8 @@
 #include "util/string_util.h"
 #include <stdio.h>
 
+#include <rock/string/ToString.h>
+
 namespace rocksdb {
 
 namespace {

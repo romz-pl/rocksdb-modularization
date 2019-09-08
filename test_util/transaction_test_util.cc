@@ -18,6 +18,8 @@
 #include "rocksdb/utilities/transaction.h"
 #include "rocksdb/utilities/transaction_db.h"
 
+#include <rock/string/ToString.h>
+
 #include "db/dbformat.h"
 #include "db/snapshot_impl.h"
 #include "logging/logging.h"
