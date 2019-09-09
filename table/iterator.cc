@@ -13,47 +13,9 @@
 #include "table/iterator_wrapper.h"
 
 #include <rock/iterator/EmptyIterator.h>
+#include <rock/iterator/EmptyInternalIterator.h>
 
 namespace rocksdb {
-
-
-
-
-
-
-
-
-
-namespace {
-
-
-template <class TValue = Slice>
-class EmptyInternalIterator : public InternalIteratorBase<TValue> {
- public:
-  explicit EmptyInternalIterator(const Status& s) : status_(s) {}
-  bool Valid() const override { return false; }
-  void Seek(const Slice& /*target*/) override {}
-  void SeekForPrev(const Slice& /*target*/) override {}
-  void SeekToFirst() override {}
-  void SeekToLast() override {}
-  void Next() override { assert(false); }
-  void Prev() override { assert(false); }
-  Slice key() const override {
-    assert(false);
-    return Slice();
-  }
-  TValue value() const override {
-    assert(false);
-    return TValue();
-  }
-  Status status() const override { return status_; }
-
- private:
-  Status status_;
-};
-}  // namespace
-
-
 
 
 
@@ -61,8 +23,10 @@ template <class TValue>
 InternalIteratorBase<TValue>* NewErrorInternalIterator(const Status& status) {
   return new EmptyInternalIterator<TValue>(status);
 }
+
 template InternalIteratorBase<IndexValue>* NewErrorInternalIterator(
     const Status& status);
+
 template InternalIteratorBase<Slice>* NewErrorInternalIterator(
     const Status& status);
 
@@ -76,8 +40,10 @@ InternalIteratorBase<TValue>* NewErrorInternalIterator(const Status& status,
     return new (mem) EmptyInternalIterator<TValue>(status);
   }
 }
+
 template InternalIteratorBase<IndexValue>* NewErrorInternalIterator(
     const Status& status, Arena* arena);
+
 template InternalIteratorBase<Slice>* NewErrorInternalIterator(
     const Status& status, Arena* arena);
 

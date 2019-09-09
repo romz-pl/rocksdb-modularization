@@ -8,6 +8,12 @@ add_library( ${LIB_NAME} STATIC
     NewEmptyIterator.cpp
     NewErrorIterator.cpp
     PinnableSlice.cpp
+    InternalIteratorBase.cpp
+    IterateResult.cpp
+    InternalIterator.cpp
+    EmptyInternalIterator.cpp
+    IteratorWrapperBase.cpp
+    IteratorWrapper.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
