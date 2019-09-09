@@ -51,7 +51,7 @@ DEFINE_int32(min_write_buffer_number_to_merge, 1, "");
 DEFINE_int32(skiplist_height, 4, "");
 DEFINE_double(memtable_prefix_bloom_size_ratio, 0.1, "");
 DEFINE_int32(memtable_huge_page_size, 2 * 1024 * 1024, "");
-DEFINE_int32(value_size, 40, "");
+DEFINE_int32(prefix_test_value_size, 40, "");
 DEFINE_bool(enable_print, false, "Print options generated to console.");
 
 // Path to the database on file system
@@ -600,7 +600,7 @@ TEST_F(PrefixTest, DynamicPrefixIterator) {
 
         std::string s;
         Slice key = TestKeyToSlice(s, test_key);
-        std::string value(FLAGS_value_size, 0);
+        std::string value(FLAGS_prefix_test_value_size, 0);
 
         get_perf_context()->Reset();
         StopWatchNano timer(Env::Default(), true);

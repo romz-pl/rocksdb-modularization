@@ -312,15 +312,15 @@ DEFINE_int64(db_write_buffer_size, rocksdb::Options().db_write_buffer_size,
 DEFINE_bool(cost_write_buffer_to_cache, false,
             "The usage of memtable is costed to the block cache");
 
-DEFINE_int64(write_buffer_size, rocksdb::Options().write_buffer_size,
+DEFINE_int64(db_bench_tool_write_buffer_size, rocksdb::Options().write_buffer_size,
              "Number of bytes to buffer in memtable before compacting");
 
-DEFINE_int32(max_write_buffer_number,
+DEFINE_int32(db_bench_tool_max_write_buffer_number,
              rocksdb::Options().max_write_buffer_number,
              "The number of in-memory memtables. Each memtable is of size"
              " write_buffer_size bytes.");
 
-DEFINE_int32(min_write_buffer_number_to_merge,
+DEFINE_int32(db_bench_tool_min_write_buffer_number_to_merge,
              rocksdb::Options().min_write_buffer_number_to_merge,
              "The minimum number of write buffers that will be merged together"
              "before writing to storage. This is cheap because it is an"
@@ -3398,10 +3398,10 @@ class Benchmark {
       options.write_buffer_manager.reset(
           new WriteBufferManager(FLAGS_db_write_buffer_size, cache_));
     }
-    options.write_buffer_size = FLAGS_write_buffer_size;
-    options.max_write_buffer_number = FLAGS_max_write_buffer_number;
+    options.write_buffer_size = FLAGS_db_bench_tool_write_buffer_size;
+    options.max_write_buffer_number = FLAGS_db_bench_tool_max_write_buffer_number;
     options.min_write_buffer_number_to_merge =
-      FLAGS_min_write_buffer_number_to_merge;
+      FLAGS_db_bench_tool_min_write_buffer_number_to_merge;
     options.max_write_buffer_number_to_maintain =
         FLAGS_max_write_buffer_number_to_maintain;
     options.max_write_buffer_size_to_maintain =
