@@ -479,6 +479,7 @@ add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
     io_abstract
+    iterator
 )
 
 # Main library source code

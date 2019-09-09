@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "db/dbformat.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/slice.h"
 #include "table/internal_iterator.h"
 

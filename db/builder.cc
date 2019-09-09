@@ -26,7 +26,7 @@
 #include "monitoring/thread_status_util.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/table.h"
 #include "table/block_based/block_based_table_builder.h"

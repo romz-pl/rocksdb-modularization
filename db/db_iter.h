@@ -16,7 +16,7 @@
 #include "memory/arena.h"
 #include "options/cf_options.h"
 #include "rocksdb/db.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "util/autovector.h"
 
 namespace rocksdb {

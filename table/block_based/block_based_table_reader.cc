@@ -22,7 +22,7 @@
 #include "rocksdb/comparator.h"
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/statistics.h"
 #include "rocksdb/table.h"

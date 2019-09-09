@@ -99,6 +99,8 @@
 #include "util/mutexlock.h"
 #include "util/stop_watch.h"
 
+#include <rock/iterator/NewErrorIterator.h>
+
 
 namespace rocksdb {
 const std::string kDefaultColumnFamilyName("default");

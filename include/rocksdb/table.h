@@ -24,7 +24,7 @@
 
 #include "rocksdb/cache.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include <rock/status/Status.h>
 

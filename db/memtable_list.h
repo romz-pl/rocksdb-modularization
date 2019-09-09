@@ -20,7 +20,7 @@
 #include "logging/log_buffer.h"
 #include "monitoring/instrumented_mutex.h"
 #include "rocksdb/db.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/types.h"
 #include "util/autovector.h"

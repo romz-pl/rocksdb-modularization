@@ -20,7 +20,7 @@
 #include "port/stack_trace.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/utilities/object_registry.h"
 #include "test_util/fault_injection_test_env.h"
 #include "test_util/sync_point.h"

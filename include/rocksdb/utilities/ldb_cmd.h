@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/ldb_tool.h"
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"

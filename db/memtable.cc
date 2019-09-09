@@ -26,7 +26,7 @@
 #include "port/port.h"
 #include "rocksdb/comparator.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/merge_operator.h"
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/write_buffer_manager.h"

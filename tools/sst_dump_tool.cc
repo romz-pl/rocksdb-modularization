@@ -20,7 +20,7 @@
 #include "options/cf_options.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include <rock/slice/SliceTransform.h>
 #include <rock/status/Status.h>
 #include "rocksdb/table_properties.h"

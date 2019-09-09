@@ -22,7 +22,7 @@
 
 #include "db/dbformat.h"
 #include "db/pinned_iterators_manager.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/statistics.h"
 #include "rocksdb/table.h"

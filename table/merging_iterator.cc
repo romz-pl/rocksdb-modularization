@@ -15,7 +15,7 @@
 #include "memory/arena.h"
 #include "monitoring/perf_context_imp.h"
 #include "rocksdb/comparator.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "table/internal_iterator.h"
 #include "table/iter_heap.h"

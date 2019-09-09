@@ -21,7 +21,7 @@
 #include "monitoring/statistics.h"
 #include "rocksdb/convenience.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/utilities/stackable_db.h"
 #include "rocksdb/utilities/transaction.h"
 #include "table/block_based/block.h"

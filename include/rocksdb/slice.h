@@ -18,7 +18,7 @@
 
 
 
-#include "rocksdb/cleanable.h"
+#include <rock/iterator/Cleanable.h>
 
 // #include <rock/slice/Slice.h>
 #include "../libs/slice/include/rock/slice/Slice.h"

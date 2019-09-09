@@ -12,6 +12,8 @@
 #include "logging/auto_roll_logger.h"
 #include "monitoring/perf_context_imp.h"
 
+#include <rock/iterator/NewErrorIterator.h>
+
 namespace rocksdb {
 
 #ifndef ROCKSDB_LITE

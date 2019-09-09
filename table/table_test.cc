@@ -28,7 +28,7 @@
 #include "rocksdb/cache.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/perf_context.h"
 #include <rock/slice/SliceTransform.h>

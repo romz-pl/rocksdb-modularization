@@ -7,7 +7,7 @@
 
 #include "port/port.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "table/block_based/block.h"
 #include "table/internal_iterator.h"
 #include "table/table_properties_internal.h"

@@ -7,7 +7,7 @@
 
 #ifndef ROCKSDB_LITE
 
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"
 #include "rocksdb/table_properties.h"

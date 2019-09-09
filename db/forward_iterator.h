@@ -13,7 +13,7 @@
 #include "db/dbformat.h"
 #include "memory/arena.h"
 #include "rocksdb/db.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "table/internal_iterator.h"
 

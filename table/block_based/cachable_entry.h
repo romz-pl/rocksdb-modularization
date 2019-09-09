@@ -12,7 +12,7 @@
 #include <cassert>
 #include "port/likely.h"
 #include "rocksdb/cache.h"
-#include "rocksdb/cleanable.h"
+#include <rock/iterator/Cleanable.h>
 
 namespace rocksdb {
 

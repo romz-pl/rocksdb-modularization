@@ -17,7 +17,7 @@
 #include "monitoring/thread_status_util.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "table/merging_iterator.h"
 #include "test_util/sync_point.h"
 #include "util/coding.h"

@@ -17,7 +17,7 @@
 #include "db/write_batch_internal.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "table/block_based/block.h"

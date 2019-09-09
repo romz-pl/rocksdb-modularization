@@ -15,7 +15,7 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/listener.h"
 #include "rocksdb/metadata.h"
 #include "rocksdb/options.h"

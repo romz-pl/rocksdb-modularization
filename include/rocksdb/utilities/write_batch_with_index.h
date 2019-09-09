@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "rocksdb/comparator.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/slice.h"
 #include <rock/status/Status.h>
 #include "rocksdb/write_batch.h"

@@ -17,7 +17,7 @@
 #include "memtable/skiplist.h"
 #include "options/db_options.h"
 #include "rocksdb/comparator.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "util/cast_util.h"
 
 #include "utilities/write_batch_with_index/write_batch_with_index_internal.h"

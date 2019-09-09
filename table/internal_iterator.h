@@ -9,7 +9,7 @@
 #include <string>
 #include "db/dbformat.h"
 #include "rocksdb/comparator.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include <rock/status/Status.h>
 #include "table/format.h"
 

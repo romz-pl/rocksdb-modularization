@@ -10,7 +10,7 @@
 #include "file/filename.h"
 #include "rocksdb/convenience.h"
 #include "rocksdb/env.h"
-#include "rocksdb/iterator.h"
+#include <rock/iterator/Iterator.h>
 #include "rocksdb/utilities/db_ttl.h"
 #include "util/coding.h"
 
