@@ -25,6 +25,7 @@
 #include "rocksdb/write_buffer_manager.h"
 
 #include <rock/slice/BytewiseComparator.h>
+#include <rock/logger_abstract/InfoLogLevel.h>
 
 #ifdef max
 #undef max

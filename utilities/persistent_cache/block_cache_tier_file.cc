@@ -17,6 +17,9 @@
 #include <rock/port/port.h>
 #include "util/crc32c.h"
 
+#include <rock/logger_abstract/Error.h>
+#include <rock/logger_abstract/Info.h>
+
 namespace rocksdb {
 
 //

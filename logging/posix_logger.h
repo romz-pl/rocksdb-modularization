@@ -29,6 +29,8 @@
 #include "rocksdb/env.h"
 #include <rock/sync_point/sync_point.h>
 
+#include <rock/logger_abstract/Logger.h>
+
 namespace rocksdb {
 
 class PosixLogger : public Logger {

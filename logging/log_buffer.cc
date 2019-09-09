@@ -7,6 +7,8 @@
 
 #include <rock/port/sys_time.h>
 #include <rock/port/port.h>
+#include <rock/logger_abstract/Logger.h>
+#include <rock/logger_abstract/Log.h>
 
 namespace rocksdb {
 

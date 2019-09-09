@@ -480,7 +480,7 @@ add_subdirectory( libs )
 SET( ROCKSDB_COMPONENT_LIBS
     io_abstract
     iterator
-    random
+    logger_abstract
     sync_point
 )
 

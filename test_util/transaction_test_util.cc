@@ -25,6 +25,7 @@
 #include "logging/logging.h"
 #include <rock/random/Random.h>
 #include <rock/random/Random64.h>
+#include <rock/logger_abstract/Logger.h>
 
 namespace rocksdb {
 

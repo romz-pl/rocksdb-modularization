@@ -11,6 +11,8 @@
 #include "rocksdb/env.h"
 #include "util/autovector.h"
 
+#include <rock/logger_abstract/InfoLogLevel.h>
+
 namespace rocksdb {
 
 class Logger;

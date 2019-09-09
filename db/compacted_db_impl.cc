@@ -9,6 +9,8 @@
 #include "db/version_set.h"
 #include "table/get_context.h"
 
+#include <rock/logger_abstract/LogFlush.h>
+
 namespace rocksdb {
 
 extern void MarkKeyMayExist(void* arg);

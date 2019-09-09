@@ -11,6 +11,8 @@
 #include "db/merge_context.h"
 #include "monitoring/perf_context_imp.h"
 
+#include <rock/logger_abstract/LogFlush.h>
+
 namespace rocksdb {
 
 #ifndef ROCKSDB_LITE

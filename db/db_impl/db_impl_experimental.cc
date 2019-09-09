@@ -16,6 +16,7 @@
 #include "db/job_context.h"
 #include "db/version_set.h"
 #include <rock/status/Status.h>
+#include <rock/logger_abstract/LogFlush.h>
 
 namespace rocksdb {
 

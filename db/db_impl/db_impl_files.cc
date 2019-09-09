@@ -16,6 +16,8 @@
 #include "file/file_util.h"
 #include "file/sst_file_manager_impl.h"
 
+#include <rock/logger_abstract/LogFlush.h>
+
 namespace rocksdb {
 
 uint64_t DBImpl::MinLogNumberToKeep() {

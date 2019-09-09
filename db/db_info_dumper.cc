@@ -14,6 +14,10 @@
 #include "file/filename.h"
 #include "rocksdb/env.h"
 
+#include <rock/logger_abstract/LogFlush.h>
+#include <rock/logger_abstract/Header.h>
+#include <rock/logger_abstract/Error.h>
+
 namespace rocksdb {
 
 void DumpDBFileSummary(const ImmutableDBOptions& options,

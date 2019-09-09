@@ -35,6 +35,8 @@
 #include "util/crc32c.h"
 #include "util/mutexlock.h"
 
+#include <rock/logger_abstract/Info.h>
+
 namespace rocksdb {
 
 //

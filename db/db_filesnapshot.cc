@@ -21,6 +21,8 @@
 #include <rock/sync_point/sync_point.h>
 #include "util/mutexlock.h"
 
+#include <rock/logger_abstract/LogFlush.h>
+
 namespace rocksdb {
 
 Status DBImpl::DisableFileDeletions() {

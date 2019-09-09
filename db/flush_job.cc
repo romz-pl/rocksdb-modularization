@@ -50,6 +50,7 @@
 #include "util/stop_watch.h"
 
 #include <rock/io_abstract/Directory.h>
+#include <rock/logger_abstract/LogFlush.h>
 
 namespace rocksdb {
 

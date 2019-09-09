@@ -10,6 +10,8 @@
 
 #include "rocksdb/env.h"
 
+#include <rock/logger_abstract/Logger.h>
+
 namespace rocksdb {
 
 // Prints logs to stderr for faster debugging

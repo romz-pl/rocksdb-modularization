@@ -14,6 +14,8 @@
 #include "rocksdb/sst_file_manager.h"
 #include "rocksdb/wal_filter.h"
 
+#include <rock/logger_abstract/Header.h>
+
 namespace rocksdb {
 
 ImmutableDBOptions::ImmutableDBOptions() : ImmutableDBOptions(Options()) {}

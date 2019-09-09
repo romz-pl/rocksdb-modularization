@@ -21,6 +21,7 @@
 #include "util/rate_limiter.h"
 
 #include <rock/io_abstract/Directory.h>
+#include <rock/logger_abstract/LogFlush.h>
 
 namespace rocksdb {
 Options SanitizeOptions(const std::string& dbname, const Options& src) {

@@ -23,6 +23,8 @@
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
 
+#include <rock/logger_abstract/Logger.h>
+
 namespace rocksdb {
 
 class EnvLogger : public Logger {

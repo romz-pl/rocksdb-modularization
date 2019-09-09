@@ -100,6 +100,7 @@
 #include "util/stop_watch.h"
 
 #include <rock/iterator/NewErrorIterator.h>
+#include <rock/logger_abstract/LogFlush.h>
 
 
 namespace rocksdb {

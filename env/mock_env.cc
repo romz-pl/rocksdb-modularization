@@ -22,6 +22,8 @@
 #include <rock/io_abstract/Directory.h>
 #include <rock/io_abstract/WritableFile.h>
 
+#include <rock/logger_abstract/Logger.h>
+
 namespace rocksdb {
 
 class MemFile {

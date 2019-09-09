@@ -3,6 +3,7 @@ add_subdirectory( iterator )
 
 
 add_subdirectory( likely )
+add_subdirectory( logger_abstract )
 
 add_subdirectory( numeric_limits )
 

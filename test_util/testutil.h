@@ -27,6 +27,7 @@
 #include <rock/random/Random.h>
 
 #include <rock/io_abstract/RandomRWFile.h>
+#include <rock/logger_abstract/Logger.h>
 
 namespace rocksdb {
 class SequentialFile;

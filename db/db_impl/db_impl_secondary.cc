@@ -13,6 +13,7 @@
 #include "monitoring/perf_context_imp.h"
 
 #include <rock/iterator/NewErrorIterator.h>
+#include <rock/logger_abstract/LogFlush.h>
 
 namespace rocksdb {
 

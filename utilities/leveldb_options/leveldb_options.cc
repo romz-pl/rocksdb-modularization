@@ -15,6 +15,8 @@
 #include "rocksdb/options.h"
 #include "rocksdb/table.h"
 
+#include <rock/logger_abstract/Logger.h>
+
 namespace rocksdb {
 
 LevelDBOptions::LevelDBOptions()

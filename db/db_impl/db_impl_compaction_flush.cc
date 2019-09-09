@@ -23,6 +23,7 @@
 #include "util/concurrent_task_limiter_impl.h"
 
 #include <rock/io_abstract/Directory.h>
+#include <rock/logger_abstract/LogFlush.h>
 
 namespace rocksdb {
 
