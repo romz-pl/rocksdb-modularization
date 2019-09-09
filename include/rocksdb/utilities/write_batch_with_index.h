@@ -16,12 +16,14 @@
 #include <string>
 #include <vector>
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/slice.h"
 #include <rock/status/Status.h>
 #include "rocksdb/write_batch.h"
 #include "rocksdb/write_batch_base.h"
+
+#include <rock/slice/BytewiseComparator.h>
 
 namespace rocksdb {
 

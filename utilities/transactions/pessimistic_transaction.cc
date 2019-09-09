@@ -14,7 +14,7 @@
 
 #include "db/column_family.h"
 #include "db/db_impl/db_impl.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/snapshot.h"
 #include <rock/status/Status.h>

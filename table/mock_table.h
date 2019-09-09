@@ -13,7 +13,7 @@
 #include <utility>
 
 #include "port/port.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/table.h"
 #include "table/internal_iterator.h"
 #include "table/table_builder.h"

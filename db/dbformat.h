@@ -16,7 +16,7 @@
 #include "db/merge_context.h"
 #include "logging/logging.h"
 #include "monitoring/perf_context_imp.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/slice.h"
@@ -27,6 +27,7 @@
 #include "util/user_comparator_wrapper.h"
 
 #include <rock/numeric_limits/numeric_limits.h>
+#include <rock/slice/ExtractUserKey.h>
 
 namespace rocksdb {
 
@@ -147,11 +148,7 @@ extern void AppendInternalKeyFooter(std::string* result, SequenceNumber s,
 extern bool ParseInternalKey(const Slice& internal_key,
                              ParsedInternalKey* result);
 
-// Returns the user key portion of an internal key.
-inline Slice ExtractUserKey(const Slice& internal_key) {
-  assert(internal_key.size() >= 8);
-  return Slice(internal_key.data(), internal_key.size() - 8);
-}
+
 
 inline Slice ExtractUserKeyAndStripTimestamp(const Slice& internal_key,
                                              size_t ts_sz) {

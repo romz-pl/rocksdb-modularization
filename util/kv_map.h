@@ -7,7 +7,7 @@
 #include <map>
 #include <string>
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/slice.h"
 #include "util/coding.h"
 

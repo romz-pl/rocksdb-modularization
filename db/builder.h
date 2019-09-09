@@ -13,7 +13,7 @@
 #include "db/table_properties_collector.h"
 #include "logging/event_logger.h"
 #include "options/cf_options.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "rocksdb/listener.h"
 #include "rocksdb/options.h"

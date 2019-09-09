@@ -20,7 +20,7 @@
 #include <thread>
 
 #include "rocksdb/cache.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/persistent_cache.h"
 
 #include "utilities/persistent_cache/block_cache_tier_file.h"

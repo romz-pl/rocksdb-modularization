@@ -14,7 +14,7 @@
 #include "db/pinned_iterators_manager.h"
 #include "memory/arena.h"
 #include "monitoring/perf_context_imp.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "table/internal_iterator.h"

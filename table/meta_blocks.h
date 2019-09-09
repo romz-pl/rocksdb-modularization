@@ -11,7 +11,7 @@
 
 #include "db/builder.h"
 #include "db/table_properties_collector.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/memory_allocator.h"
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"

@@ -24,7 +24,7 @@
 #include "rocksjni/statisticsjni.h"
 #include "rocksjni/table_filter_jnicallback.h"
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/convenience.h"
 #include "rocksdb/db.h"
 #include "rocksdb/memtablerep.h"

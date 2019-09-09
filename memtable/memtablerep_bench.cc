@@ -27,7 +27,7 @@ int main() {
 #include "memory/arena.h"
 #include "port/port.h"
 #include "port/stack_trace.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/options.h"
 #include <rock/slice/SliceTransform.h>

@@ -12,7 +12,7 @@
 
 #include "options/db_options.h"
 #include "port/port.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/slice.h"
 #include <rock/status/Status.h>

@@ -36,7 +36,7 @@
 #include <assert.h>
 #include <algorithm>
 #include "db/dbformat.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "table/block_based/data_block_footer.h"
 #include "util/coding.h"
 

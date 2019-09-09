@@ -6,7 +6,7 @@
 #include "db/range_tombstone_fragmenter.h"
 
 #include "db/db_test_util.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "test_util/testutil.h"
 
 namespace rocksdb {

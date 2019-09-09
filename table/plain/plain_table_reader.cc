@@ -13,7 +13,7 @@
 #include "db/dbformat.h"
 
 #include "rocksdb/cache.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/options.h"

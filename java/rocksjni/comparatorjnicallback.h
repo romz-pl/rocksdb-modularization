@@ -13,7 +13,7 @@
 #include <memory>
 #include <string>
 #include "rocksjni/jnicallback.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/slice.h"
 #include "port/port.h"
 

@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 
 #include "utilities/persistent_cache/block_cache_tier_file_buffer.h"

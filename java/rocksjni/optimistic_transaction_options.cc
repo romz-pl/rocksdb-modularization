@@ -10,7 +10,7 @@
 
 #include "include/org_rocksdb_OptimisticTransactionOptions.h"
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/utilities/optimistic_transaction_db.h"
 
 /*

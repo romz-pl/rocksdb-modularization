@@ -21,7 +21,7 @@ int main() {
 
 #include "db/range_del_aggregator.h"
 #include "db/range_tombstone_fragmenter.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "test_util/testutil.h"
 #include "util/coding.h"

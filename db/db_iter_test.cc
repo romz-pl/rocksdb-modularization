@@ -10,7 +10,7 @@
 
 #include "db/db_iter.h"
 #include "db/dbformat.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/perf_context.h"
 #include "rocksdb/slice.h"

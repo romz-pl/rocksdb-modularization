@@ -7,8 +7,8 @@
 #pragma once
 
 #include <string>
-#include "db/dbformat.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/ExtractUserKey.h>
+#include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
 #include <rock/status/Status.h>
 #include "table/format.h"

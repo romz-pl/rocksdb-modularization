@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "db/merge_helper.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/coding.h"

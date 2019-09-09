@@ -23,7 +23,7 @@
 #include "index_builder.h"
 
 #include "rocksdb/cache.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/flush_block_policy.h"

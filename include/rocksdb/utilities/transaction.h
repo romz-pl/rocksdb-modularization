@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include <rock/status/Status.h>
 

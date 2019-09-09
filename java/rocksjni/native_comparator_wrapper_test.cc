@@ -6,7 +6,7 @@
 #include <jni.h>
 #include <string>
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/slice.h"
 
 #include "include/org_rocksdb_NativeComparatorWrapperTest_NativeStringComparatorWrapper.h"

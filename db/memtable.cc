@@ -24,7 +24,7 @@
 #include "monitoring/perf_context_imp.h"
 #include "monitoring/statistics.h"
 #include "port/port.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/merge_operator.h"

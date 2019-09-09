@@ -9,7 +9,7 @@
 #include "rocksdb/utilities/write_batch_with_index.h"
 #include "include/org_rocksdb_WBWIRocksIterator.h"
 #include "include/org_rocksdb_WriteBatchWithIndex.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksjni/portal.h"
 
 /*

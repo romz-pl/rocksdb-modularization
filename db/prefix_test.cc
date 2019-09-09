@@ -19,7 +19,7 @@ int main() {
 
 #include "db/db_impl/db_impl.h"
 #include "monitoring/histogram.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/memtablerep.h"

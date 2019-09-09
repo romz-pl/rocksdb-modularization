@@ -16,7 +16,7 @@
 #include "memory/arena.h"
 #include "memtable/skiplist.h"
 #include "options/db_options.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
 #include "util/cast_util.h"
 

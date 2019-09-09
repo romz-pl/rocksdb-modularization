@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "memory/arena.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/slice.h"
 #include <rock/slice/SliceTransform.h>
 #include "util/coding.h"

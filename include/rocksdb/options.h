@@ -17,12 +17,14 @@
 #include <vector>
 
 #include "rocksdb/advanced_options.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "rocksdb/listener.h"
 #include "rocksdb/universal_compaction.h"
 #include "rocksdb/version.h"
 #include "rocksdb/write_buffer_manager.h"
+
+#include <rock/slice/BytewiseComparator.h>
 
 #ifdef max
 #undef max

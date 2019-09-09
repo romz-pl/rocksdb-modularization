@@ -11,7 +11,7 @@
 #include <string>
 
 #include "include/org_rocksdb_SstFileWriter.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "rocksdb/options.h"
 #include "rocksdb/sst_file_writer.h"

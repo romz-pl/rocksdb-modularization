@@ -72,7 +72,7 @@
 #include "db/write_batch_internal.h"
 #include "file/filename.h"
 #include "options/cf_options.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/options.h"

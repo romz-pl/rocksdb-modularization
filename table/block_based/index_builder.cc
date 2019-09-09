@@ -15,7 +15,7 @@
 #include <list>
 #include <string>
 
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 #include "rocksdb/flush_block_policy.h"
 #include "table/block_based/partitioned_filter_block.h"
 #include "table/format.h"

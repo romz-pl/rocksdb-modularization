@@ -9,7 +9,7 @@
 #pragma once
 
 #include "monitoring/perf_context_imp.h"
-#include "rocksdb/comparator.h"
+#include <rock/slice/Comparator.h>
 
 namespace rocksdb {
 
