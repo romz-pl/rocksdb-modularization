@@ -12,7 +12,7 @@
 #include <stdint.h>
 
 #include "db/log_format.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include "rocksdb/options.h"
 

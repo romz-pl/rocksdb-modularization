@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "monitoring/perf_context_imp.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/utilities/transaction_db_mutex.h"
 #include "test_util/sync_point.h"
 #include "util/cast_util.h"

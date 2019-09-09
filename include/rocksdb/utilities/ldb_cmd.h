@@ -20,7 +20,7 @@
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/ldb_tool.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/utilities/db_ttl.h"
 #include "rocksdb/utilities/ldb_cmd_execute_result.h"
 

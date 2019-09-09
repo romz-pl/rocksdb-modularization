@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "utilities/compaction_filters/remove_emptyvalue_compactionfilter.h"
 
 namespace rocksdb {

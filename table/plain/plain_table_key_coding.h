@@ -9,7 +9,7 @@
 
 #include <array>
 #include "db/dbformat.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "table/plain/plain_table_reader.h"
 
 // The file contains three helper classes of PlainTable format,

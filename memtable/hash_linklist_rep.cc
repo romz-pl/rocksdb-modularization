@@ -15,7 +15,7 @@
 #include "monitoring/histogram.h"
 #include "port/port.h"
 #include "rocksdb/memtablerep.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "util/hash.h"
 

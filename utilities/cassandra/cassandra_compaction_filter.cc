@@ -5,7 +5,7 @@
 
 #include "utilities/cassandra/cassandra_compaction_filter.h"
 #include <string>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "utilities/cassandra/format.h"
 
 

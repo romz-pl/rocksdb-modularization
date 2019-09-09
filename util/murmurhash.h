@@ -11,7 +11,7 @@
 */
 #pragma once
 #include <stdint.h>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 #if defined(__x86_64__)
 #define MURMUR_HASH MurmurHash64A

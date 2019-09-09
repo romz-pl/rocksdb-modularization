@@ -11,7 +11,7 @@
 #include <vector>
 
 #include <stdint.h>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/table.h"
 #include "table/block_based/data_block_hash_index.h"
 

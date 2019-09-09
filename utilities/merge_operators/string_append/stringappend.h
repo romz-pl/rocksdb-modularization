@@ -6,7 +6,7 @@
 
 #pragma once
 #include "rocksdb/merge_operator.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 namespace rocksdb {
 

@@ -13,7 +13,7 @@
 #include <rock/slice/Comparator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/perf_context.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/statistics.h"
 #include "table/iterator_wrapper.h"
 #include "table/merging_iterator.h"

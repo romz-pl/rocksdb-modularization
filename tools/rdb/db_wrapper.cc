@@ -8,7 +8,7 @@
 #include "db/_wrapper.h"
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 namespace {
   void printWithBackSlashes(std::string str) {

@@ -7,7 +7,7 @@
 #include "db/dbformat.h"
 #include <rock/slice/Comparator.h>
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "test_util/testharness.h"
 #include "util/random.h"
 

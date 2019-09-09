@@ -6,7 +6,7 @@
 #pragma once
 #include <string>
 #include "rocksdb/compaction_filter.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 namespace rocksdb {
 namespace cassandra {

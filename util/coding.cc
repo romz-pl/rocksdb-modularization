@@ -10,7 +10,7 @@
 #include "util/coding.h"
 
 #include <algorithm>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 
 namespace rocksdb {

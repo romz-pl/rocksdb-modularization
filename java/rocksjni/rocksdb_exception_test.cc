@@ -7,7 +7,7 @@
 
 #include "include/org_rocksdb_RocksDBExceptionTest.h"
 
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include "rocksjni/portal.h"
 

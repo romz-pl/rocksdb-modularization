@@ -18,7 +18,7 @@
 #include "db/range_del_aggregator.h"
 #include "db/range_tombstone_fragmenter.h"
 #include "rocksdb/env.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "table/merging_iterator.h"
 #include "test_util/sync_point.h"

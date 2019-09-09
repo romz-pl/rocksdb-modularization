@@ -10,7 +10,7 @@
 #include <string>
 #include "rocksdb/env.h"
 #include "rocksdb/merge_operator.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "util/coding.h"
 #include "utilities/merge_operators.h"
 

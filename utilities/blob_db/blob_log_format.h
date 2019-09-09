@@ -14,7 +14,7 @@
 #include <utility>
 
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include "rocksdb/types.h"
 

@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 namespace rocksdb {
 // This is an experimental feature aiming to reduce the CPU utilization of

@@ -68,7 +68,7 @@ int main() {
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "util/gflags_compat.h"
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;

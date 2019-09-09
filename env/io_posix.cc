@@ -32,7 +32,7 @@
 #endif
 #include "monitoring/iostats_context_imp.h"
 #include "port/port.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "test_util/sync_point.h"
 #include "util/coding.h"
 

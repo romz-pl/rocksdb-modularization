@@ -6,7 +6,7 @@
 #include <node.h>
 
 #include "rocksdb/db.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/options.h"
 
 using namespace v8;

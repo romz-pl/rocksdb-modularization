@@ -11,7 +11,7 @@
 #include <string>
 #include <utility>
 #include "rocksdb/db.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/types.h"
 
 namespace rocksdb {

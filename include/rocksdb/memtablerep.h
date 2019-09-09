@@ -35,11 +35,12 @@
 
 #pragma once
 
-#include <rocksdb/slice.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <memory>
 #include <stdexcept>
+
+#include <rock/slice/Slice.h>
 
 namespace rocksdb {
 

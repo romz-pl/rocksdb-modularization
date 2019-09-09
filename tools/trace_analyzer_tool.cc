@@ -30,7 +30,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include <rock/status/Status.h>
 #include "rocksdb/table_properties.h"

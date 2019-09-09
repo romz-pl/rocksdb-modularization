@@ -19,7 +19,7 @@
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/filter_policy.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "rocksdb/types.h"

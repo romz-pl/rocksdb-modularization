@@ -49,7 +49,7 @@ int main() {
 #include "port/port.h"
 #include "rocksdb/cache.h"
 #include "rocksdb/env.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/statistics.h"
 #include "rocksdb/utilities/backupable_db.h"

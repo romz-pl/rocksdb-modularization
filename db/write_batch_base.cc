@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 
 namespace rocksdb {

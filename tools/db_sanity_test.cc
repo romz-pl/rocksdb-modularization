@@ -11,7 +11,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
 #include "rocksdb/env.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/table.h"

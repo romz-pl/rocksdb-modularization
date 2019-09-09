@@ -18,7 +18,7 @@
 #include "options/db_options.h"
 #include "port/port.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include "rocksdb/transaction_log.h"
 

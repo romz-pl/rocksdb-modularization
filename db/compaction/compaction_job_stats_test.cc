@@ -38,7 +38,7 @@
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/options.h"
 #include "rocksdb/perf_context.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "rocksdb/table_properties.h"

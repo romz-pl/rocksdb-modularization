@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 #include "port/port.h"
 #include "util/hash.h"

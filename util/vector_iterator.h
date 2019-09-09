@@ -7,7 +7,7 @@
 
 #include "db/dbformat.h"
 #include <rock/iterator/Iterator.h>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "table/internal_iterator.h"
 
 namespace rocksdb {

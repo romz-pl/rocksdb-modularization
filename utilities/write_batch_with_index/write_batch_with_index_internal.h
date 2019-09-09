@@ -14,7 +14,7 @@
 #include "port/port.h"
 #include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include "rocksdb/utilities/write_batch_with_index.h"
 

@@ -14,7 +14,7 @@
 #include "db/read_callback.h"
 
 #include "rocksdb/db.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include "rocksdb/types.h"
 

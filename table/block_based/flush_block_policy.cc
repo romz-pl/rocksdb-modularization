@@ -5,7 +5,7 @@
 
 #include "rocksdb/flush_block_policy.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "table/block_based/block_builder.h"
 #include "table/format.h"
 

@@ -26,6 +26,8 @@
 #include "rocksdb/types.h"
 #include "rocksdb/version.h"
 
+#include <rock/iterator/PinnableSlice.h>
+
 #ifdef _WIN32
 // Windows API macro interference
 #undef DeleteFile

@@ -7,6 +7,7 @@ add_library( ${LIB_NAME} STATIC
     EmptyInternalIterator.cpp
     NewEmptyIterator.cpp
     NewErrorIterator.cpp
+    PinnableSlice.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )

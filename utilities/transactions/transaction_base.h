@@ -13,7 +13,7 @@
 
 #include "db/write_batch_internal.h"
 #include "rocksdb/db.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/snapshot.h"
 #include <rock/status/Status.h>
 #include "rocksdb/types.h"

@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 namespace rocksdb {
 

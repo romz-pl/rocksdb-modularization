@@ -11,7 +11,7 @@
 #include "port/port.h"
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/db.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/write_batch.h"
 #include "test_util/testharness.h"
 

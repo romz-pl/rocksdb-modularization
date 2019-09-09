@@ -34,7 +34,7 @@
 
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 using rocksdb::ColumnFamilyDescriptor;
 using rocksdb::ColumnFamilyHandle;

@@ -18,7 +18,7 @@
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/table.h"
 #include "table/block_based/block_based_table_factory.h"
 #include "table/internal_iterator.h"

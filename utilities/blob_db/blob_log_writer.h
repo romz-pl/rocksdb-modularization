@@ -11,7 +11,7 @@
 #include <string>
 
 #include "rocksdb/env.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/statistics.h"
 #include <rock/status/Status.h>
 #include "rocksdb/types.h"

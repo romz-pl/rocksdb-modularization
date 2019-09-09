@@ -11,7 +11,7 @@
 
 #include "db/version_set.h"
 #include "logging/event_logger.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "test_util/sync_point.h"
 #include "util/coding.h"
 

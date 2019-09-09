@@ -15,7 +15,7 @@
 #include "db/snapshot_checker.h"
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/env.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "util/stop_watch.h"
 
 namespace rocksdb {

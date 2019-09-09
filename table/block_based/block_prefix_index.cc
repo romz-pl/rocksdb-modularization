@@ -9,7 +9,7 @@
 
 #include "memory/arena.h"
 #include <rock/slice/Comparator.h>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "util/coding.h"
 #include "util/hash.h"

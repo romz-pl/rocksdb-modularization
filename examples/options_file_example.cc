@@ -14,7 +14,7 @@
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/table.h"
 #include "rocksdb/utilities/options_util.h"
 

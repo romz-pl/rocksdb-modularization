@@ -9,7 +9,7 @@
 #include <memory>
 #include <assert.h>
 
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/merge_operator.h"
 #include "utilities/merge_operators.h"
 

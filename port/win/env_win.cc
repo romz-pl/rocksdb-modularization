@@ -21,7 +21,7 @@
 #include <sys/stat.h>
 
 #include "rocksdb/env.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 
 #include "port/port.h"
 #include "port/port_dirent.h"

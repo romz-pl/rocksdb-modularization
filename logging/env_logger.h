@@ -18,7 +18,7 @@
 
 #include "monitoring/iostats_context_imp.h"
 #include "rocksdb/env.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "test_util/sync_point.h"
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"

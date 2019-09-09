@@ -47,7 +47,7 @@
 #include "rocksdb/perf_context.h"
 #include "rocksdb/persistent_cache.h"
 #include "rocksdb/rate_limiter.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/stats_history.h"
 #include "rocksdb/utilities/object_registry.h"

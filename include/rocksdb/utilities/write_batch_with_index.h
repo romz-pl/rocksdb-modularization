@@ -18,12 +18,13 @@
 
 #include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/status/Status.h>
 #include "rocksdb/write_batch.h"
 #include "rocksdb/write_batch_base.h"
 
 #include <rock/slice/BytewiseComparator.h>
+#include <rock/iterator/PinnableSlice.h>
 
 namespace rocksdb {
 

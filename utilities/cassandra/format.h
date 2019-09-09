@@ -59,7 +59,7 @@
 #include <memory>
 #include <vector>
 #include "rocksdb/merge_operator.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "test_util/testharness.h"
 
 namespace rocksdb {

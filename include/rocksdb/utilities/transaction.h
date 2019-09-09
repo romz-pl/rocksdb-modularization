@@ -13,6 +13,7 @@
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include <rock/status/Status.h>
+#include <rock/iterator/PinnableSlice.h>
 
 namespace rocksdb {
 

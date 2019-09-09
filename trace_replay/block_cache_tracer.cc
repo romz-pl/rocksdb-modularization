@@ -11,7 +11,7 @@
 
 #include "db/db_impl/db_impl.h"
 #include "db/dbformat.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "util/coding.h"
 #include "util/hash.h"
 

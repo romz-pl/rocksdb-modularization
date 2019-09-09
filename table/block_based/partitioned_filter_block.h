@@ -11,7 +11,7 @@
 #include "db/dbformat.h"
 #include "index_builder.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "table/block_based/block.h"
 #include "table/block_based/filter_block_reader_common.h"

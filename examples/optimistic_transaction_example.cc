@@ -7,7 +7,7 @@
 
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/utilities/transaction.h"
 #include "rocksdb/utilities/optimistic_transaction_db.h"
 

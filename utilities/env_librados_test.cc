@@ -12,7 +12,7 @@
 #include "test_util/testharness.h"
 
 #include "rocksdb/db.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/options.h"
 #include "util/random.h"
 #include <chrono>

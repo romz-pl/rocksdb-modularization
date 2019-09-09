@@ -4,7 +4,7 @@
 //  (found in the LICENSE.Apache file in the root directory).
 
 #include <memory>
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/merge_operator.h"
 #include "utilities/merge_operators.h"
 

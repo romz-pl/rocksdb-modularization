@@ -9,7 +9,7 @@
 
 #include <rock/slice/Comparator.h>
 #include "rocksdb/memtablerep.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "util/coding.h"
 
 namespace rocksdb {

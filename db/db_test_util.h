@@ -33,7 +33,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/sst_file_writer.h"
 #include "rocksdb/statistics.h"
 #include "rocksdb/table.h"

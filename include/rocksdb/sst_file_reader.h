@@ -9,7 +9,7 @@
 
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
-#include "rocksdb/slice.h"
+#include <rock/slice/Slice.h>
 #include "rocksdb/table_properties.h"
 
 namespace rocksdb {
