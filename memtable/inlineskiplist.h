@@ -47,7 +47,7 @@
 #include <atomic>
 #include <type_traits>
 #include "memory/allocator.h"
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 #include "port/port.h"
 #include <rock/slice/Slice.h>
 #include "util/coding.h"

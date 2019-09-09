@@ -7,7 +7,7 @@
 
 #include <cinttypes>
 #include "rocksdb/statistics.h"
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 #include <algorithm>
 #include <cstdio>
 

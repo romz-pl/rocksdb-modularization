@@ -12,7 +12,7 @@
 #include <string>
 #include <utility>
 #include "db/db_impl/db_impl.h"
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 
 
 #include <rock/string/ParseUint64.h>

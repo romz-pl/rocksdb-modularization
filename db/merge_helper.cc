@@ -10,7 +10,7 @@
 #include "db/dbformat.h"
 #include "monitoring/perf_context_imp.h"
 #include "monitoring/statistics.h"
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/merge_operator.h"

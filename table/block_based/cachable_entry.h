@@ -10,7 +10,7 @@
 #pragma once
 
 #include <cassert>
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 #include "rocksdb/cache.h"
 #include <rock/iterator/Cleanable.h>
 

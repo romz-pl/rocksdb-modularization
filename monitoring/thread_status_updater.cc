@@ -5,7 +5,7 @@
 
 #include "monitoring/thread_status_updater.h"
 #include <memory>
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 #include "rocksdb/env.h"
 #include "util/mutexlock.h"
 

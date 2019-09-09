@@ -5,7 +5,7 @@
 
 #include "db/compaction/compaction_iterator.h"
 #include "db/snapshot_checker.h"
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 #include "rocksdb/listener.h"
 #include "table/internal_iterator.h"
 #include "test_util/sync_point.h"

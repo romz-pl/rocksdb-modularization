@@ -10,7 +10,7 @@
 #include <utility>
 #include <vector>
 
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 #include "port/port.h"
 #include "util/random.h"
 

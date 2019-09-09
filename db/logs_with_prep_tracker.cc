@@ -5,7 +5,7 @@
 //
 #include "db/logs_with_prep_tracker.h"
 
-#include "port/likely.h"
+#include <rock/likely/likely.h>
 
 namespace rocksdb {
 void LogsWithPrepTracker::MarkLogAsHavingPrepSectionFlushed(uint64_t log) {
