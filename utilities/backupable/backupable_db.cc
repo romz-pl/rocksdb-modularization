@@ -15,7 +15,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/rate_limiter.h"
 #include "rocksdb/transaction_log.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/channel.h"
 #include "util/coding.h"
 #include "util/crc32c.h"

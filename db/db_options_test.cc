@@ -19,7 +19,7 @@
 #include "rocksdb/convenience.h"
 #include "rocksdb/rate_limiter.h"
 #include "rocksdb/stats_history.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testutil.h"
 #include <rock/random/Random.h>
 

@@ -23,7 +23,7 @@
 #include "rocksdb/table.h"
 #include "rocksdb/write_batch.h"
 #include "test_util/fault_injection_test_env.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/mutexlock.h"

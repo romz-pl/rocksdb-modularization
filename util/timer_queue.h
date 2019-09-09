@@ -32,7 +32,7 @@
 #include <vector>
 
 #include <rock/port/port.h>
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 // Allows execution of handlers at a specified time in the future
 // Guarantees:

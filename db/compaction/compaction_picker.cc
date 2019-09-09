@@ -19,7 +19,7 @@
 #include "file/filename.h"
 #include "logging/log_buffer.h"
 #include "monitoring/statistics.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include <rock/random/Random.h>
 #include <rock/random/Random64.h>
 

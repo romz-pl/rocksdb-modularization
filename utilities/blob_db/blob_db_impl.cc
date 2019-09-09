@@ -28,7 +28,7 @@
 #include "table/block_based/block_based_table_builder.h"
 #include "table/block_based/block_builder.h"
 #include "table/meta_blocks.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"

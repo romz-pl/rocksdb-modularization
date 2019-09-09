@@ -50,7 +50,7 @@
 #include "table/block_based/block_based_table_factory.h"
 #include "table/merging_iterator.h"
 #include "table/table_builder.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/coding.h"
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"

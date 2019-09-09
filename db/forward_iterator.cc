@@ -21,7 +21,7 @@
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "table/merging_iterator.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 
 namespace rocksdb {

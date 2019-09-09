@@ -72,7 +72,7 @@ int main() {
 
 // SyncPoint is not supported in Released Windows Mode.
 #if !(defined NDEBUG) || !defined(OS_WIN)
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #endif  // !(defined NDEBUG) || !defined(OS_WIN)
 #include "test_util/testutil.h"
 

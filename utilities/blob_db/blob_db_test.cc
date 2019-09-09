@@ -19,7 +19,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/utilities/debug.h"
 #include "test_util/fault_injection_test_env.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "util/cast_util.h"
 #include <rock/random/Random.h>

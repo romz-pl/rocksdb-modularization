@@ -30,7 +30,7 @@
 #include "table/block_based/data_block_hash_index.h"
 #include "table/format.h"
 #include "table/internal_iterator.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include <rock/random/Random.h>
 
 namespace rocksdb {

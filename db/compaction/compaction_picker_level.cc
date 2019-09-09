@@ -13,7 +13,7 @@
 
 #include "db/compaction/compaction_picker_level.h"
 #include "logging/log_buffer.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 namespace rocksdb {
 

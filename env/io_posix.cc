@@ -33,7 +33,7 @@
 #include "monitoring/iostats_context_imp.h"
 #include <rock/port/port.h>
 #include <rock/slice/Slice.h>
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/coding.h"
 
 

@@ -19,7 +19,7 @@
 #include "rocksdb/snapshot.h"
 #include <rock/status/Status.h>
 #include "rocksdb/utilities/transaction_db.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
 
 #include "utilities/transactions/pessimistic_transaction_db.h"

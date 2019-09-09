@@ -16,7 +16,7 @@
 #include "options/options_helper.h"
 #include "rocksdb/convenience.h"
 #include "rocksdb/db.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
 #include "util/file_reader_writer.h"
 

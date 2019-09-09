@@ -19,7 +19,7 @@
 #include "monitoring/perf_context_imp.h"
 #include <rock/slice/Slice.h>
 #include "rocksdb/utilities/transaction_db_mutex.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
 #include "util/hash.h"
 #include "util/thread_local.h"

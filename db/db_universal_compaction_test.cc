@@ -11,7 +11,7 @@
 #include <rock/port/stack_trace.h>
 #if !defined(ROCKSDB_LITE)
 #include "rocksdb/utilities/table_properties_collectors.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 namespace rocksdb {
 

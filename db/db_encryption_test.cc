@@ -7,7 +7,7 @@
 #include <rock/port/stack_trace.h>
 #include "rocksdb/perf_context.h"
 #if !defined(ROCKSDB_LITE)
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #endif
 #include <iostream>
 #include <string>

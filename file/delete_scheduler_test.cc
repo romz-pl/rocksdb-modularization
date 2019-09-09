@@ -12,7 +12,7 @@
 #include "file/sst_file_manager_impl.h"
 #include "rocksdb/env.h"
 #include "rocksdb/options.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 

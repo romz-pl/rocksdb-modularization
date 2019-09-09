@@ -480,8 +480,8 @@ add_subdirectory( libs )
 SET( ROCKSDB_COMPONENT_LIBS
     io_abstract
     iterator
-    port
     random
+    sync_point
 )
 
 # Main library source code
@@ -625,8 +625,6 @@ set(SOURCES
         table/sst_file_writer.cc
         table/table_properties.cc
         table/two_level_iterator.cc
-        test_util/sync_point.cc
-        test_util/sync_point_impl.cc
         test_util/testutil.cc
         test_util/transaction_test_util.cc
         tools/block_cache_analyzer/block_cache_trace_analyzer.cc

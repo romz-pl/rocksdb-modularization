@@ -25,7 +25,7 @@
 #include "rocksdb/metadata.h"
 #include "rocksdb/transaction_log.h"
 #include "rocksdb/utilities/checkpoint.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 #include <rock/io_abstract/Directory.h>
 

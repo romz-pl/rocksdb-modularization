@@ -15,7 +15,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/listener.h"
 #include "rocksdb/rate_limiter.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/aligned_buffer.h"
 
 #include <rock/numeric_limits/numeric_limits.h>

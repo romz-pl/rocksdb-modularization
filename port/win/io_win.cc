@@ -10,7 +10,7 @@
 #include "port/win/io_win.h"
 
 #include "monitoring/iostats_context_imp.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/aligned_buffer.h"
 #include "util/coding.h"
 

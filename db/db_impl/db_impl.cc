@@ -87,7 +87,7 @@
 #include "table/multiget_context.h"
 #include "table/table_builder.h"
 #include "table/two_level_iterator.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "tools/sst_dump_tool_imp.h"
 #include "util/autovector.h"
 #include "util/build_version.h"

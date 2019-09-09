@@ -20,7 +20,7 @@
 #include "table/internal_iterator.h"
 #include "table/iter_heap.h"
 #include "table/iterator_wrapper.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/autovector.h"
 #include "util/heap.h"
 #include "util/stop_watch.h"

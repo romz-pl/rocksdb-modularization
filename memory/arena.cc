@@ -22,7 +22,7 @@
 #include "logging/logging.h"
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 namespace rocksdb {
 

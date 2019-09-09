@@ -20,7 +20,7 @@
 #include "logging/logging.h"
 #include <rock/port/port.h>
 #include "rocksdb/db.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 

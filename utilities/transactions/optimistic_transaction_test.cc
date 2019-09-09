@@ -17,7 +17,7 @@
 #include "rocksdb/perf_context.h"
 #include "rocksdb/utilities/optimistic_transaction_db.h"
 #include "rocksdb/utilities/transaction.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/transaction_test_util.h"
 #include "util/crc32c.h"

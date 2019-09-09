@@ -25,7 +25,7 @@
 #include "rocksdb/table_properties.h"
 #include "table/block_based/block_based_table_factory.h"
 #include "table/plain/plain_table_factory.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/hash.h"

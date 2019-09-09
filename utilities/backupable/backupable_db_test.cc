@@ -22,7 +22,7 @@
 #include "rocksdb/types.h"
 #include "rocksdb/utilities/backupable_db.h"
 #include "rocksdb/utilities/options_util.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/file_reader_writer.h"

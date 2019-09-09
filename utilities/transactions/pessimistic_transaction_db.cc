@@ -16,7 +16,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
 #include "rocksdb/utilities/transaction_db.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
 #include "util/mutexlock.h"
 #include "utilities/transactions/pessimistic_transaction.h"

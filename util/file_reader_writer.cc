@@ -15,7 +15,7 @@
 #include "monitoring/histogram.h"
 #include "monitoring/iostats_context_imp.h"
 #include <rock/port/port.h>
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include <rock/random/Random.h>
 #include "util/rate_limiter.h"
 

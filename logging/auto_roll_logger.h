@@ -14,7 +14,7 @@
 #include "file/filename.h"
 #include <rock/port/port.h>
 #include "port/util_logger.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/mutexlock.h"
 
 namespace rocksdb {

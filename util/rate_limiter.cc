@@ -11,7 +11,7 @@
 #include "monitoring/statistics.h"
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/aligned_buffer.h"
 
 #include <rock/numeric_limits/numeric_limits.h>

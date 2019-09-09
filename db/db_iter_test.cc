@@ -17,7 +17,7 @@
 #include "rocksdb/statistics.h"
 #include "table/iterator_wrapper.h"
 #include "table/merging_iterator.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 
 #include "utilities/merge_operators.h"

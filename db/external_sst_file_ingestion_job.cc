@@ -20,7 +20,7 @@
 #include "table/scoped_arena_iterator.h"
 #include "table/sst_file_writer_collectors.h"
 #include "table/table_builder.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"
 

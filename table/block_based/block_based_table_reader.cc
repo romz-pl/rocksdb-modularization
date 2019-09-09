@@ -46,7 +46,7 @@
 #include "table/two_level_iterator.h"
 
 #include "monitoring/perf_context_imp.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/coding.h"
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"

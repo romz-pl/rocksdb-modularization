@@ -41,7 +41,7 @@
 #include "logging/log_buffer.h"
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/coding.h"

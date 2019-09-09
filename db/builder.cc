@@ -32,7 +32,7 @@
 #include "table/block_based/block_based_table_builder.h"
 #include "table/format.h"
 #include "table/internal_iterator.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"
 

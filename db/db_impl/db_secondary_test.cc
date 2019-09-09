@@ -11,7 +11,7 @@
 #include "db/db_test_util.h"
 #include <rock/port/stack_trace.h>
 #include "test_util/fault_injection_test_env.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 namespace rocksdb {
 

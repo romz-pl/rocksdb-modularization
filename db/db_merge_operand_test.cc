@@ -10,7 +10,7 @@
 #include "table/block_based/block_builder.h"
 #include "test_util/fault_injection_test_env.h"
 #if !defined(ROCKSDB_LITE)
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #endif
 #include "rocksdb/merge_operator.h"
 #include "utilities/merge_operators.h"

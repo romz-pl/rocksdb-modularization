@@ -15,7 +15,7 @@
 
 #include "db/db_test_util.h"
 #include "rocksdb/env.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include <rock/random/Random.h>
 

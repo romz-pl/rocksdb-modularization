@@ -8,7 +8,7 @@
 #include <rock/likely/likely.h>
 #include "rocksdb/listener.h"
 #include "table/internal_iterator.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 #define DEFINITELY_IN_SNAPSHOT(seq, snapshot)                       \
   ((seq) <= (snapshot) &&                                           \

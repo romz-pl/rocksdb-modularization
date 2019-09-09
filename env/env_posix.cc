@@ -54,7 +54,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/options.h"
 #include <rock/slice/Slice.h>
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 #include "util/coding.h"
 #include "util/compression_context_cache.h"
 #include <rock/random/Random.h>

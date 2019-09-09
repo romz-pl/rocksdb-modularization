@@ -13,7 +13,7 @@
 #include "db/column_family.h"
 #include "db/compaction/compaction.h"
 #include "rocksdb/compaction_filter.h"
-#include "test_util/sync_point.h"
+#include <rock/sync_point/sync_point.h>
 
 
 #include <rock/string/AppendHumanBytes.h>
