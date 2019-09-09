@@ -27,7 +27,7 @@ int main() {
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/gflags_compat.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;

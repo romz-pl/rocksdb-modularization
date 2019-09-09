@@ -36,7 +36,7 @@
 #include <atomic>
 #include "memory/allocator.h"
 #include "port/port.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 namespace rocksdb {
 

@@ -9,7 +9,7 @@
 #include "rocksdb/options.h"
 #include <rock/slice/Slice.h>
 #include "test_util/testharness.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include "utilities/merge_operators.h"
 

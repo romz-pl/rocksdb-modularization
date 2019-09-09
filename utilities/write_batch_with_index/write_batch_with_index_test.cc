@@ -15,7 +15,7 @@
 #include "db/column_family.h"
 #include "port/stack_trace.h"
 #include "test_util/testharness.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include "utilities/merge_operators.h"
 #include "utilities/merge_operators/string_append/stringappend.h"

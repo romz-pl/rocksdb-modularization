@@ -54,7 +54,7 @@
 #include "util/coding.h"
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/stop_watch.h"
 
 #include <rock/io_abstract/Directory.h>

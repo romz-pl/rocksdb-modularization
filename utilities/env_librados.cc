@@ -2,7 +2,7 @@
 // vim: ts=8 sw=2 smarttab
 // Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
 #include "rocksdb/utilities/env_librados.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include <mutex>
 #include <cstdlib>
 

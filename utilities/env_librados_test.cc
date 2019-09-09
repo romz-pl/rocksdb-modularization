@@ -14,7 +14,7 @@
 #include "rocksdb/db.h"
 #include <rock/slice/Slice.h>
 #include "rocksdb/options.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include <chrono>
 #include <ostream>
 #include "rocksdb/utilities/transaction_db.h"

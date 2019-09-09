@@ -15,7 +15,7 @@
 #include "util/coding.h"
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 namespace rocksdb {
 namespace log {

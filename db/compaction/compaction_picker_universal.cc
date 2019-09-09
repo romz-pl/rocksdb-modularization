@@ -20,7 +20,7 @@
 #include "logging/log_buffer.h"
 #include "monitoring/statistics.h"
 #include "test_util/sync_point.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 
 namespace rocksdb {

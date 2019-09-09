@@ -23,8 +23,8 @@
 #include "db/dbformat.h"
 #include "db/snapshot_impl.h"
 #include "logging/logging.h"
-#include "util/random.h"
-
+#include <rock/random/Random.h>
+#include <rock/random/Random64.h>
 
 namespace rocksdb {
 

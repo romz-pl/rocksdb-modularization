@@ -64,7 +64,7 @@
 #include "util/crc32c.h"
 #include "util/gflags_compat.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/stderr_logger.h"
 
 #include "util/xxhash.h"
@@ -78,6 +78,7 @@
 #include <rock/string/TimeToHumanString.h>
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/random/Random64.h>
 
 #ifdef OS_WIN
 #include <io.h>  // open/close

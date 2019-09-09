@@ -45,7 +45,7 @@
 #include "util/compression.h"
 #include "util/file_reader_writer.h"
 #include "util/gflags_compat.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;

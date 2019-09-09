@@ -18,7 +18,7 @@
 #include "rocksdb/write_batch.h"
 #include "test_util/sync_point.h"
 #include "test_util/testharness.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 using std::string;
 

@@ -31,7 +31,7 @@
 #include "table/format.h"
 #include "table/internal_iterator.h"
 #include "test_util/sync_point.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 namespace rocksdb {
 

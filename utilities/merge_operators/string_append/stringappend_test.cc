@@ -13,7 +13,7 @@
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/utilities/db_ttl.h"
 #include "test_util/testharness.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "utilities/merge_operators.h"
 #include "utilities/merge_operators/string_append/stringappend.h"
 #include "utilities/merge_operators/string_append/stringappend2.h"

@@ -4,15 +4,14 @@
 //  (found in the LICENSE.Apache file in the root directory).
 //
 
-#include "util/random.h"
+#include <rock/random/Random.h>
 
-#include <stdint.h>
+
+#include <rock/likely/likely.h>
+
 #include <string.h>
 #include <thread>
 #include <utility>
-
-#include <rock/likely/likely.h>
-//#include "util/thread_local.h"
 
 #ifdef ROCKSDB_SUPPORT_THREAD_LOCAL
 #define STORAGE_DECL static __thread

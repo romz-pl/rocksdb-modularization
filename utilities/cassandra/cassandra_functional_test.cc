@@ -9,7 +9,7 @@
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/utilities/db_ttl.h"
 #include "test_util/testharness.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "utilities/cassandra/cassandra_compaction_filter.h"
 #include "utilities/cassandra/merge_operator.h"
 #include "utilities/cassandra/test_utils.h"

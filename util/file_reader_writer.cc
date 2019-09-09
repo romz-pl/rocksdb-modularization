@@ -16,7 +16,7 @@
 #include "monitoring/iostats_context_imp.h"
 #include "port/port.h"
 #include "test_util/sync_point.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/rate_limiter.h"
 
 namespace rocksdb {

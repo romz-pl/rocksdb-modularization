@@ -65,7 +65,7 @@ int main() {
 #include "util/crc32c.h"
 #include "util/gflags_compat.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/io_abstract/MemoryMappedFileBuffer.h>

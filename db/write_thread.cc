@@ -10,7 +10,7 @@
 #include "monitoring/perf_context_imp.h"
 #include "port/port.h"
 #include "test_util/sync_point.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 namespace rocksdb {
 

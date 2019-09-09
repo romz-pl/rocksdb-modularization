@@ -21,7 +21,7 @@
 #include "table/meta_blocks.h"
 #include "util/autovector.h"
 #include "util/file_reader_writer.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 
 namespace rocksdb {

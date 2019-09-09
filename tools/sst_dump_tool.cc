@@ -34,7 +34,7 @@
 #include "table/plain/plain_table_factory.h"
 #include "table/table_reader.h"
 #include "util/compression.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include "port/port.h"
 

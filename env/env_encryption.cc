@@ -13,7 +13,7 @@
 #include "rocksdb/env_encryption.h"
 #include "util/aligned_buffer.h"
 #include "util/coding.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include <rock/io_abstract/SequentialFile.h>
 #include <rock/io_abstract/RandomAccessFile.h>

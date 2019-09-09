@@ -33,7 +33,7 @@
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/stop_watch.h"
 #include "util/timer_queue.h"
 #include "utilities/blob_db/blob_compaction_filter.h"

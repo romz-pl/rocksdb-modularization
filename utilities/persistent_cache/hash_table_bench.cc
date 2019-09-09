@@ -22,7 +22,7 @@ int main() { fprintf(stderr, "Please install gflags to run tools\n"); }
 #include "rocksdb/env.h"
 #include "util/gflags_compat.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "utilities/persistent_cache/hash_table.h"
 
 using std::string;

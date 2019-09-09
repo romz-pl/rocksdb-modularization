@@ -23,7 +23,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include <rock/io_abstract/RandomRWFile.h>
 #include <rock/io_abstract/Directory.h>

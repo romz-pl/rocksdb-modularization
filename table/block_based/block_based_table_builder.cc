@@ -49,6 +49,8 @@
 
 #include "util/xxhash.h"
 
+#include <rock/random/Random64.h>
+
 namespace rocksdb {
 
 extern const std::string kHashIndexPrefixesBlock;

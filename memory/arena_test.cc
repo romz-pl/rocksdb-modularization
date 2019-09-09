@@ -9,7 +9,7 @@
 
 #include "memory/arena.h"
 #include "test_util/testharness.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 namespace rocksdb {
 

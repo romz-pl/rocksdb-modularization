@@ -25,7 +25,7 @@
 #include "rocksdb/utilities/object_registry.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/stderr_logger.h"
 
 #include "utilities/merge_operators/bytesxor.h"

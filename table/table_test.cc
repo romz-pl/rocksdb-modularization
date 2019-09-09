@@ -50,7 +50,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/compression.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include "utilities/merge_operators.h"
 

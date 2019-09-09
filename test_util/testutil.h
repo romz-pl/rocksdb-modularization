@@ -24,7 +24,7 @@
 #include "table/internal_iterator.h"
 #include "table/plain/plain_table_factory.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #include <rock/io_abstract/RandomRWFile.h>
 

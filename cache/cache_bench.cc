@@ -21,7 +21,7 @@ int main() {
 #include "rocksdb/env.h"
 #include "util/gflags_compat.h"
 #include "util/mutexlock.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 

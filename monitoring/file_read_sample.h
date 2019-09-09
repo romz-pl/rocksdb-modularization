@@ -5,7 +5,7 @@
 //
 #pragma once
 #include "db/version_edit.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 namespace rocksdb {
 static const uint32_t kFileReadSampleRate = 1024;

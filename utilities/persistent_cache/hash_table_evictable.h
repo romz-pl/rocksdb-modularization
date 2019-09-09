@@ -9,7 +9,7 @@
 
 #include <functional>
 
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "utilities/persistent_cache/hash_table.h"
 #include "utilities/persistent_cache/lrulist.h"
 

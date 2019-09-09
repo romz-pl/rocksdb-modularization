@@ -13,7 +13,7 @@
 #include "port/sys_time.h"
 #include "util/cast_util.h"
 #include "util/murmurhash.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/rate_limiter.h"
 
 #include <rock/io_abstract/SequentialFile.h>

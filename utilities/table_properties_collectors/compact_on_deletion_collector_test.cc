@@ -17,7 +17,7 @@
 #include "rocksdb/table.h"
 #include "rocksdb/table_properties.h"
 #include "rocksdb/utilities/table_properties_collectors.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "utilities/table_properties_collectors/compact_on_deletion_collector.h"
 
 int main(int /*argc*/, char** /*argv*/) {

@@ -25,7 +25,7 @@ int main() {
 #include "rocksdb/env.h"
 #include "test_util/testutil.h"
 #include "util/coding.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/stop_watch.h"
 
 #include "util/gflags_compat.h"

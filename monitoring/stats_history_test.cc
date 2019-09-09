@@ -22,7 +22,7 @@
 #include "rocksdb/stats_history.h"
 #include "test_util/sync_point.h"
 #include "test_util/testutil.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 namespace rocksdb {
 

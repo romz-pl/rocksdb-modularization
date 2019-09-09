@@ -29,7 +29,7 @@ int main() {
 #include "test_util/testharness.h"
 #include "util/coding.h"
 #include "util/gflags_compat.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 #include "util/stop_watch.h"
 
 #include "utilities/merge_operators.h"

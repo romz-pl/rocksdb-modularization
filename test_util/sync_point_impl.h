@@ -16,7 +16,7 @@
 #include <unordered_set>
 
 #include "port/port.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 #pragma once
 

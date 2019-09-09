@@ -19,7 +19,7 @@
 #include "rocksdb/perf_context.h"
 #include "rocksdb/perf_level.h"
 #include "rocksdb/table.h"
-#include "util/random.h"
+#include <rock/random/Random.h>
 
 
 namespace rocksdb {

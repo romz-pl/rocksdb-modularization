@@ -480,7 +480,7 @@ add_subdirectory( libs )
 SET( ROCKSDB_COMPONENT_LIBS
     io_abstract
     iterator
-    likely
+    random
 )
 
 # Main library source code
@@ -649,7 +649,6 @@ set(SOURCES
         util/filter_policy.cc
         util/hash.cc
         util/murmurhash.cc
-        util/random.cc
         util/rate_limiter.cc
         util/thread_local.cc
         util/threadpool_imp.cc
