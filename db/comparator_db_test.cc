@@ -16,6 +16,8 @@
 
 #include "utilities/merge_operators.h"
 
+#include <rock/slice/ReverseBytewiseComparator.h>
+
 using std::unique_ptr;
 
 namespace rocksdb {

@@ -19,6 +19,7 @@
 
 #include <rock/string/NumberToString.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/slice/ReverseBytewiseComparator.h>
 
 namespace rocksdb {
 

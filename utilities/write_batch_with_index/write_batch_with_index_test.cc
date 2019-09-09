@@ -20,6 +20,8 @@
 #include "utilities/merge_operators.h"
 #include "utilities/merge_operators/string_append/stringappend.h"
 
+#include <rock/slice/ReverseBytewiseComparator.h>
+
 namespace rocksdb {
 
 namespace {

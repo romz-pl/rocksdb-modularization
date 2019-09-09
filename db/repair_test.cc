@@ -16,6 +16,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/transaction_log.h"
 
+#include <rock/slice/ReverseBytewiseComparator.h>
 
 namespace rocksdb {
 

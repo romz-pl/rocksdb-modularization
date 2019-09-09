@@ -44,6 +44,7 @@
 
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/slice/ReverseBytewiseComparator.h>
 
 #ifndef GFLAGS
 bool FLAGS_enable_print = false;

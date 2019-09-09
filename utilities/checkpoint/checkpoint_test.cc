@@ -28,6 +28,8 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 
+#include <rock/slice/ReverseBytewiseComparator.h>
+
 namespace rocksdb {
 class CheckpointTest : public testing::Test {
  protected:

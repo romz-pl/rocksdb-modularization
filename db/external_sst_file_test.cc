@@ -14,6 +14,8 @@
 #include "test_util/fault_injection_test_env.h"
 #include "test_util/testutil.h"
 
+#include <rock/slice/ReverseBytewiseComparator.h>
+
 namespace rocksdb {
 
 // A test environment that can be configured to fail the Link operation.
