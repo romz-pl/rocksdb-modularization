@@ -4,6 +4,6 @@
 
 namespace rocksdb {
 
-using IteratorWrapper = IteratorWrapperBase<Slice>;
+
 
 }

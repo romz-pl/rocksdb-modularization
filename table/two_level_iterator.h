@@ -11,6 +11,7 @@
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/env.h"
 #include "table/iterator_wrapper.h"
+#include "table/format.h"
 
 namespace rocksdb {
 
