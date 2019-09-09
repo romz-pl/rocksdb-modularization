@@ -10,7 +10,7 @@
 #include "rocksdb/utilities/option_change_migration.h"
 #include <set>
 #include "db/db_test_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 namespace rocksdb {
 
 class DBOptionChangeMigrationTests

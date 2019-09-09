@@ -12,7 +12,7 @@
 #include <atomic>
 #include <mutex>
 #include <thread>
-#include "port/port.h"
+#include <rock/port/port.h>
 
 namespace rocksdb {
 

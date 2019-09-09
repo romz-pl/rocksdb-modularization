@@ -9,7 +9,7 @@
 
 #include "memory/concurrent_arena.h"
 #include <thread>
-#include "port/port.h"
+#include <rock/port/port.h>
 #include <rock/random/Random.h>
 
 namespace rocksdb {

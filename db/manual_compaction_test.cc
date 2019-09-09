@@ -8,7 +8,7 @@
 #include <sstream>
 #include <cstdlib>
 
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/db.h"
 #include <rock/slice/Slice.h>

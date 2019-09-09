@@ -18,7 +18,7 @@
 #include <thread>
 #include <vector>
 #include "logging/logging.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/db.h"
 #include "test_util/sync_point.h"
 #include "test_util/testharness.h"

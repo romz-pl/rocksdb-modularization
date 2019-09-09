@@ -14,7 +14,7 @@
 #include "db/db_impl/db_impl.h"
 #include "db/db_test_util.h"
 #include "options/options_helper.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/cache.h"
 #include "rocksdb/convenience.h"
 #include "rocksdb/rate_limiter.h"

@@ -11,7 +11,7 @@
 #include <string>
 #include "db/dbformat.h"
 #include "db/version_edit.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include <rock/slice/Comparator.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"

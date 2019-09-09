@@ -22,7 +22,7 @@ int main() {
 #include "dynamic_bloom.h"
 #include "logging/logging.h"
 #include "memory/arena.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/gflags_compat.h"

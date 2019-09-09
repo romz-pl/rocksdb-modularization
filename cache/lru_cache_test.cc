@@ -7,7 +7,7 @@
 
 #include <string>
 #include <vector>
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "test_util/testharness.h"
 
 namespace rocksdb {

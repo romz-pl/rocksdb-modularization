@@ -9,7 +9,7 @@
 
 #include <rock/slice/Slice.h>
 
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "util/hash.h"
 
 #include <memory>

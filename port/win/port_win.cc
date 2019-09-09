@@ -14,8 +14,8 @@
 #include "port/win/port_win.h"
 
 #include <io.h>
-#include "port/port_dirent.h"
-#include "port/sys_time.h"
+#include <rock/port/port_dirent.h>
+#include <rock/port/sys_time.h>
 
 #include <cstdlib>
 #include <stdio.h>

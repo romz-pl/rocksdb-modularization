@@ -9,7 +9,7 @@
 #include <thread>
 
 #include <rock/likely/likely.h>
-#include "port/port.h"
+#include <rock/port/port.h>
 
 
 namespace rocksdb {

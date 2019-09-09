@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "db/compaction/compaction_iterator.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 

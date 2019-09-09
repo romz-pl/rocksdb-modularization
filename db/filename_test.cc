@@ -11,7 +11,7 @@
 
 #include "db/dbformat.h"
 #include "logging/logging.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "test_util/testharness.h"
 
 namespace rocksdb {

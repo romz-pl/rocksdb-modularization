@@ -9,7 +9,7 @@
 #include <vector>
 
 #include "port/jemalloc_helper.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/memory_allocator.h"
 #include "util/thread_local.h"
 

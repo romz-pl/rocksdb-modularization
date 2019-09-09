@@ -16,7 +16,7 @@
 #include "db/db_test_util.h"
 #include "file/file_util.h"
 #include "file/sst_file_manager_impl.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/utilities/debug.h"
 #include "test_util/fault_injection_test_env.h"
 #include "test_util/sync_point.h"

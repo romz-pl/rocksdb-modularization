@@ -36,7 +36,7 @@
 #include "util/compression.h"
 #include <rock/random/Random.h>
 
-#include "port/port.h"
+#include <rock/port/port.h>
 
 #include <rock/slice/NewNoopTransform.h>
 

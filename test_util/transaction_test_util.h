@@ -8,7 +8,7 @@
 #ifndef ROCKSDB_LITE
 
 #include "rocksdb/options.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/utilities/optimistic_transaction_db.h"
 #include "rocksdb/utilities/transaction_db.h"
 

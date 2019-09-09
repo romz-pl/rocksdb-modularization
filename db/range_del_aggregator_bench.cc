@@ -30,6 +30,8 @@ int main() {
 
 #include "util/gflags_compat.h"
 
+#include <rock/random/Random64.h>
+
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 
 DEFINE_int32(num_range_tombstones, 1000, "number of range tombstones created");

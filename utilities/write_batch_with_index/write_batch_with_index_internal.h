@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "options/db_options.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
 #include <rock/slice/Slice.h>

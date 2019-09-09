@@ -7,7 +7,7 @@
 
 #include "db/db_test_util.h"
 #include "db/forward_iterator.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/merge_operator.h"
 #include "utilities/merge_operators.h"
 #include "utilities/merge_operators/string_append/stringappend2.h"

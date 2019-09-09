@@ -28,7 +28,7 @@
 #include "memtable/hash_linklist_rep.h"
 #include "monitoring/statistics.h"
 #include "monitoring/thread_status_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/cache.h"
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/convenience.h"

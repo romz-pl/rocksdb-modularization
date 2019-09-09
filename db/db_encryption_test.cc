@@ -4,7 +4,7 @@
 //  (found in the LICENSE.Apache file in the root directory).
 //
 #include "db/db_test_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/perf_context.h"
 #if !defined(ROCKSDB_LITE)
 #include "test_util/sync_point.h"

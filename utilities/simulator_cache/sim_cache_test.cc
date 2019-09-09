@@ -6,7 +6,7 @@
 #include "rocksdb/utilities/sim_cache.h"
 #include <cstdlib>
 #include "db/db_test_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 
 namespace rocksdb {
 

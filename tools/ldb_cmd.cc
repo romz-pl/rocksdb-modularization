@@ -14,7 +14,7 @@
 #include "db/log_reader.h"
 #include "db/write_batch_internal.h"
 #include "file/filename.h"
-#include "port/port_dirent.h"
+#include <rock/port/port_dirent.h>
 #include "rocksdb/cache.h"
 #include "rocksdb/table_properties.h"
 #include "rocksdb/utilities/backupable_db.h"

@@ -13,7 +13,7 @@
 #include <memory>
 #include <string>
 #include "rocksjni/jnicallback.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/env.h"
 
 namespace rocksdb {

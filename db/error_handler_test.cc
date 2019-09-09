@@ -9,7 +9,7 @@
 #ifndef ROCKSDB_LITE
 
 #include "db/db_test_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/perf_context.h"
 #include "rocksdb/sst_file_manager.h"
 #include "test_util/fault_injection_test_env.h"

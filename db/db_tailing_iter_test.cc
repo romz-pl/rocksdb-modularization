@@ -14,7 +14,7 @@
 
 #include "db/db_test_util.h"
 #include "db/forward_iterator.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 
 #include <rock/slice/NewFixedPrefixTransform.h>
 

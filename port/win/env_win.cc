@@ -23,8 +23,8 @@
 #include "rocksdb/env.h"
 #include <rock/slice/Slice.h>
 
-#include "port/port.h"
-#include "port/port_dirent.h"
+#include <rock/port/port.h>
+#include <rock/port/port_dirent.h>
 #include "port/win/win_logger.h"
 #include "port/win/io_win.h"
 

@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "db/db_test_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/db.h"
 #include "rocksdb/utilities/table_properties_collectors.h"
 #include "test_util/testharness.h"

@@ -8,7 +8,7 @@
 #pragma once
 
 #include "table/internal_iterator.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 
 namespace rocksdb {
 class ScopedArenaIterator {

@@ -5,8 +5,8 @@
 
 #include <functional>
 
-#include "port/port.h"
-#include "port/stack_trace.h"
+#include <rock/port/port.h>
+#include <rock/port/stack_trace.h>
 #include "rocksdb/iostats_context.h"
 #include "rocksdb/perf_context.h"
 #include "test_util/testharness.h"

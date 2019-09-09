@@ -12,7 +12,7 @@
 
 #include "db/db_impl/db_impl.h"
 #include "logging/logging.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/db.h"
 #include "rocksdb/perf_context.h"
 #include "rocksdb/utilities/optimistic_transaction_db.h"
@@ -22,6 +22,7 @@
 #include "test_util/transaction_test_util.h"
 #include "util/crc32c.h"
 #include <rock/random/Random.h>
+#include <rock/random/Random64.h>
 
 using std::string;
 

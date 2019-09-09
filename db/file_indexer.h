@@ -13,7 +13,7 @@
 #include <limits>
 #include <vector>
 #include "memory/arena.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "util/autovector.h"
 
 #include <rock/numeric_limits/numeric_limits.h>

@@ -13,7 +13,7 @@
 #include <map>
 #include <memory>
 #include "db/column_family.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "test_util/testharness.h"
 #include <rock/random/Random.h>
 

@@ -13,7 +13,7 @@
 #include <thread>
 
 #include "monitoring/instrumented_mutex.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 
 #include <rock/status/Status.h>
 

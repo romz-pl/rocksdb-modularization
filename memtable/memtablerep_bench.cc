@@ -25,8 +25,8 @@ int main() {
 #include "db/dbformat.h"
 #include "db/memtable.h"
 #include "memory/arena.h"
-#include "port/port.h"
-#include "port/stack_trace.h"
+#include <rock/port/port.h>
+#include <rock/port/stack_trace.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/options.h"
@@ -38,6 +38,7 @@ int main() {
 #include "util/stop_watch.h"
 
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/random/Random64.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 using GFLAGS_NAMESPACE::RegisterFlagValidator;

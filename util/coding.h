@@ -19,7 +19,7 @@
 #include <string>
 
 #include "rocksdb/write_batch.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 
 #include <rock/slice/SliceParts.h>
 

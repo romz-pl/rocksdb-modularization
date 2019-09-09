@@ -13,7 +13,7 @@
 #include <string>
 
 #include "db/db_test_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/listener.h"
 #include "rocksdb/options.h"
 #include "rocksdb/perf_context.h"

@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <cstdint>
 #include <functional>
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "util/autovector.h"
 
 #include <rock/numeric_limits/numeric_limits.h>

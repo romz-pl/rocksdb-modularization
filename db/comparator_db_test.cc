@@ -17,6 +17,7 @@
 #include "utilities/merge_operators.h"
 
 #include <rock/slice/ReverseBytewiseComparator.h>
+#include <rock/random/Random64.h>
 
 using std::unique_ptr;
 

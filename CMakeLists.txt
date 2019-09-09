@@ -480,6 +480,7 @@ add_subdirectory( libs )
 SET( ROCKSDB_COMPONENT_LIBS
     io_abstract
     iterator
+    port
     random
 )
 
@@ -588,7 +589,6 @@ set(SOURCES
         options/options_helper.cc
         options/options_parser.cc
         options/options_sanity_check.cc
-        port/stack_trace.cc
         table/adaptive/adaptive_table_factory.cc
         table/block_based/block.cc
         table/block_based/block_based_filter_block.cc
@@ -748,7 +748,6 @@ endif()
 
 else()
   list(APPEND SOURCES
-    port/port_posix.cc
     env/env_posix.cc
     env/io_posix.cc)
 endif()

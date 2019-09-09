@@ -21,7 +21,7 @@
 #include "util/file_reader_writer.h"
 
 
-#include "port/port.h"
+#include <rock/port/port.h>
 
 #include <rock/string/EscapeOptionString.h>
 #include <rock/string/UnescapeOptionString.h>

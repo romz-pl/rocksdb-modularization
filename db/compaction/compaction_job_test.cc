@@ -28,6 +28,8 @@
 
 #include "utilities/merge_operators.h"
 
+#include <rock/random/Random64.h>
+
 namespace rocksdb {
 
 namespace {

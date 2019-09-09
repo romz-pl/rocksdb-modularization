@@ -15,7 +15,7 @@
 #include "rocksjni/jnicallback.h"
 #include <rock/slice/Comparator.h>
 #include <rock/slice/Slice.h>
-#include "port/port.h"
+#include <rock/port/port.h>
 
 namespace rocksdb {
 

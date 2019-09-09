@@ -46,7 +46,7 @@ int main() {
 #include "logging/logging.h"
 #include "monitoring/histogram.h"
 #include "options/options_helper.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/cache.h"
 #include "rocksdb/env.h"
 #include <rock/slice/Slice.h>
@@ -79,6 +79,7 @@ int main() {
 #include "utilities/merge_operators.h"
 
 #include <rock/string/NumberToString.h>
+#include <rock/random/Random64.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 using GFLAGS_NAMESPACE::RegisterFlagValidator;

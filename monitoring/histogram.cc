@@ -14,7 +14,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "util/cast_util.h"
 
 #include <rock/numeric_limits/numeric_limits.h>

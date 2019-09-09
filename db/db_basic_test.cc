@@ -8,7 +8,7 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 // #include <iostream>
 #include "db/db_test_util.h"
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "rocksdb/perf_context.h"
 #include "rocksdb/utilities/debug.h"
 #include "table/block_based/block_builder.h"

@@ -20,7 +20,7 @@
 #endif
 #include <algorithm>
 #include "logging/logging.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include "test_util/sync_point.h"
 

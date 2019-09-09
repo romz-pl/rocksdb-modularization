@@ -7,7 +7,7 @@
 #include <atomic>
 #include <string>
 
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include "test_util/sync_point.h"
 #include "test_util/testharness.h"

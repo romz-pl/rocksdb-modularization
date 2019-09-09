@@ -16,7 +16,7 @@
 #include <vector>
 
 #include "util/autovector.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 
 namespace rocksdb {
 

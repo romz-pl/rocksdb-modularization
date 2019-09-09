@@ -12,7 +12,7 @@
 #include <string>
 #include <utility>
 
-#include "port/port.h"
+#include <rock/port/port.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/table.h"
 #include "table/internal_iterator.h"

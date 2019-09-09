@@ -15,6 +15,8 @@
 #include "utilities/persistent_cache/hash_table.h"
 #include "utilities/persistent_cache/hash_table_evictable.h"
 
+#include <rock/random/Random64.h>
+
 #ifndef ROCKSDB_LITE
 
 namespace rocksdb {

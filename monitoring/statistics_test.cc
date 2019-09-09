@@ -4,7 +4,7 @@
 //  (found in the LICENSE.Apache file in the root directory).
 //
 
-#include "port/stack_trace.h"
+#include <rock/port/stack_trace.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 

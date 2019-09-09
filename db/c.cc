@@ -12,7 +12,7 @@
 #include "rocksdb/c.h"
 
 #include <stdlib.h>
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "rocksdb/cache.h"
 #include "rocksdb/compaction_filter.h"
 #include <rock/slice/Comparator.h>

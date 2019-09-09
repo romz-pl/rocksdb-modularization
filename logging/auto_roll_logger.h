@@ -12,7 +12,7 @@
 #include <string>
 
 #include "file/filename.h"
-#include "port/port.h"
+#include <rock/port/port.h>
 #include "port/util_logger.h"
 #include "test_util/sync_point.h"
 #include "util/mutexlock.h"

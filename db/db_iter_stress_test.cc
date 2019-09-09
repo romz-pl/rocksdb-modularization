@@ -13,6 +13,8 @@
 
 #include "utilities/merge_operators.h"
 
+#include <rock/random/Random64.h>
+
 #ifdef GFLAGS
 
 #include "util/gflags_compat.h"
