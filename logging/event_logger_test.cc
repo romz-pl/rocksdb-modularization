@@ -8,6 +8,8 @@
 #include "logging/event_logger.h"
 #include "test_util/testharness.h"
 
+#include <rock/logger_abstract/Logger.h>
+
 namespace rocksdb {
 
 class EventLoggerTest : public testing::Test {};

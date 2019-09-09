@@ -24,6 +24,10 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 
+#include <rock/logger_abstract/Header.h>
+#include <rock/logger_abstract/Info.h>
+#include <rock/logger_abstract/LogFlush.h>
+
 namespace rocksdb {
 namespace {
 class NoSleepEnv : public EnvWrapper {
