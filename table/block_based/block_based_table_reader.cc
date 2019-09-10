@@ -52,7 +52,7 @@
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"
 
-#include "util/xxhash.h"
+#include <rock/hash/xxhash.h>
 
 namespace rocksdb {
 

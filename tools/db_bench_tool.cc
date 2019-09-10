@@ -67,7 +67,7 @@
 #include <rock/random/Random.h>
 #include "util/stderr_logger.h"
 
-#include "util/xxhash.h"
+#include <rock/hash/xxhash.h>
 #include "utilities/blob_db/blob_db.h"
 #include "utilities/merge_operators.h"
 #include "utilities/merge_operators/bytesxor.h"

@@ -47,7 +47,7 @@
 #include "util/crc32c.h"
 #include "util/stop_watch.h"
 
-#include "util/xxhash.h"
+#include <rock/hash/xxhash.h>
 
 #include <rock/random/Random64.h>
 
