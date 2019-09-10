@@ -16,7 +16,7 @@
 #include "rocksdb/listener.h"
 #include "rocksdb/rate_limiter.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/aligned_buffer.h"
+#include <rock/container/AlignedBuffer.h>
 
 #include <rock/numeric_limits/numeric_limits.h>
 #include <rock/io_abstract/SequentialFile.h>

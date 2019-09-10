@@ -11,7 +11,7 @@
 #include <random>
 #include <utility>
 
-#include "util/heap.h"
+#include <rock/container/BinaryHeap.h>
 
 #ifndef GFLAGS
 const int64_t FLAGS_iters = 100000;

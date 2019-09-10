@@ -14,7 +14,7 @@
 
 #include <rock/status/Status.h>
 #include "rocksdb/env.h"
-#include "util/aligned_buffer.h"
+#include <rock/container/AlignedBuffer.h>
 
 #include <windows.h>
 

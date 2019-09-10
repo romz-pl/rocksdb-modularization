@@ -1,7 +1,10 @@
 set( LIB_NAME container )
 
 add_library( ${LIB_NAME} STATIC
+    AlignedBuffer.cpp
     autovector.cpp
+    BinaryHeap.cpp
+    HashMap.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -15,6 +18,8 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
+    numeric_limits
+    port
     PRIVATE
 )
 

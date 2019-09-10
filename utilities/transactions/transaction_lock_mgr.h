@@ -16,7 +16,7 @@
 #include "monitoring/instrumented_mutex.h"
 #include "rocksdb/utilities/transaction.h"
 #include <rock/container/autovector.h>
-#include "util/hash_map.h"
+#include <rock/container/HashMap.h>
 #include "util/thread_local.h"
 #include "utilities/transactions/pessimistic_transaction.h"
 

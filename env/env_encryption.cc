@@ -11,7 +11,7 @@
 #include <iostream>
 
 #include "rocksdb/env_encryption.h"
-#include "util/aligned_buffer.h"
+#include <rock/container/AlignedBuffer.h>
 #include <rock/coding/coding.h>
 #include <rock/random/Random.h>
 

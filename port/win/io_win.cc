@@ -11,7 +11,7 @@
 
 #include "monitoring/iostats_context_imp.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/aligned_buffer.h"
+#include <rock/container/AlignedBuffer.h>
 #include <rock/coding/coding.h>
 
 namespace rocksdb {

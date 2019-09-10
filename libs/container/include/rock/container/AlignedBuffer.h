@@ -10,6 +10,7 @@
 
 #include <algorithm>
 #include <rock/port/port.h>
+#include <cassert>
 
 namespace rocksdb {
 

@@ -12,7 +12,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/aligned_buffer.h"
+#include <rock/container/AlignedBuffer.h>
 
 #include <rock/numeric_limits/numeric_limits.h>
 

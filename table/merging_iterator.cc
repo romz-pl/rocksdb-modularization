@@ -22,7 +22,7 @@
 #include "table/iterator_wrapper.h"
 #include <rock/sync_point/sync_point.h>
 #include <rock/container/autovector.h>
-#include "util/heap.h"
+#include <rock/container/BinaryHeap.h>
 #include "util/stop_watch.h"
 
 namespace rocksdb {

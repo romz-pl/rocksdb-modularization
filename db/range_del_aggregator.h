@@ -24,7 +24,7 @@
 #include "table/internal_iterator.h"
 #include "table/scoped_arena_iterator.h"
 #include "table/table_builder.h"
-#include "util/heap.h"
+#include <rock/container/BinaryHeap.h>
 #include "util/kv_map.h"
 
 namespace rocksdb {
