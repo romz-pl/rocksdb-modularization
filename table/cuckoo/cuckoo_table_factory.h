@@ -8,7 +8,7 @@
 
 #include <string>
 #include "rocksdb/table.h"
-#include "util/murmurhash.h"
+#include <rock/hash/murmurhash.h>
 #include "rocksdb/options.h"
 
 namespace rocksdb {

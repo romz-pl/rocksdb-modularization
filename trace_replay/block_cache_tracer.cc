@@ -13,7 +13,7 @@
 #include "db/dbformat.h"
 #include <rock/slice/Slice.h>
 #include "util/coding.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 
 #include <rock/string/ParseUint64.h>

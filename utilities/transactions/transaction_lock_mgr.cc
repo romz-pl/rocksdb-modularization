@@ -21,7 +21,7 @@
 #include "rocksdb/utilities/transaction_db_mutex.h"
 #include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 #include "util/thread_local.h"
 #include "utilities/transactions/pessimistic_transaction_db.h"
 

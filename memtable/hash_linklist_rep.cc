@@ -17,7 +17,7 @@
 #include "rocksdb/memtablerep.h"
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 #include <rock/logger_abstract/Info.h>
 

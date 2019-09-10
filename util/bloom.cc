@@ -14,7 +14,7 @@
 #include "table/block_based/full_filter_block.h"
 #include "table/full_filter_bits_builder.h"
 #include "util/coding.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

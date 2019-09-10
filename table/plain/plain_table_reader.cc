@@ -35,8 +35,8 @@
 #include "monitoring/perf_context_imp.h"
 #include "util/coding.h"
 #include "util/dynamic_bloom.h"
-#include "util/hash.h"
-#include "util/murmurhash.h"
+#include <rock/hash/hash.h>
+#include <rock/hash/murmurhash.h>
 #include "util/stop_watch.h"
 
 

@@ -12,7 +12,7 @@
 #include <chrono>
 #include <rock/port/sys_time.h>
 #include "util/cast_util.h"
-#include "util/murmurhash.h"
+#include <rock/hash/murmurhash.h>
 #include <rock/random/Random.h>
 #include "util/rate_limiter.h"
 

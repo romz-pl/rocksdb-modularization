@@ -24,7 +24,7 @@
 #include <rock/slice/SliceTransform.h>
 #include "table/block_based/filter_block_reader_common.h"
 #include "table/format.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

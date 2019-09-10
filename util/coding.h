@@ -18,10 +18,11 @@
 #include <string.h>
 #include <string>
 
-#include "rocksdb/write_batch.h"
+//#include "rocksdb/write_batch.h"
 #include <rock/port/port.h>
 
 #include <rock/slice/SliceParts.h>
+#include <rock/slice/Slice.h>
 
 // Some processors does not allow unaligned access to memory
 #if defined(__sparc)

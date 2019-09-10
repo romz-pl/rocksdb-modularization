@@ -14,7 +14,7 @@
 
 #include <rock/port/port.h>
 #include "rocksdb/cache.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

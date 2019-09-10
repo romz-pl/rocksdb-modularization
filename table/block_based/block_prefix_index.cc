@@ -12,7 +12,7 @@
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include "util/coding.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

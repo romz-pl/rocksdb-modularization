@@ -27,7 +27,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/memtablerep.h"
 #include "util/dynamic_bloom.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

@@ -13,7 +13,7 @@
 #include "memory/concurrent_arena.h"
 #include "rocksdb/env.h"
 #include "test_util/testharness.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 #include <rock/random/Random.h>
 
 namespace rocksdb {

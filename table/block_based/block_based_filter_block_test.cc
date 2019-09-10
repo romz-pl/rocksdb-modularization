@@ -14,7 +14,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/coding.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 #include <rock/slice/EscapeString.h>
 

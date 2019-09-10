@@ -9,7 +9,7 @@
 
 #include "table/plain/plain_table_index.h"
 #include "util/coding.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

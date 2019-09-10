@@ -10,7 +10,7 @@
 #include <rock/slice/Slice.h>
 
 #include <rock/port/port.h>
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 #include <atomic>
 #include <memory>

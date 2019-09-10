@@ -10,7 +10,7 @@
 #include "memory/allocator.h"
 #include <rock/port/port.h>
 #include <rock/slice/Slice.h>
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

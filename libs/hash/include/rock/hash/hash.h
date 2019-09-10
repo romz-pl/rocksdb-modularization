@@ -14,7 +14,7 @@
 #include <stdint.h>
 
 #include <rock/slice/Slice.h>
-#include "util/murmurhash.h"
+#include <rock/hash/murmurhash.h>
 
 namespace rocksdb {
 

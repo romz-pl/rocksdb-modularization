@@ -16,7 +16,7 @@
 #include "rocksdb/memtablerep.h"
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
-#include "util/murmurhash.h"
+#include <rock/hash/murmurhash.h>
 
 namespace rocksdb {
 namespace {

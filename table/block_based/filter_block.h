@@ -31,7 +31,7 @@
 #include "table/format.h"
 #include "table/multiget_context.h"
 #include "trace_replay/block_cache_tracer.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 
 namespace rocksdb {
 

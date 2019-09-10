@@ -479,6 +479,7 @@ add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
     container
+    hash
     io_abstract
     iterator
     logger_abstract
@@ -646,8 +647,6 @@ set(SOURCES
         util/dynamic_bloom.cc
         util/file_reader_writer.cc
         util/filter_policy.cc
-        util/hash.cc
-        util/murmurhash.cc
         util/rate_limiter.cc
         util/thread_local.cc
         util/threadpool_imp.cc

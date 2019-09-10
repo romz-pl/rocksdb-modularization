@@ -57,7 +57,7 @@
 #include "trace_replay/block_cache_tracer.h"
 #include "trace_replay/trace_replay.h"
 #include <rock/container/autovector.h>
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 #include "util/repeatable_thread.h"
 #include "util/stop_watch.h"
 #include "util/thread_local.h"

@@ -15,8 +15,8 @@
 #include "monitoring/histogram.h"
 #include "options/cf_options.h"
 #include "rocksdb/options.h"
-#include "util/hash.h"
-#include "util/murmurhash.h"
+#include <rock/hash/hash.h>
+#include <rock/hash/murmurhash.h>
 
 namespace rocksdb {
 

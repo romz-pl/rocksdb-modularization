@@ -9,7 +9,7 @@
 
 #include <string.h>
 #include "util/coding.h"
-#include "util/hash.h"
+#include <rock/hash/hash.h>
 #include "util/util.h"
 
 namespace rocksdb {
