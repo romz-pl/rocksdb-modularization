@@ -20,7 +20,7 @@
 #include "rocksdb/utilities/transaction.h"
 #include "rocksdb/utilities/transaction_db.h"
 #include "rocksdb/utilities/write_batch_with_index.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "utilities/transactions/transaction_util.h"
 
 namespace rocksdb {

@@ -12,7 +12,7 @@
 #include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/thread_local.h"
 
 namespace rocksdb {

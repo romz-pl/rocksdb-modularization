@@ -19,7 +19,7 @@
 #include "table/cuckoo/cuckoo_table_factory.h"
 #include "table/format.h"
 #include "table/meta_blocks.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/file_reader_writer.h"
 #include <rock/random/Random.h>
 

@@ -17,7 +17,7 @@
 #include <rock/port/sys_time.h>
 #include "rocksdb/options.h"
 #include "rocksdb/utilities/object_registry.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 #include <rock/io_abstract/MemoryMappedFileBuffer.h>
 

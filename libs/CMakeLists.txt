@@ -1,3 +1,6 @@
+
+add_subdirectory( container )
+
 add_subdirectory( io_abstract )
 add_subdirectory( iterator )
 

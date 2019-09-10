@@ -12,7 +12,7 @@
 #include <cinttypes>
 #include <stdio.h>
 
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/kv_map.h"
 #include "util/vector_iterator.h"
 

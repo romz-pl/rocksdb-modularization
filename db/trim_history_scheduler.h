@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <atomic>
 #include <mutex>
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

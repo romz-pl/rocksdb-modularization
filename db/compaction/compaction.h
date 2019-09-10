@@ -11,7 +11,7 @@
 #include "db/version_set.h"
 #include "memory/arena.h"
 #include "options/cf_options.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 // The file contains class Compaction, as well as some helper functions

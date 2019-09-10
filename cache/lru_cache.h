@@ -13,7 +13,7 @@
 #include "cache/sharded_cache.h"
 
 #include <rock/port/port.h>
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

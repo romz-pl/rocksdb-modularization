@@ -11,7 +11,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/statistics.h"
 #include "rocksdb/types.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 class GetContext;

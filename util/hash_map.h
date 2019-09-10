@@ -10,7 +10,7 @@
 #include <array>
 #include <utility>
 
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

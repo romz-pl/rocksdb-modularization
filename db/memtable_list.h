@@ -23,7 +23,7 @@
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
 #include "rocksdb/types.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

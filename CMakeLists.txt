@@ -478,6 +478,7 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
+    container
     io_abstract
     iterator
     logger_abstract

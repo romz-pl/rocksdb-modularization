@@ -53,7 +53,7 @@
 #include "monitoring/perf_context_imp.h"
 #include "monitoring/statistics.h"
 #include "rocksdb/merge_operator.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/cast_util.h"
 #include "util/coding.h"
 #include "util/duplicate_detector.h"

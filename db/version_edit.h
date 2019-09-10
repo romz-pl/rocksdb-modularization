@@ -16,7 +16,7 @@
 #include "db/dbformat.h"
 #include "memory/arena.h"
 #include "rocksdb/cache.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

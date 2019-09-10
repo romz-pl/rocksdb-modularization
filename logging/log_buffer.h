@@ -9,7 +9,7 @@
 #include "memory/arena.h"
 #include <rock/port/sys_time.h>
 #include "rocksdb/env.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 #include <rock/logger_abstract/InfoLogLevel.h>
 

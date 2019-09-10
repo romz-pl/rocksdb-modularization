@@ -9,7 +9,7 @@
 #include <cstdint>
 #include <functional>
 #include <rock/port/port.h>
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 #include <rock/numeric_limits/numeric_limits.h>
 

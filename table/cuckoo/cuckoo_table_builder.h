@@ -15,7 +15,7 @@
 #include "table/table_builder.h"
 #include "rocksdb/table.h"
 #include "rocksdb/table_properties.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

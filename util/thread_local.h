@@ -15,7 +15,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include <rock/port/port.h>
 
 namespace rocksdb {

@@ -36,7 +36,7 @@ std::shared_ptr<Cache> NewClockCache(size_t /*capacity*/, int /*num_shard_bits*/
 
 #include "cache/sharded_cache.h"
 #include <rock/port/port.h>
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/mutexlock.h"
 
 namespace rocksdb {

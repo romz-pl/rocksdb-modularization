@@ -12,7 +12,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/metadata.h"
 #include "rocksdb/sst_file_writer.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

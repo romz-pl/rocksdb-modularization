@@ -9,7 +9,7 @@
 #include <atomic>
 #include <mutex>
 #include <set>
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

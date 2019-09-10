@@ -17,7 +17,7 @@
 #include "options/cf_options.h"
 #include "rocksdb/db.h"
 #include <rock/iterator/Iterator.h>
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

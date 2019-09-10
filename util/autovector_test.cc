@@ -11,7 +11,7 @@
 #include "rocksdb/env.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 
 using std::cout;

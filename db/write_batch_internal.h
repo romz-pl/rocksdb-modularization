@@ -16,7 +16,7 @@
 #include "rocksdb/options.h"
 #include "rocksdb/types.h"
 #include "rocksdb/write_batch.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 
 namespace rocksdb {
 

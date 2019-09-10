@@ -89,7 +89,7 @@
 #include "table/two_level_iterator.h"
 #include <rock/sync_point/sync_point.h>
 #include "tools/sst_dump_tool_imp.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/build_version.h"
 #include "util/cast_util.h"
 #include "util/coding.h"

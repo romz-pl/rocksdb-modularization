@@ -32,7 +32,7 @@
 #include "options/options_helper.h"
 #include "table/block_based/block_based_table_factory.h"
 #include "table/merging_iterator.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/compression.h"
 
 #include <rock/io_abstract/Directory.h>

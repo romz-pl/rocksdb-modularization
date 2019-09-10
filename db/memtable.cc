@@ -33,7 +33,7 @@
 #include "table/internal_iterator.h"
 #include "table/iterator_wrapper.h"
 #include "table/merging_iterator.h"
-#include "util/autovector.h"
+#include <rock/container/autovector.h>
 #include "util/coding.h"
 #include "util/mutexlock.h"
 #include "util/util.h"
