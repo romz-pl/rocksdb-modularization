@@ -33,7 +33,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include <rock/hash/hash.h>
-#include "util/mutexlock.h"
+
 
 #include "utilities/merge_operators.h"
 

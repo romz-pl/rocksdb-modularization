@@ -13,7 +13,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include <rock/coding/coding.h>
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/file_reader_writer.h"
 #include <rock/random/Random.h>
 

@@ -22,7 +22,7 @@
 #include "table/block_based/block_based_table_factory.h"
 #include "table/block_based/block_based_table_reader.h"
 #include "table/format.h"
-#include "util/mutexlock.h"
+
 
 
 #include <rock/string/UnescapeOptionString.h>
@@ -30,6 +30,7 @@
 #include <rock/string/trim.h>
 #include <rock/string/ParseInt.h>
 #include <rock/string/ParseBoolean.h>
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

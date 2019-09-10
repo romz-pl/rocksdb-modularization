@@ -20,6 +20,9 @@
 #include "logging/logging.h"
 #include "utilities/blob_db/blob_db_impl.h"
 
+#include <rock/mutex/ReadLock.h>
+#include <rock/mutex/WriteLock.h>
+
 namespace rocksdb {
 
 namespace blob_db {

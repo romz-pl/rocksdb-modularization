@@ -20,8 +20,9 @@ int main() {
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "util/gflags_compat.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
+#include <rock/mutex/MutexLock.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 

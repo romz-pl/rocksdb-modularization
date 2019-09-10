@@ -15,7 +15,8 @@
 #include <rock/port/port.h>
 #include "port/util_logger.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/mutexlock.h"
+
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

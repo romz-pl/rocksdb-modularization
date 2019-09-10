@@ -16,7 +16,8 @@
 #include "memory/arena.h"
 #include "memtable/stl_wrappers.h"
 #include <rock/port/port.h>
-#include "util/mutexlock.h"
+#include <rock/mutex/WriteLock.h>
+#include <rock/mutex/ReadLock.h>
 
 namespace rocksdb {
 namespace {

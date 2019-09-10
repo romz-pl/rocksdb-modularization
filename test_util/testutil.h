@@ -23,11 +23,12 @@
 #include "table/block_based/block_based_table_factory.h"
 #include "table/internal_iterator.h"
 #include "table/plain/plain_table_factory.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
 
 #include <rock/io_abstract/RandomRWFile.h>
 #include <rock/logger_abstract/Logger.h>
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 class SequentialFile;

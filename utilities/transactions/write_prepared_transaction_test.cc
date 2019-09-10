@@ -28,7 +28,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "test_util/transaction_test_util.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
 
 #include "utilities/merge_operators.h"

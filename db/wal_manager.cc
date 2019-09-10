@@ -29,8 +29,8 @@
 #include "util/cast_util.h"
 #include <rock/coding/coding.h>
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
 
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

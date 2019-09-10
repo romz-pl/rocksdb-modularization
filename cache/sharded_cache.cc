@@ -8,10 +8,10 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include "cache/sharded_cache.h"
-
+#include <rock/mutex/MutexLock.h>
 #include <string>
 
-#include "util/mutexlock.h"
+
 
 namespace rocksdb {
 

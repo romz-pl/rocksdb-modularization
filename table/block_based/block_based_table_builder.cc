@@ -44,7 +44,7 @@
 #include "memory/memory_allocator.h"
 #include <rock/coding/coding.h>
 #include "util/compression.h"
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/stop_watch.h"
 
 #include <rock/hash/xxhash.h>

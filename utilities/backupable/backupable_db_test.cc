@@ -26,7 +26,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
 #include "util/stderr_logger.h"
 

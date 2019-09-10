@@ -7,7 +7,7 @@
 #include <memory>
 #include <rock/likely/likely.h>
 #include "rocksdb/env.h"
-#include "util/mutexlock.h"
+
 
 namespace rocksdb {
 

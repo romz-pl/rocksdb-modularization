@@ -26,7 +26,7 @@
 #include "options/cf_options.h"
 #include <rock/port/port.h>  // noexcept
 #include "table/persistent_cache_options.h"
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/file_reader_writer.h"
 #include <rock/hash/xxhash.h>
 

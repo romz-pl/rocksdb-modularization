@@ -11,6 +11,8 @@
 #include <algorithm>
 #include <cstdio>
 
+#include <rock/mutex/MutexLock.h>
+
 namespace rocksdb {
 
 // The order of items listed in  Tickers should be the same as

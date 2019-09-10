@@ -34,7 +34,7 @@ int main() {
 #include "rocksdb/write_buffer_manager.h"
 #include "test_util/testutil.h"
 #include "util/gflags_compat.h"
-#include "util/mutexlock.h"
+
 #include "util/stop_watch.h"
 
 #include <rock/slice/NewFixedPrefixTransform.h>

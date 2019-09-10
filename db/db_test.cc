@@ -63,7 +63,7 @@
 #include "test_util/testutil.h"
 #include "util/compression.h"
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
+
 #include "util/rate_limiter.h"
 
 #include "utilities/merge_operators.h"

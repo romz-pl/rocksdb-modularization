@@ -21,9 +21,10 @@
 #include <rock/slice/Slice.h>
 #include <rock/sync_point/sync_point.h>
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
+
 
 #include <rock/logger_abstract/Logger.h>
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

@@ -48,7 +48,7 @@
 #include "monitoring/perf_context_imp.h"
 #include <rock/sync_point/sync_point.h>
 #include <rock/coding/coding.h>
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"
 

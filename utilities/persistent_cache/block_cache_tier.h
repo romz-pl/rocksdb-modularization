@@ -32,8 +32,8 @@
 #include "monitoring/histogram.h"
 #include <rock/port/port.h>
 #include <rock/coding/coding.h>
-#include "util/crc32c.h"
-#include "util/mutexlock.h"
+#include <rock/crc32/crc32c.h>
+
 
 #include <rock/logger_abstract/Info.h>
 

@@ -20,9 +20,11 @@
 #include "utilities/persistent_cache/persistent_cache_util.h"
 
 #include <rock/port/port.h>
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
+
+#include <rock/mutex/WriteLock.h>
+#include <rock/mutex/ReadLock.h>
 
 // The io code path of persistent cache uses pipelined architecture
 //

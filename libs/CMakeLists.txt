@@ -1,6 +1,7 @@
 
 add_subdirectory( coding )
 add_subdirectory( container )
+add_subdirectory( crc32 )
 
 add_subdirectory( hash )
 
@@ -10,6 +11,8 @@ add_subdirectory( iterator )
 
 add_subdirectory( likely )
 add_subdirectory( logger_abstract )
+
+add_subdirectory( mutex )
 
 add_subdirectory( numeric_limits )
 

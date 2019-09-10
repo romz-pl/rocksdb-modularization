@@ -29,6 +29,10 @@
 #include "utilities/transactions/transaction_lock_mgr.h"
 #include "utilities/transactions/write_prepared_txn.h"
 
+#include <rock/mutex/ReadLock.h>
+#include <rock/mutex/WriteLock.h>
+#include <rock/mutex/MutexLock.h>
+
 namespace rocksdb {
 enum SnapshotBackup : bool { kUnbackedByDBSnapshot, kBackedByDBSnapshot };
 

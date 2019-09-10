@@ -8,8 +8,8 @@
 #ifndef ROCKSDB_LITE
 
 #include <atomic>
+#include <rock/mutex/MutexLock.h>
 
-#include "util/mutexlock.h"
 
 namespace rocksdb {
 

@@ -45,7 +45,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include <rock/coding/coding.h>
-#include "util/mutexlock.h"
+
 
 #include <rock/io_abstract/MemoryMappedFileBuffer.h>
 #include <rock/io_abstract/WritableFileWrapper.h>

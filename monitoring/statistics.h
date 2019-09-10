@@ -15,7 +15,7 @@
 #include <rock/likely/likely.h>
 #include <rock/port/port.h>
 #include "util/core_local.h"
-#include "util/mutexlock.h"
+
 
 #ifdef __clang__
 #define ROCKSDB_FIELD_UNUSED __attribute__((__unused__))

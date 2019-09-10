@@ -25,7 +25,7 @@ int main() { fprintf(stderr, "Please install gflags to run tools\n"); }
 #include <rock/port/port.h>
 #include "table/block_based/block_builder.h"
 #include "util/gflags_compat.h"
-#include "util/mutexlock.h"
+
 #include "util/stop_watch.h"
 
 DEFINE_int32(nsec, 10, "nsec");

@@ -61,9 +61,9 @@
 #include "test_util/transaction_test_util.h"
 #include "util/cast_util.h"
 #include "util/compression.h"
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/gflags_compat.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
 #include "util/stderr_logger.h"
 

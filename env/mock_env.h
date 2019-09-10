@@ -15,7 +15,7 @@
 #include "rocksdb/env.h"
 #include <rock/status/Status.h>
 #include <rock/port/port.h>
-#include "util/mutexlock.h"
+
 
 namespace rocksdb {
 

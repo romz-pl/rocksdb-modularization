@@ -20,7 +20,7 @@
 #include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/transaction_test_util.h"
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include <rock/random/Random.h>
 #include <rock/random/Random64.h>
 

@@ -19,7 +19,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/mutexlock.h"
+
 
 #include <rock/logger_abstract/LogFlush.h>
 

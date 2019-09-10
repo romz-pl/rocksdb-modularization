@@ -14,7 +14,8 @@
 #include <stdlib.h>
 #include <string>
 
-#include "util/mutexlock.h"
+#include <rock/mutex/MutexLock.h>
+
 
 namespace rocksdb {
 

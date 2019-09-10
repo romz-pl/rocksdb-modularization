@@ -8,6 +8,8 @@
 
 #include <functional>
 
+#include <rock/mutex/ReadUnlock.h>
+
 namespace rocksdb {
 
 bool BlockCacheTierMetadata::Insert(BlockCacheFile* file) {

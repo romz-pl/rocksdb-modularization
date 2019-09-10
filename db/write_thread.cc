@@ -11,6 +11,7 @@
 #include <rock/port/port.h>
 #include <rock/sync_point/sync_point.h>
 #include <rock/random/Random.h>
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

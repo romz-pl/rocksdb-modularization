@@ -11,7 +11,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include "test_util/mock_time_env.h"
-#include "util/mutexlock.h"
+
 
 namespace rocksdb {
 

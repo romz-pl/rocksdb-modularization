@@ -53,7 +53,7 @@
 #include <rock/sync_point/sync_point.h>
 #include <rock/coding/coding.h>
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
 #include "util/stop_watch.h"
 

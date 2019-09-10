@@ -35,8 +35,10 @@
 #include "table/merging_iterator.h"
 #include <rock/container/autovector.h>
 #include <rock/coding/coding.h>
-#include "util/mutexlock.h"
+
 #include "util/util.h"
+
+#include <rock/mutex/WriteLock.h>
 
 namespace rocksdb {
 

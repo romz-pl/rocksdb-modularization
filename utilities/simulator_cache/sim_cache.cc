@@ -9,10 +9,10 @@
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
-
 
 #include <rock/string/AppendNumberTo.h>
+#include <rock/mutex/ReadLock.h>
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

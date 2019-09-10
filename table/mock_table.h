@@ -21,7 +21,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include "util/kv_map.h"
-#include "util/mutexlock.h"
+
 
 namespace rocksdb {
 namespace mock {

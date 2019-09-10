@@ -30,9 +30,9 @@
 #include "table/meta_blocks.h"
 #include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/file_reader_writer.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
 #include "util/stop_watch.h"
 #include "util/timer_queue.h"
@@ -43,6 +43,10 @@
 
 #include <rock/io_abstract/Directory.h>
 #include <rock/logger_abstract/LogFlush.h>
+
+#include <rock/mutex/ReadLock.h>
+#include <rock/mutex/WriteLock.h>
+#include <rock/mutex/MutexLock.h>
 
 namespace {
 int kBlockBasedTableVersionFormat = 2;

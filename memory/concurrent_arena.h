@@ -15,8 +15,12 @@
 #include "memory/arena.h"
 #include <rock/likely/likely.h>
 #include "util/core_local.h"
-#include "util/mutexlock.h"
+
 #include "util/thread_local.h"
+
+#include <rock/mutex/SpinMutex.h>
+
+#include <mutex>
 
 // Only generate field unused warning for padding array, or build under
 // GCC 4.8.1 will fail.

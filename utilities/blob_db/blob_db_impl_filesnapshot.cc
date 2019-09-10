@@ -9,7 +9,9 @@
 
 #include "file/filename.h"
 #include "logging/logging.h"
-#include "util/mutexlock.h"
+
+#include <rock/mutex/MutexLock.h>
+#include <rock/mutex/ReadLock.h>
 
 // BlobDBImpl methods to get snapshot of files, e.g. for replication.
 

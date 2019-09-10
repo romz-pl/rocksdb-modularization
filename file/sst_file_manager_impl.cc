@@ -13,7 +13,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/sst_file_manager.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/mutexlock.h"
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

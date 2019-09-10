@@ -62,9 +62,9 @@ int main() {
 #include "rocksdb/write_batch.h"
 #include <rock/coding/coding.h>
 #include "util/compression.h"
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/gflags_compat.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
 
 #include <rock/slice/NewFixedPrefixTransform.h>

@@ -8,9 +8,11 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include "util/thread_local.h"
-#include "util/mutexlock.h"
+
 #include <rock/likely/likely.h>
 #include <stdlib.h>
+
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

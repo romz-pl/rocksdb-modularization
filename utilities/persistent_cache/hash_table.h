@@ -16,7 +16,8 @@
 #endif
 
 #include "include/rocksdb/env.h"
-#include "util/mutexlock.h"
+
+#include <rock/mutex/WriteLock.h>
 
 namespace rocksdb {
 

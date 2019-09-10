@@ -18,7 +18,7 @@
 #include <rock/sync_point/sync_point.h>
 #include "util/channel.h"
 #include <rock/coding/coding.h>
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include "util/file_reader_writer.h"
 
 #include "utilities/checkpoint/checkpoint_impl.h"

@@ -44,7 +44,7 @@
 #include "table/scoped_arena_iterator.h"
 #include "test_util/mock_time_env.h"
 #include "util/compression.h"
-#include "util/mutexlock.h"
+
 
 #include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"

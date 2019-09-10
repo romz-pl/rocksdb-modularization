@@ -479,10 +479,12 @@ add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
     container
+    crc32
     hash
     io_abstract
     iterator
     logger_abstract
+    mutex
     sync_point
 )
 
@@ -642,7 +644,6 @@ set(SOURCES
         util/compaction_job_stats_impl.cc
         util/compression_context_cache.cc
         util/concurrent_task_limiter_impl.cc
-        util/crc32c.cc
         util/dynamic_bloom.cc
         util/file_reader_writer.cc
         util/filter_policy.cc

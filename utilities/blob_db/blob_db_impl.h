@@ -26,7 +26,7 @@
 #include "rocksdb/options.h"
 #include "rocksdb/statistics.h"
 #include "rocksdb/wal_filter.h"
-#include "util/mutexlock.h"
+
 #include "util/timer_queue.h"
 #include "utilities/blob_db/blob_db.h"
 #include "utilities/blob_db/blob_file.h"

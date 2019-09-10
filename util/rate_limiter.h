@@ -16,8 +16,9 @@
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include "rocksdb/rate_limiter.h"
-#include "util/mutexlock.h"
+
 #include <rock/random/Random.h>
+#include <rock/mutex/MutexLock.h>
 
 namespace rocksdb {
 

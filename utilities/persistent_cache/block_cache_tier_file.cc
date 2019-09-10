@@ -15,7 +15,7 @@
 
 #include "logging/logging.h"
 #include <rock/port/port.h>
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 
 #include <rock/logger_abstract/Error.h>
 #include <rock/logger_abstract/Info.h>

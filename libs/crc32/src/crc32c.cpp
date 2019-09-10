@@ -9,7 +9,7 @@
 //
 // A portable implementation of crc32c, optimized to handle
 // four bytes at a time.
-#include "util/crc32c.h"
+#include <rock/crc32/crc32c.h>
 #include <stdint.h>
 #ifdef HAVE_SSE42
 #include <nmmintrin.h>
@@ -18,7 +18,7 @@
 #include <rock/coding/coding.h>
 #include "util/util.h"
 
-#include "util/crc32c_arm64.h"
+#include <rock/crc32/crc32c_arm64.h>
 
 #ifdef __powerpc64__
 #include "util/crc32c_ppc.h"
