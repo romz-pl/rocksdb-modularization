@@ -21,7 +21,7 @@
 #include "table/table_builder.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/file_reader_writer.h"
 
 namespace rocksdb {

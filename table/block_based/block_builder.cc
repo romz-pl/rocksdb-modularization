@@ -38,7 +38,7 @@
 #include "db/dbformat.h"
 #include <rock/slice/Comparator.h>
 #include "table/block_based/data_block_footer.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 

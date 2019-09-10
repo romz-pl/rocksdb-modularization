@@ -11,7 +11,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/merge_operator.h"
 #include <rock/slice/Slice.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "utilities/merge_operators.h"
 
 namespace rocksdb {

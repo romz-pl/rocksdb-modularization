@@ -42,7 +42,7 @@
 #include "table/table_builder.h"
 
 #include "memory/memory_allocator.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/compression.h"
 #include "util/crc32c.h"
 #include "util/stop_watch.h"

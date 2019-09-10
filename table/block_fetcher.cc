@@ -20,7 +20,7 @@
 #include "table/block_based/block_based_table_reader.h"
 #include "table/format.h"
 #include "table/persistent_cache_helper.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/compression.h"
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"

@@ -14,7 +14,7 @@
 #include "monitoring/perf_context_imp.h"
 #include "rocksdb/filter_policy.h"
 #include "table/block_based/block_based_table_reader.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 
 namespace rocksdb {

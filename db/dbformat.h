@@ -23,7 +23,7 @@
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "rocksdb/types.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/user_comparator_wrapper.h"
 
 #include <rock/numeric_limits/numeric_limits.h>

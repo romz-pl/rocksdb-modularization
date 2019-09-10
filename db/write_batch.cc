@@ -55,7 +55,7 @@
 #include "rocksdb/merge_operator.h"
 #include <rock/container/autovector.h>
 #include "util/cast_util.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/duplicate_detector.h"
 
 #include "util/util.h"

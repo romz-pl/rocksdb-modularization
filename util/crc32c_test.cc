@@ -8,7 +8,7 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 #include "util/crc32c.h"
 #include "test_util/testharness.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 namespace crc32c {

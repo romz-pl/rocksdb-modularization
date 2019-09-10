@@ -10,7 +10,7 @@
 #include <rock/slice/Comparator.h>
 #include "rocksdb/memtablerep.h"
 #include <rock/slice/Slice.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 namespace stl_wrappers {

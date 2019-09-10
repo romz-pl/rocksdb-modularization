@@ -27,7 +27,7 @@
 #include "tools/ldb_cmd_impl.h"
 #include "tools/sst_dump_tool_imp.h"
 #include "util/cast_util.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/stderr_logger.h"
 
 #include "utilities/merge_operators.h"

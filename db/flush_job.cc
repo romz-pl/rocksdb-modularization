@@ -45,7 +45,7 @@
 #include "table/table_builder.h"
 #include "table/two_level_iterator.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/mutexlock.h"
 #include "util/stop_watch.h"
 

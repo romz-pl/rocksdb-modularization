@@ -13,7 +13,7 @@
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/utilities/write_batch_with_index.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 
 namespace rocksdb {

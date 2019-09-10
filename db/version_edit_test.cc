@@ -10,7 +10,7 @@
 #include "db/version_edit.h"
 #include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 

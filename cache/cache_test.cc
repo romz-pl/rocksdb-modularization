@@ -17,7 +17,7 @@
 #include "cache/clock_cache.h"
 #include "cache/lru_cache.h"
 #include "test_util/testharness.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 
 #include <rock/string/ToString.h>

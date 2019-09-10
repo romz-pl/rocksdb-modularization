@@ -23,7 +23,7 @@
 #include "table/block_based/block_prefix_index.h"
 #include "table/block_based/data_block_footer.h"
 #include "table/format.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 

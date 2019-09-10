@@ -6,7 +6,7 @@
 #ifndef ROCKSDB_LITE
 
 #include "rocksdb/options.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 
 namespace rocksdb {

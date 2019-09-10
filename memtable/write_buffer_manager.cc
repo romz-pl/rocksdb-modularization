@@ -9,7 +9,7 @@
 
 #include "rocksdb/write_buffer_manager.h"
 #include <mutex>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 #ifndef ROCKSDB_LITE

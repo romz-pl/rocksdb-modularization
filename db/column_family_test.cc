@@ -26,7 +26,7 @@
 #include <rock/sync_point/sync_point.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 #include "utilities/merge_operators.h"
 

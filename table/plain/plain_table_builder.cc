@@ -24,7 +24,7 @@
 #include "table/plain/plain_table_bloom.h"
 #include "table/plain/plain_table_factory.h"
 #include "table/plain/plain_table_index.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"

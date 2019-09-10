@@ -20,7 +20,7 @@
 #include <rock/iterator/Iterator.h>
 #include "table/merging_iterator.h"
 #include <rock/sync_point/sync_point.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 

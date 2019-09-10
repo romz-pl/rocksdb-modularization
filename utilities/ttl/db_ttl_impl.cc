@@ -12,7 +12,7 @@
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/utilities/db_ttl.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 namespace rocksdb {
 

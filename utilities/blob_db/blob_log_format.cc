@@ -7,7 +7,7 @@
 
 #include "utilities/blob_db/blob_log_format.h"
 
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/crc32c.h"
 
 namespace rocksdb {

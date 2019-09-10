@@ -14,7 +14,7 @@
 #include "rocksdb/convenience.h"
 #include "rocksdb/env.h"
 #include "table/format.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/file_reader_writer.h"
 
 

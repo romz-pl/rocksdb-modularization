@@ -11,7 +11,7 @@
 #include <rock/slice/Comparator.h>
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include <rock/hash/hash.h>
 
 namespace rocksdb {

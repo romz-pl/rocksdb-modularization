@@ -33,7 +33,7 @@
 #include "memory/arena.h"
 #include "monitoring/histogram.h"
 #include "monitoring/perf_context_imp.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/dynamic_bloom.h"
 #include <rock/hash/hash.h>
 #include <rock/hash/murmurhash.h>

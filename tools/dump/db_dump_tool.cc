@@ -11,7 +11,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/db_dump_tool.h"
 #include "rocksdb/env.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 #include <rock/io_abstract/SequentialFile.h>
 #include <rock/io_abstract/WritableFile.h>

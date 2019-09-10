@@ -8,7 +8,7 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include <string.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include <rock/hash/hash.h>
 #include "util/util.h"
 

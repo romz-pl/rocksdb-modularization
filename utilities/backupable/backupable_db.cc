@@ -17,7 +17,7 @@
 #include "rocksdb/transaction_log.h"
 #include <rock/sync_point/sync_point.h>
 #include "util/channel.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"
 

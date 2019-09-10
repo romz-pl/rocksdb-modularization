@@ -24,7 +24,7 @@ int main() {
 #include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "test_util/testutil.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include <rock/random/Random.h>
 #include "util/stop_watch.h"
 

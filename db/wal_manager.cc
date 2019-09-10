@@ -27,7 +27,7 @@
 #include "rocksdb/write_batch.h"
 #include <rock/sync_point/sync_point.h>
 #include "util/cast_util.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/file_reader_writer.h"
 #include "util/mutexlock.h"
 

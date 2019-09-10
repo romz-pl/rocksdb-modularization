@@ -6,7 +6,7 @@
 #include "db/table_properties_collector.h"
 
 #include "db/dbformat.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 
 namespace rocksdb {

@@ -11,7 +11,7 @@
 
 #include "monitoring/statistics.h"
 #include "rocksdb/env.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"
 #include "utilities/blob_db/blob_log_format.h"

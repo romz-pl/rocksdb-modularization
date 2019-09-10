@@ -34,7 +34,7 @@
 #include <rock/port/port.h>
 #include <rock/slice/Slice.h>
 #include <rock/sync_point/sync_point.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 
 #include <rock/string/ToString.h>

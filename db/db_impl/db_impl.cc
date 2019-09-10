@@ -92,7 +92,7 @@
 #include <rock/container/autovector.h>
 #include "util/build_version.h"
 #include "util/cast_util.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/compression.h"
 #include "util/crc32c.h"
 #include "util/file_reader_writer.h"

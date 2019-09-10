@@ -41,7 +41,7 @@
 #include "table/table_reader.h"
 #include "tools/trace_analyzer_tool.h"
 #include "trace_replay/trace_replay.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/compression.h"
 #include "util/file_reader_writer.h"
 #include "util/gflags_compat.h"

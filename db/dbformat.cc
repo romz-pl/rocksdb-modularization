@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "monitoring/perf_context_imp.h"
 #include <rock/port/port.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 
 #include <rock/slice/EscapeString.h>
 

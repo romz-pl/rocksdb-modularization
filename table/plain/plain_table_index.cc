@@ -8,7 +8,7 @@
 #include <cinttypes>
 
 #include "table/plain/plain_table_index.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include <rock/hash/hash.h>
 
 namespace rocksdb {

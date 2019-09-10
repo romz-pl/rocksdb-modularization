@@ -27,7 +27,7 @@ int main() {
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
 #include "test_util/testharness.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/gflags_compat.h"
 #include <rock/random/Random.h>
 #include "util/stop_watch.h"

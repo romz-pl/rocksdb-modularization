@@ -639,7 +639,6 @@ set(SOURCES
         trace_replay/trace_replay.cc
         trace_replay/block_cache_tracer.cc
         util/bloom.cc
-        util/coding.cc
         util/compaction_job_stats_impl.cc
         util/compression_context_cache.cc
         util/concurrent_task_limiter_impl.cc

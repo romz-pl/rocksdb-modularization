@@ -10,7 +10,7 @@
 #include "table/full_filter_bits_builder.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include <rock/hash/hash.h>
 
 #include <rock/slice/EscapeString.h>

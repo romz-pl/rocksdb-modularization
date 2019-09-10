@@ -9,7 +9,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/table_properties.h"
 #include "table/get_context.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/file_reader_writer.h"
 
 namespace rocksdb {

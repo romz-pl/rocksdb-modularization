@@ -50,7 +50,7 @@
 #include <rock/likely/likely.h>
 #include <rock/port/port.h>
 #include <rock/slice/Slice.h>
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include <rock/random/Random.h>
 
 namespace rocksdb {

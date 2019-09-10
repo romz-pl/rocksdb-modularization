@@ -15,7 +15,7 @@
 #include <nmmintrin.h>
 #include <wmmintrin.h>
 #endif
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include "util/util.h"
 
 #include "util/crc32c_arm64.h"

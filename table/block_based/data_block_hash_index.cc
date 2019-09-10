@@ -7,7 +7,7 @@
 
 #include <rock/slice/Slice.h>
 #include "table/block_based/data_block_hash_index.h"
-#include "util/coding.h"
+#include <rock/coding/coding.h>
 #include <rock/hash/hash.h>
 
 namespace rocksdb {

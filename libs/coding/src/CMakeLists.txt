@@ -1,8 +1,7 @@
-set( LIB_NAME hash )
+set( LIB_NAME coding )
 
 add_library( ${LIB_NAME} STATIC
-    hash.cpp
-    murmurhash.cpp
+    coding.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -16,8 +15,8 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
-    coding
-    status
+    port
+    slice
     PRIVATE
 )
 
