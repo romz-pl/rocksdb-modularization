@@ -14,7 +14,7 @@
 #include <rock/statistics/HistogramImpl.h>
 #include <rock/likely/likely.h>
 #include <rock/port/port.h>
-#include "util/core_local.h"
+#include <rock/container/CoreLocalArray.h>
 
 #include <rock/statistics/Tickers.h>
 

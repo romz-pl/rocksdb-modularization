@@ -10,7 +10,7 @@
 #include "util/compression_context_cache.h"
 
 #include "util/compression.h"
-#include "util/core_local.h"
+#include <rock/container/CoreLocalArray.h>
 
 #include <atomic>
 

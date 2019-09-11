@@ -5,6 +5,7 @@ add_library( ${LIB_NAME} STATIC
     autovector.cpp
     BinaryHeap.cpp
     HashMap.cpp
+    CoreLocalArray.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -19,7 +20,9 @@ target_link_libraries(
     ${LIB_NAME}
     PUBLIC
     numeric_limits
+    likely
     port
+    random
     PRIVATE
 )
 

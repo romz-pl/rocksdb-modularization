@@ -14,7 +14,7 @@
 #include "memory/allocator.h"
 #include "memory/arena.h"
 #include <rock/likely/likely.h>
-#include "util/core_local.h"
+#include <rock/container/CoreLocalArray.h>
 
 #include "util/thread_local.h"
 
