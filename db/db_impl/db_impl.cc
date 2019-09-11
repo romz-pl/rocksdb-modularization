@@ -75,7 +75,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/merge_operator.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/stats_history.h"
 #include <rock/status/Status.h>
 #include "rocksdb/table.h"

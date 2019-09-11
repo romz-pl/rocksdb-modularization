@@ -1,0 +1,58 @@
+#include <rock/statistics/HistogramsNameMap.h>
+
+
+namespace rocksdb {
+
+const std::vector<std::pair<Histograms, std::string>> HistogramsNameMap = {
+    {DB_GET, "rocksdb.db.get.micros"},
+    {DB_WRITE, "rocksdb.db.write.micros"},
+    {COMPACTION_TIME, "rocksdb.compaction.times.micros"},
+    {COMPACTION_CPU_TIME, "rocksdb.compaction.times.cpu_micros"},
+    {SUBCOMPACTION_SETUP_TIME, "rocksdb.subcompaction.setup.times.micros"},
+    {TABLE_SYNC_MICROS, "rocksdb.table.sync.micros"},
+    {COMPACTION_OUTFILE_SYNC_MICROS, "rocksdb.compaction.outfile.sync.micros"},
+    {WAL_FILE_SYNC_MICROS, "rocksdb.wal.file.sync.micros"},
+    {MANIFEST_FILE_SYNC_MICROS, "rocksdb.manifest.file.sync.micros"},
+    {TABLE_OPEN_IO_MICROS, "rocksdb.table.open.io.micros"},
+    {DB_MULTIGET, "rocksdb.db.multiget.micros"},
+    {READ_BLOCK_COMPACTION_MICROS, "rocksdb.read.block.compaction.micros"},
+    {READ_BLOCK_GET_MICROS, "rocksdb.read.block.get.micros"},
+    {WRITE_RAW_BLOCK_MICROS, "rocksdb.write.raw.block.micros"},
+    {STALL_L0_SLOWDOWN_COUNT, "rocksdb.l0.slowdown.count"},
+    {STALL_MEMTABLE_COMPACTION_COUNT, "rocksdb.memtable.compaction.count"},
+    {STALL_L0_NUM_FILES_COUNT, "rocksdb.num.files.stall.count"},
+    {HARD_RATE_LIMIT_DELAY_COUNT, "rocksdb.hard.rate.limit.delay.count"},
+    {SOFT_RATE_LIMIT_DELAY_COUNT, "rocksdb.soft.rate.limit.delay.count"},
+    {NUM_FILES_IN_SINGLE_COMPACTION, "rocksdb.numfiles.in.singlecompaction"},
+    {DB_SEEK, "rocksdb.db.seek.micros"},
+    {WRITE_STALL, "rocksdb.db.write.stall"},
+    {SST_READ_MICROS, "rocksdb.sst.read.micros"},
+    {NUM_SUBCOMPACTIONS_SCHEDULED, "rocksdb.num.subcompactions.scheduled"},
+    {BYTES_PER_READ, "rocksdb.bytes.per.read"},
+    {BYTES_PER_WRITE, "rocksdb.bytes.per.write"},
+    {BYTES_PER_MULTIGET, "rocksdb.bytes.per.multiget"},
+    {BYTES_COMPRESSED, "rocksdb.bytes.compressed"},
+    {BYTES_DECOMPRESSED, "rocksdb.bytes.decompressed"},
+    {COMPRESSION_TIMES_NANOS, "rocksdb.compression.times.nanos"},
+    {DECOMPRESSION_TIMES_NANOS, "rocksdb.decompression.times.nanos"},
+    {READ_NUM_MERGE_OPERANDS, "rocksdb.read.num.merge_operands"},
+    {BLOB_DB_KEY_SIZE, "rocksdb.blobdb.key.size"},
+    {BLOB_DB_VALUE_SIZE, "rocksdb.blobdb.value.size"},
+    {BLOB_DB_WRITE_MICROS, "rocksdb.blobdb.write.micros"},
+    {BLOB_DB_GET_MICROS, "rocksdb.blobdb.get.micros"},
+    {BLOB_DB_MULTIGET_MICROS, "rocksdb.blobdb.multiget.micros"},
+    {BLOB_DB_SEEK_MICROS, "rocksdb.blobdb.seek.micros"},
+    {BLOB_DB_NEXT_MICROS, "rocksdb.blobdb.next.micros"},
+    {BLOB_DB_PREV_MICROS, "rocksdb.blobdb.prev.micros"},
+    {BLOB_DB_BLOB_FILE_WRITE_MICROS, "rocksdb.blobdb.blob.file.write.micros"},
+    {BLOB_DB_BLOB_FILE_READ_MICROS, "rocksdb.blobdb.blob.file.read.micros"},
+    {BLOB_DB_BLOB_FILE_SYNC_MICROS, "rocksdb.blobdb.blob.file.sync.micros"},
+    {BLOB_DB_GC_MICROS, "rocksdb.blobdb.gc.micros"},
+    {BLOB_DB_COMPRESSION_MICROS, "rocksdb.blobdb.compression.micros"},
+    {BLOB_DB_DECOMPRESSION_MICROS, "rocksdb.blobdb.decompression.micros"},
+    {FLUSH_TIME, "rocksdb.db.flush.micros"},
+    {SST_BATCH_SIZE, "rocksdb.sst.batch.size"},
+};
+
+
+}

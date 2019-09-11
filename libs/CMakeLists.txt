@@ -24,6 +24,7 @@ add_subdirectory( random )
 
 add_subdirectory( slice )
 add_subdirectory( status )
+add_subdirectory( statistics )
 add_subdirectory( string )
 add_subdirectory( sync_point )
 

@@ -20,7 +20,7 @@
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/options.h"
 #include <rock/slice/SliceTransform.h>
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/table.h"
 #include "rocksjni/portal.h"
 #include "utilities/merge_operators.h"

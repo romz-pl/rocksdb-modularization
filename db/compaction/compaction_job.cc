@@ -43,7 +43,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "table/block_based/block.h"

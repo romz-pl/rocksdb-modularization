@@ -8,7 +8,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 
 namespace rocksdb {
 

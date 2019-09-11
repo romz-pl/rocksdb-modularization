@@ -13,7 +13,7 @@
 
 #include "rocksdb/env.h"
 #include <rock/slice/Slice.h>
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include <rock/status/Status.h>
 
 namespace rocksdb {

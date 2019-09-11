@@ -79,6 +79,7 @@
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
 #include <rock/random/Random64.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 #ifdef OS_WIN
 #include <io.h>  // open/close

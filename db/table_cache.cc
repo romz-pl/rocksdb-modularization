@@ -16,7 +16,7 @@
 #include "file/filename.h"
 
 #include "monitoring/perf_context_imp.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "table/block_based/block_based_table_reader.h"
 #include "table/get_context.h"
 #include "table/internal_iterator.h"

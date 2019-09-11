@@ -8,7 +8,7 @@
 #include "monitoring/statistics.h"
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/thread_status.h"
 #include "util/stop_watch.h"
 

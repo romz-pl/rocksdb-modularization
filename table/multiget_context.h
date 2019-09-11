@@ -9,7 +9,7 @@
 #include "db/lookup_key.h"
 #include "db/merge_context.h"
 #include "rocksdb/env.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/types.h"
 #include <rock/container/autovector.h>
 

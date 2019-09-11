@@ -27,7 +27,7 @@
 #include <string>
 #include <rock/memory_allocator/MemoryAllocator.h>
 #include <rock/slice/Slice.h>
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include <rock/status/Status.h>
 
 namespace rocksdb {

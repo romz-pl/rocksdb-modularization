@@ -24,7 +24,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/listener.h"
 #include "rocksdb/options.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/wal_filter.h"
 
 #include "util/timer_queue.h"

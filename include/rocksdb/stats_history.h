@@ -11,7 +11,7 @@
 #include <map>
 #include <string>
 
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include <rock/status/Status.h>
 
 namespace rocksdb {

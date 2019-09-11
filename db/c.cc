@@ -26,7 +26,7 @@
 #include "rocksdb/options.h"
 #include "rocksdb/rate_limiter.h"
 #include <rock/slice/SliceTransform.h>
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "rocksdb/universal_compaction.h"
@@ -49,6 +49,7 @@
 #include <rock/slice/SliceParts.h>
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewNoopTransform.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 using rocksdb::BytewiseComparator;
 using rocksdb::Cache;

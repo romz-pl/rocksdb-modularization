@@ -9,7 +9,7 @@
 #include "db/merge_context.h"
 #include "db/read_callback.h"
 #include "rocksdb/env.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/types.h"
 #include "table/block_based/block.h"
 

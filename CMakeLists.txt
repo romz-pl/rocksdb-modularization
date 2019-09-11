@@ -486,6 +486,7 @@ SET( ROCKSDB_COMPONENT_LIBS
     logger_abstract
     jemalloc
     mutex
+    statistics
     sync_point
 )
 

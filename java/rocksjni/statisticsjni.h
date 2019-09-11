@@ -12,7 +12,7 @@
 #include <memory>
 #include <set>
 #include <string>
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "monitoring/statistics.h"
 
 namespace rocksdb {

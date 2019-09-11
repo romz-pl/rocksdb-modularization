@@ -51,7 +51,7 @@ int main() {
 #include "rocksdb/env.h"
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/utilities/backupable_db.h"
 #include "rocksdb/utilities/checkpoint.h"
 #include "rocksdb/utilities/db_ttl.h"

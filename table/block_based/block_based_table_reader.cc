@@ -24,7 +24,7 @@
 #include "rocksdb/filter_policy.h"
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/table.h"
 #include "rocksdb/table_properties.h"
 

@@ -17,7 +17,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
 #include "rocksdb/options.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 
 #include "table/block_based/block.h"
 #include "table/block_based/filter_block.h"

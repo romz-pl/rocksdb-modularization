@@ -18,6 +18,7 @@
 #include "util/cast_util.h"
 
 #include <rock/numeric_limits/numeric_limits.h>
+#include <rock/statistics/HistogramData.h>
 
 namespace rocksdb {
 

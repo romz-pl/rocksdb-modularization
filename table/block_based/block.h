@@ -24,7 +24,7 @@
 #include "db/pinned_iterators_manager.h"
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/table.h"
 #include "table/block_based/block_prefix_index.h"
 #include "table/block_based/data_block_hash_index.h"

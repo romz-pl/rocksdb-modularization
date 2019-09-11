@@ -4,7 +4,7 @@
 //  (found in the LICENSE.Apache file in the root directory).
 //
 #pragma once
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 
 #include <atomic>
 #include <map>
@@ -15,6 +15,8 @@
 #include <rock/likely/likely.h>
 #include <rock/port/port.h>
 #include "util/core_local.h"
+
+#include <rock/statistics/Tickers.h>
 
 
 #ifdef __clang__

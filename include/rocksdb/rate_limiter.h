@@ -10,7 +10,7 @@
 #pragma once
 
 #include "rocksdb/env.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 
 namespace rocksdb {
 

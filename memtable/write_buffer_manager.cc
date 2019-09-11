@@ -11,6 +11,8 @@
 #include <mutex>
 #include <rock/coding/coding.h>
 
+#include <vector>
+
 namespace rocksdb {
 #ifndef ROCKSDB_LITE
 namespace {

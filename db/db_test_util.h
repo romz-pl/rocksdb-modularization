@@ -35,7 +35,7 @@
 #include "rocksdb/options.h"
 #include <rock/slice/Slice.h>
 #include "rocksdb/sst_file_writer.h"
-#include "rocksdb/statistics.h"
+#include <rock/statistics/Statistics.h>
 #include "rocksdb/table.h"
 #include "rocksdb/utilities/checkpoint.h"
 #include "table/block_based/block_based_table_factory.h"
