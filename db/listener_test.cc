@@ -11,7 +11,7 @@
 #include "file/filename.h"
 #include "logging/logging.h"
 #include "memtable/hash_linklist_rep.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "rocksdb/cache.h"
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/db.h"

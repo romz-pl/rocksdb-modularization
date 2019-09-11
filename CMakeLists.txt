@@ -478,14 +478,12 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
-    container
     crc32
     hash
     io_abstract
     iterator
     logger_abstract
     jemalloc
-    mutex
     statistics
     sync_point
 )
@@ -582,7 +580,6 @@ set(SOURCES
         monitoring/perf_context.cc
         monitoring/perf_level.cc
         monitoring/persistent_stats_history.cc
-        monitoring/statistics.cc
         monitoring/thread_status_impl.cc
         monitoring/thread_status_updater.cc
         monitoring/thread_status_util.cc

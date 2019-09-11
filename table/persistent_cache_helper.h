@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "table/format.h"
 #include "table/persistent_cache_options.h"
 

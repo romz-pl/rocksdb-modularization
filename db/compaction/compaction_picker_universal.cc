@@ -18,9 +18,11 @@
 #include "db/column_family.h"
 #include "file/filename.h"
 #include "logging/log_buffer.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include <rock/sync_point/sync_point.h>
 #include <rock/random/Random.h>
+
+#include <rock/statistics/RecordInHistogram.h>
 
 
 namespace rocksdb {

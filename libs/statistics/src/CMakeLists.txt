@@ -1,18 +1,25 @@
 set( LIB_NAME statistics )
 
 add_library( ${LIB_NAME} STATIC
-    Tickers.cpp
-    TickersNameMap.cpp
-    Histograms.cpp
-    HistogramsNameMap.cpp
-    HistogramData.cpp
-    StatsLevel.cpp
-    Statistics.cpp
     CreateDBStatistics.cpp
-    HistogramBucketMapper.cpp
-    HistogramStat.cpp
     Histogram.cpp
+    HistogramBucketMapper.cpp
+    HistogramData.cpp
     HistogramImpl.cpp
+    HistogramStat.cpp
+    Histograms.cpp
+    HistogramsInternal.cpp
+    HistogramsNameMap.cpp
+    RecordInHistogram.cpp
+    RecordTick.cpp
+    RecordTimeToHistogram.cpp
+    SetTickerCount.cpp
+    Statistics.cpp
+    StatisticsImpl.cpp
+    StatsLevel.cpp
+    Tickers.cpp
+    TickersInternal.cpp
+    TickersNameMap.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -26,7 +33,8 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
-    port
+    container
+    mutex
     status
     PRIVATE
 )

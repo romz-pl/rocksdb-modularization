@@ -16,6 +16,7 @@
 #include <rock/sync_point/sync_point.h>
 
 #include <rock/io_abstract/Directory.h>
+#include <rock/statistics/RecordInHistogram.h>
 
 namespace rocksdb {
 // Convenience methods

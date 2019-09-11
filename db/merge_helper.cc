@@ -9,13 +9,15 @@
 
 #include "db/dbformat.h"
 #include "monitoring/perf_context_imp.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include <rock/likely/likely.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/merge_operator.h"
 #include "table/format.h"
 #include "table/internal_iterator.h"
+
+#include <rock/statistics/RecordInHistogram.h>
 
 namespace rocksdb {
 

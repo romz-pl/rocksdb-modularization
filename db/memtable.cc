@@ -22,7 +22,7 @@
 #include "memory/arena.h"
 #include "memory/memory_usage.h"
 #include "monitoring/perf_context_imp.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include <rock/port/port.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"

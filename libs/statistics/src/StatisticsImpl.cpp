@@ -1,28 +1,13 @@
-//  Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
-//  This source code is licensed under both the GPLv2 (found in the
-//  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
-//
-#include "monitoring/statistics.h"
-
-#include <cinttypes>
-#include <rock/statistics/Statistics.h>
-#include <rock/likely/likely.h>
-#include <algorithm>
-#include <cstdio>
+#include <rock/statistics/StatisticsImpl.h>
 
 #include <rock/mutex/MutexLock.h>
 #include <rock/statistics/TickersNameMap.h>
 #include <rock/statistics/HistogramsNameMap.h>
 #include <rock/statistics/HistogramData.h>
 
+#include <cinttypes>
+
 namespace rocksdb {
-
-
-
-std::shared_ptr<Statistics> CreateDBStatistics() {
-  return std::make_shared<StatisticsImpl>(nullptr);
-}
 
 StatisticsImpl::StatisticsImpl(std::shared_ptr<Statistics> stats)
     : stats_(std::move(stats)) {}
@@ -64,6 +49,8 @@ std::string StatisticsImpl::getHistogramString(uint32_t histogramType) const {
   MutexLock lock(&aggregate_lock_);
   return getHistogramImplLocked(histogramType)->ToString();
 }
+
+
 
 void StatisticsImpl::setTickerCount(uint32_t tickerType, uint64_t count) {
   {
@@ -194,4 +181,4 @@ bool StatisticsImpl::HistEnabledForType(uint32_t type) const {
   return type < HISTOGRAM_ENUM_MAX;
 }
 
-} // namespace rocksdb
+}

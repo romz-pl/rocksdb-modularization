@@ -51,6 +51,7 @@
 
 #include <rock/io_abstract/Directory.h>
 #include <rock/logger_abstract/LogFlush.h>
+#include <rock/statistics/RecordTimeToHistogram.h>
 
 namespace rocksdb {
 

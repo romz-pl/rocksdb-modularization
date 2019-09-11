@@ -6,7 +6,7 @@
 #pragma once
 #ifndef ROCKSDB_LITE
 
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include <rock/iterator/Iterator.h>
 #include "util/stop_watch.h"
 #include "utilities/blob_db/blob_db_impl.h"

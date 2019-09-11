@@ -14,6 +14,7 @@
 
 #include <rock/iterator/NewErrorIterator.h>
 #include <rock/logger_abstract/LogFlush.h>
+#include <rock/statistics/RecordTimeToHistogram.h>
 
 namespace rocksdb {
 

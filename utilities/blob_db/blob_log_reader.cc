@@ -9,9 +9,11 @@
 
 #include <algorithm>
 
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "util/file_reader_writer.h"
 #include "util/stop_watch.h"
+
+#include <rock/statistics/RecordTick.h>
 
 namespace rocksdb {
 namespace blob_db {

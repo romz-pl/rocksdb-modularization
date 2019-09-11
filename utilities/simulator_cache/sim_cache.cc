@@ -5,7 +5,7 @@
 
 #include "rocksdb/utilities/sim_cache.h"
 #include <atomic>
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include "util/file_reader_writer.h"
@@ -13,6 +13,9 @@
 #include <rock/string/AppendNumberTo.h>
 #include <rock/mutex/ReadLock.h>
 #include <rock/mutex/MutexLock.h>
+
+#include <rock/statistics/RecordTick.h>
+#include <rock/statistics/SetTickerCount.h>
 
 namespace rocksdb {
 

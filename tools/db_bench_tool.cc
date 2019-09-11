@@ -34,7 +34,7 @@
 #include "db/version_set.h"
 #include "hdfs/env_hdfs.h"
 #include <rock/statistics/HistogramImpl.h>
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "options/cf_options.h"
 #include <rock/port/port.h>
 #include <rock/port/stack_trace.h>

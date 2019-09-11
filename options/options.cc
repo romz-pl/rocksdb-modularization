@@ -12,7 +12,7 @@
 #include <cinttypes>
 #include <limits>
 
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "options/db_options.h"
 #include "options/options_helper.h"
 #include "rocksdb/cache.h"

@@ -18,7 +18,7 @@
 #include "file/sst_file_manager_impl.h"
 #include "logging/logging.h"
 #include "monitoring/instrumented_mutex.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "rocksdb/convenience.h"
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>
@@ -47,6 +47,7 @@
 #include <rock/mutex/ReadLock.h>
 #include <rock/mutex/WriteLock.h>
 #include <rock/mutex/MutexLock.h>
+#include <rock/statistics/RecordInHistogram.h>
 
 namespace {
 int kBlockBasedTableVersionFormat = 2;

@@ -9,7 +9,7 @@
 #include "db/read_callback.h"
 #include "monitoring/file_read_sample.h"
 #include "monitoring/perf_context_imp.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "rocksdb/env.h"
 #include "rocksdb/merge_operator.h"
 #include <rock/statistics/Statistics.h>

@@ -51,7 +51,7 @@
 #include "db/trim_history_scheduler.h"
 #include "db/write_batch_internal.h"
 #include "monitoring/perf_context_imp.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include "rocksdb/merge_operator.h"
 #include <rock/container/autovector.h>
 #include "util/cast_util.h"

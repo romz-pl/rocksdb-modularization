@@ -56,6 +56,7 @@
 #include <rock/string/AppendHumanBytes.h>
 #include <rock/logger_abstract/Error.h>
 #include <rock/logger_abstract/LogFlush.h>
+#include <rock/statistics/RecordInHistogram.h>
 
 namespace rocksdb {
 

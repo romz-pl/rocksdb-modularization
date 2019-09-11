@@ -8,6 +8,8 @@
 #include "rocksdb/env.h"
 #include "util/stop_watch.h"
 
+#include <rock/statistics/RecordTick.h>
+
 namespace rocksdb {
 
 class PerfStepTimer {

@@ -8,13 +8,14 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include "util/rate_limiter.h"
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include <rock/sync_point/sync_point.h>
 #include <rock/container/AlignedBuffer.h>
 
 #include <rock/numeric_limits/numeric_limits.h>
+#include <rock/statistics/RecordTick.h>
 
 namespace rocksdb {
 

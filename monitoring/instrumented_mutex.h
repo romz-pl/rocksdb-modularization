@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "monitoring/statistics.h"
+#include <rock/statistics/StatisticsImpl.h>
 #include <rock/port/port.h>
 #include "rocksdb/env.h"
 #include <rock/statistics/Statistics.h>

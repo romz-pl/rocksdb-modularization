@@ -50,6 +50,8 @@
 #include <rock/hash/xxhash.h>
 
 #include <rock/random/Random64.h>
+#include <rock/statistics/RecordTimeToHistogram.h>
+#include <rock/statistics/RecordInHistogram.h>
 
 namespace rocksdb {
 

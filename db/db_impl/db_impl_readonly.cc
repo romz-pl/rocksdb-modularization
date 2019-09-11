@@ -12,6 +12,7 @@
 #include "monitoring/perf_context_imp.h"
 
 #include <rock/logger_abstract/LogFlush.h>
+#include <rock/statistics/RecordInHistogram.h>
 
 namespace rocksdb {
 
