@@ -17,6 +17,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 #include <rock/random/Random.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 #ifndef GFLAGS
 bool FLAGS_enable_print = false;

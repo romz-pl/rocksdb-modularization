@@ -11,7 +11,7 @@
 #include "db/db_impl/db_impl.h"
 #include "db/flush_job.h"
 #include "db/version_set.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/write_buffer_manager.h"
 #include "table/mock_table.h"
 #include "test_util/testharness.h"
@@ -20,7 +20,7 @@
 
 #include <rock/statistics/CreateDBStatistics.h>
 #include <rock/statistics/HistogramData.h>
-
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

@@ -21,7 +21,7 @@
 #include <rock/slice/NewCappedPrefixTransform.h>
 #include <rock/slice/ReverseBytewiseComparator.h>
 #include <rock/statistics/CreateDBStatistics.h>
-
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

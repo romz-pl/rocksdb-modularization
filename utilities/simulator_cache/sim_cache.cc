@@ -16,6 +16,7 @@
 
 #include <rock/statistics/RecordTick.h>
 #include <rock/statistics/SetTickerCount.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

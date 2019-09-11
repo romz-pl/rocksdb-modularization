@@ -10,6 +10,8 @@
 #include "rocksdb/write_buffer_manager.h"
 #include "test_util/testharness.h"
 
+#include <rock/cache_lru/NewLRUCache.h>
+
 namespace rocksdb {
 
 class WriteBufferManagerTest : public testing::Test {};

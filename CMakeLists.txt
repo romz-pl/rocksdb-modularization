@@ -491,7 +491,6 @@ SET( ROCKSDB_COMPONENT_LIBS
 # Main library source code
 
 set(SOURCES
-        cache/lru_cache.cc
         db/builder.cc
         db/c.cc
         db/column_family.cc

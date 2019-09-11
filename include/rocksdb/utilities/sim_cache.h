@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <memory>
 #include <string>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/env.h"
 #include <rock/slice/Slice.h>
 #include <rock/statistics/Statistics.h>

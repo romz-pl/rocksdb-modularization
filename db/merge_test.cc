@@ -11,7 +11,7 @@
 #include "db/dbformat.h"
 #include "db/write_batch_internal.h"
 #include <rock/port/stack_trace.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"

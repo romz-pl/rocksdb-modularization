@@ -8,7 +8,7 @@
 
 #include <jni.h>
 
-#include "cache/lru_cache.h"
+#include <rock/cache_lru/NewLRUCache.h>
 #include "include/org_rocksdb_LRUCache.h"
 
 /*

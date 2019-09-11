@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "include/org_rocksdb_RocksDB.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
 #include "rocksdb/types.h"

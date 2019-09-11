@@ -15,7 +15,7 @@
 
 #include "options/options_helper.h"
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/convenience.h"
 #include "rocksdb/flush_block_policy.h"
 #include "table/block_based/block_based_table_builder.h"
@@ -31,6 +31,7 @@
 #include <rock/string/ParseInt.h>
 #include <rock/string/ParseBoolean.h>
 #include <rock/mutex/MutexLock.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

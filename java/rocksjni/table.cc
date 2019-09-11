@@ -10,7 +10,7 @@
 #include "include/org_rocksdb_BlockBasedTableConfig.h"
 #include "include/org_rocksdb_PlainTableConfig.h"
 #include "portal.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/filter_policy.h"
 
 /*

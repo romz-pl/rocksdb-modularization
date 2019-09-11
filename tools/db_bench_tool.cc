@@ -38,7 +38,7 @@
 #include "options/cf_options.h"
 #include <rock/port/port.h>
 #include <rock/port/stack_trace.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
@@ -80,6 +80,8 @@
 #include <rock/slice/NewCappedPrefixTransform.h>
 #include <rock/random/Random64.h>
 #include <rock/statistics/CreateDBStatistics.h>
+#include <rock/cache_lru/NewLRUCache.h>
+#include <rock/cache_clock/NewClockCache.h>
 
 #ifdef OS_WIN
 #include <io.h>  // open/close

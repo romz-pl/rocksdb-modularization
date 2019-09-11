@@ -22,7 +22,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"

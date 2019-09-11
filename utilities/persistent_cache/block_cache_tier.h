@@ -19,7 +19,7 @@
 #include <string>
 #include <thread>
 
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/persistent_cache.h"
 

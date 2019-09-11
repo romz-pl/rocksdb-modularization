@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"

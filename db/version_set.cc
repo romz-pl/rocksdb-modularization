@@ -57,6 +57,7 @@
 #include <rock/logger_abstract/Error.h>
 #include <rock/logger_abstract/LogFlush.h>
 #include <rock/statistics/RecordInHistogram.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

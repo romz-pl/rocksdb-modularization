@@ -17,7 +17,7 @@
 #include "db/db_impl/db_impl.h"
 #include "db/error_handler.h"
 #include "db/version_set.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
 #include "rocksdb/write_buffer_manager.h"
@@ -29,6 +29,7 @@
 #include "utilities/merge_operators.h"
 
 #include <rock/random/Random64.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

@@ -18,7 +18,7 @@
 #include "db/dbformat.h"
 #include "db/pinned_iterators_manager.h"
 
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"

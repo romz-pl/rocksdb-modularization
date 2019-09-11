@@ -18,7 +18,7 @@
 #include "db/range_del_aggregator.h"
 #include "options/cf_options.h"
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/env.h"
 #include "rocksdb/options.h"
 #include "rocksdb/table.h"

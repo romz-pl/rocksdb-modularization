@@ -13,7 +13,7 @@
 
 #include <stdlib.h>
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"
 #include <rock/slice/Comparator.h>
 #include "rocksdb/convenience.h"
@@ -50,6 +50,7 @@
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewNoopTransform.h>
 #include <rock/statistics/CreateDBStatistics.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 using rocksdb::BytewiseComparator;
 using rocksdb::Cache;

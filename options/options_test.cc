@@ -12,13 +12,13 @@
 #include <unordered_map>
 #include <cinttypes>
 
-#include "cache/lru_cache.h"
-#include "cache/sharded_cache.h"
+#include <rock/cache_lru/NewLRUCache.h>
+#include <rock/cache_sharded/CacheShard.h>
 #include "options/options_helper.h"
 #include "options/options_parser.h"
 #include "options/options_sanity_check.h"
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/convenience.h"
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/utilities/leveldb_options.h"
@@ -45,6 +45,9 @@
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
 #include <rock/slice/ReverseBytewiseComparator.h>
+#include <rock/cache_sharded/ShardedCache.h>
+#include <rock/cache_lru/LRUCache.h>
+#include <rock/cache_sharded/GetDefaultCacheShardBits.h>
 
 #ifndef GFLAGS
 bool FLAGS_enable_print = false;

@@ -17,7 +17,7 @@
 #include "env/mock_env.h"
 #include "file/filename.h"
 #include "logging/logging.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/table.h"
@@ -27,6 +27,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

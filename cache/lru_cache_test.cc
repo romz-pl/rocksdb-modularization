@@ -3,12 +3,15 @@
 //  COPYING file in the root directory) and Apache 2.0 License
 //  (found in the LICENSE.Apache file in the root directory).
 
-#include "cache/lru_cache.h"
+#include <rock/cache_lru/NewLRUCache.h>
 
 #include <string>
 #include <vector>
 #include <rock/port/port.h>
 #include "test_util/testharness.h"
+
+#include <rock/cache_lru/LRUCache.h>
+#include <rock/cache_lru/LRUCacheShard.h>
 
 namespace rocksdb {
 

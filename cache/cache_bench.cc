@@ -16,13 +16,15 @@ int main() {
 #include <stdio.h>
 
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "util/gflags_compat.h"
 
 #include <rock/random/Random.h>
 #include <rock/mutex/MutexLock.h>
+#include <rock/cache_clock/NewClockCache.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 

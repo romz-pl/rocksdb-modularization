@@ -69,7 +69,7 @@
 #include "options/options_helper.h"
 #include "options/options_parser.h"
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/convenience.h"
 #include "rocksdb/db.h"
@@ -102,6 +102,7 @@
 #include <rock/iterator/NewErrorIterator.h>
 #include <rock/logger_abstract/LogFlush.h>
 #include <rock/statistics/RecordInHistogram.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 
 namespace rocksdb {

@@ -15,7 +15,7 @@
 #include <rock/statistics/StatisticsImpl.h>
 #include "options/db_options.h"
 #include "options/options_helper.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"
 #include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
@@ -29,6 +29,8 @@
 #include "rocksdb/wal_filter.h"
 #include "table/block_based/block_based_table_factory.h"
 #include "util/compression.h"
+
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

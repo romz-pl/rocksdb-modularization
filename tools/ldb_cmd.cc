@@ -15,7 +15,7 @@
 #include "db/write_batch_internal.h"
 #include "file/filename.h"
 #include <rock/port/port_dirent.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/table_properties.h"
 #include "rocksdb/utilities/backupable_db.h"
 #include "rocksdb/utilities/checkpoint.h"
@@ -47,6 +47,7 @@
 #include <rock/string/TimeToHumanString.h>
 #include <rock/string/NumberToString.h>
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

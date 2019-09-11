@@ -7,20 +7,21 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 
 #include <forward_list>
 #include <functional>
 #include <iostream>
 #include <string>
 #include <vector>
-#include "cache/clock_cache.h"
-#include "cache/lru_cache.h"
+#include <rock/cache_lru/NewLRUCache.h>
 #include "test_util/testharness.h"
 #include <rock/coding/coding.h>
 
 
 #include <rock/string/ToString.h>
+#include <rock/cache_clock/NewClockCache.h>
+#include <rock/cache_sharded/ShardedCache.h>
 
 namespace rocksdb {
 

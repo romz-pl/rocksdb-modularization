@@ -81,6 +81,7 @@
 #include "util/file_reader_writer.h"
 
 #include <rock/slice/EscapeString.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

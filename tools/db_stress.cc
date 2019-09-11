@@ -47,7 +47,7 @@ int main() {
 #include <rock/statistics/HistogramImpl.h>
 #include "options/options_helper.h"
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/env.h"
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
@@ -66,10 +66,12 @@ int main() {
 #include "util/gflags_compat.h"
 
 #include <rock/random/Random.h>
-
+#include <rock/cache_lru/NewLRUCache.h>
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/io_abstract/MemoryMappedFileBuffer.h>
 #include <rock/statistics/CreateDBStatistics.h>
+#include <rock/cache_lru/NewLRUCache.h>
+#include <rock/cache_clock/NewClockCache.h>
 
 // SyncPoint is not supported in Released Windows Mode.
 #if !(defined NDEBUG) || !defined(OS_WIN)

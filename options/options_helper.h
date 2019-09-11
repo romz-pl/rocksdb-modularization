@@ -16,6 +16,7 @@
 #include <rock/status/Status.h>
 #include "rocksdb/table.h"
 #include "rocksdb/universal_compaction.h"
+#include <rock/cache_lru/LRUCacheOptions.h>
 
 namespace rocksdb {
 

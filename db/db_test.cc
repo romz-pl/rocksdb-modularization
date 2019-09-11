@@ -23,7 +23,7 @@
 #include <alloca.h>
 #endif
 
-#include "cache/lru_cache.h"
+#include <rock/cache_lru/NewLRUCache.h>
 #include "db/db_impl/db_impl.h"
 #include "db/db_test_util.h"
 #include "db/dbformat.h"
@@ -36,7 +36,7 @@
 #include "monitoring/thread_status_util.h"
 #include <rock/port/port.h>
 #include <rock/port/stack_trace.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/convenience.h"
 #include "rocksdb/db.h"
@@ -73,6 +73,7 @@
 #include <rock/slice/NewNoopTransform.h>
 #include <rock/statistics/CreateDBStatistics.h>
 #include <rock/statistics/HistogramData.h>
+#include <rock/cache_lru/LRUCache.h>
 
 namespace rocksdb {
 

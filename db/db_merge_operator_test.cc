@@ -12,6 +12,8 @@
 #include "utilities/merge_operators.h"
 #include "utilities/merge_operators/string_append/stringappend2.h"
 
+#include <rock/cache_lru/NewLRUCache.h>
+
 namespace rocksdb {
 
 class TestReadCallback : public ReadCallback {

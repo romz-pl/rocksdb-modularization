@@ -26,7 +26,7 @@ int main() { return 0; }
 #include <thread>
 
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include <rock/status/Status.h>
 #include "rocksdb/table.h"

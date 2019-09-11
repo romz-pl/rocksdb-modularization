@@ -17,7 +17,7 @@
 #include <vector>
 
 #include "block_fetcher.h"
-#include "cache/lru_cache.h"
+#include <rock/cache_lru/NewLRUCache.h>
 #include "db/dbformat.h"
 #include "db/memtable.h"
 #include "db/write_batch_internal.h"
@@ -25,7 +25,7 @@
 #include "meta_blocks.h"
 #include <rock/statistics/StatisticsImpl.h>
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>

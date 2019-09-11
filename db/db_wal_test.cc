@@ -14,6 +14,8 @@
 #include "test_util/fault_injection_test_env.h"
 #include <rock/sync_point/sync_point.h>
 
+#include <rock/cache_lru/NewLRUCache.h>
+
 namespace rocksdb {
 class DBWALTest : public DBTestBase {
  public:

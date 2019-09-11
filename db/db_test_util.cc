@@ -16,6 +16,7 @@
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
 #include <rock/slice/NewNoopTransform.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

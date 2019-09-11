@@ -11,7 +11,7 @@
 
 #include <cassert>
 #include <rock/likely/likely.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include <rock/iterator/Cleanable.h>
 
 namespace rocksdb {

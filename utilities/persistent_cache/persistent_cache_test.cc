@@ -17,6 +17,7 @@
 #include "utilities/persistent_cache/block_cache_tier.h"
 
 #include <rock/statistics/CreateDBStatistics.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

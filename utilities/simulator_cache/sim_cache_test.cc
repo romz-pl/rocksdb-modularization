@@ -9,6 +9,7 @@
 #include <rock/port/stack_trace.h>
 
 #include <rock/statistics/CreateDBStatistics.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

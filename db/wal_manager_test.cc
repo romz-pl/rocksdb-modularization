@@ -8,7 +8,7 @@
 #include <map>
 #include <string>
 
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/write_batch.h"
 #include "rocksdb/write_buffer_manager.h"
 
@@ -23,6 +23,7 @@
 #include "test_util/testutil.h"
 #include "util/file_reader_writer.h"
 
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

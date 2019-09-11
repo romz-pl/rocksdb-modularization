@@ -9,7 +9,7 @@
 
 #include "logging/logging.h"
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/env.h"
 #include "rocksdb/sst_file_manager.h"
 #include "rocksdb/wal_filter.h"

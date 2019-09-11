@@ -21,7 +21,7 @@
 #include "db/db_test_util.h"
 #include "memory/arena.h"
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "table/block_based/block_builder.h"
 #include "test_util/testharness.h"
 #include "utilities/persistent_cache/volatile_tier_impl.h"

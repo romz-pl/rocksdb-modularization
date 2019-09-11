@@ -13,7 +13,7 @@
 #include <string>
 
 #include <rock/port/port.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include <rock/hash/hash.h>
 
 namespace rocksdb {

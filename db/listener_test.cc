@@ -12,7 +12,7 @@
 #include "logging/logging.h"
 #include "memtable/hash_linklist_rep.h"
 #include <rock/statistics/StatisticsImpl.h>
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"

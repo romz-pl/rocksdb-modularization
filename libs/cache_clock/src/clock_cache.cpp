@@ -22,7 +22,6 @@
 #endif
 #include "tbb/concurrent_hash_map.h"
 
-#include "cache/sharded_cache.h"
 #include <rock/port/port.h>
 #include <rock/container/autovector.h>
 

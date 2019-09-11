@@ -21,7 +21,7 @@
 #include "db/log_format.h"
 #include "db/version_set.h"
 #include "file/filename.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/convenience.h"
 #include "rocksdb/env.h"
 #include "rocksdb/table.h"
@@ -32,7 +32,7 @@
 #include "test_util/testutil.h"
 
 #include <rock/slice/ConsumeDecimalNumber.h>
-
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

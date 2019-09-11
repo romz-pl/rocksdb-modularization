@@ -6,7 +6,7 @@
 #ifndef ROCKSDB_LITE
 
 #include "db/db_impl/db_impl.h"
-#include "rocksdb/cache.h"
+#include <rock/cache/Cache.h>
 #include "rocksdb/table.h"
 #include "rocksdb/utilities/memory_util.h"
 #include "rocksdb/utilities/stackable_db.h"
@@ -14,6 +14,7 @@
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

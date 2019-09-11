@@ -7,7 +7,7 @@
 
 #include <unordered_map>
 
-#include "cache/lru_cache.h"
+#include <rock/cache_lru/NewLRUCache.h>
 #include "trace_replay/block_cache_tracer.h"
 
 namespace rocksdb {

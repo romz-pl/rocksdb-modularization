@@ -1,25 +1,12 @@
-//  Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
-//  This source code is licensed under both the GPLv2 (found in the
-//  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
-//
-// Copyright (c) 2011 The LevelDB Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file. See the AUTHORS file for names of contributors.
 #pragma once
 
-#include <string>
-
-#include "cache/sharded_cache.h"
-
+#include <rock/cache_sharded/CacheShard.h>
 #include <rock/port/port.h>
+#include <rock/cache_lru/LRUHandleTable.h>
+#include <rock/cache_lru/LRUHandle.h>
 #include <rock/container/autovector.h>
 
 namespace rocksdb {
-
-
-
-
 
 // A single shard of sharded cache.
 class ALIGN_AS(CACHE_LINE_SIZE) LRUCacheShard final : public CacheShard {
@@ -137,33 +124,5 @@ class ALIGN_AS(CACHE_LINE_SIZE) LRUCacheShard final : public CacheShard {
   mutable port::Mutex mutex_;
 };
 
-class LRUCache
-#ifdef NDEBUG
-    final
-#endif
-    : public ShardedCache {
- public:
-  LRUCache(size_t capacity, int num_shard_bits, bool strict_capacity_limit,
-           double high_pri_pool_ratio,
-           std::shared_ptr<MemoryAllocator> memory_allocator = nullptr,
-           bool use_adaptive_mutex = kDefaultToAdaptiveMutex);
-  virtual ~LRUCache();
-  virtual const char* Name() const override { return "LRUCache"; }
-  virtual CacheShard* GetShard(int shard) override;
-  virtual const CacheShard* GetShard(int shard) const override;
-  virtual void* Value(Handle* handle) override;
-  virtual size_t GetCharge(Handle* handle) const override;
-  virtual uint32_t GetHash(Handle* handle) const override;
-  virtual void DisownData() override;
 
-  //  Retrieves number of elements in LRU, for unit test purpose only
-  size_t TEST_GetLRUSize();
-  //  Retrives high pri pool ratio
-  double GetHighPriPoolRatio();
-
- private:
-  LRUCacheShard* shards_ = nullptr;
-  int num_shards_ = 0;
-};
-
-}  // namespace rocksdb
+}

@@ -17,6 +17,7 @@
 
 
 #include <rock/string/AppendNumberTo.h>
+#include <rock/cache_lru/NewLRUCache.h>
 
 namespace rocksdb {
 

@@ -3,6 +3,11 @@ set( LIB_NAME cache_lru )
 add_library( ${LIB_NAME} STATIC
     LRUHandle.cpp
     LRUHandleTable.cpp
+    LRUCacheShard.cpp
+    LRUCache.cpp
+    LRUCacheOptions.cpp
+    kDefaultToAdaptiveMutex.cpp
+    NewLRUCache.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
