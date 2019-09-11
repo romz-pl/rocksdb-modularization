@@ -12,6 +12,7 @@ add_subdirectory( iterator )
 add_subdirectory( likely )
 add_subdirectory( logger_abstract )
 
+add_subdirectory( memory_allocator )
 add_subdirectory( mutex )
 
 add_subdirectory( numeric_limits )

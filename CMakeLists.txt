@@ -484,6 +484,7 @@ SET( ROCKSDB_COMPONENT_LIBS
     io_abstract
     iterator
     logger_abstract
+    memory_allocator
     mutex
     sync_point
 )
