@@ -7,21 +7,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include <rock/cache/clock_cache.h>
+#include <rock/cache_clock/clock_cache.h>
 
-#ifndef SUPPORT_CLOCK_CACHE
-
-namespace rocksdb {
-
-std::shared_ptr<Cache> NewClockCache(size_t /*capacity*/, int /*num_shard_bits*/,
-                                     bool /*strict_capacity_limit*/) {
-  // Clock cache not supported.
-  return nullptr;
-}
-
-}  // namespace rocksdb
-
-#else
+#ifdef SUPPORT_CLOCK_CACHE
 
 #include <assert.h>
 #include <atomic>
@@ -714,14 +702,7 @@ class ClockCache final : public ShardedCache {
 
 }  // end anonymous namespace
 
-std::shared_ptr<Cache> NewClockCache(size_t capacity, int num_shard_bits,
-                                     bool strict_capacity_limit) {
-  if (num_shard_bits < 0) {
-    num_shard_bits = GetDefaultCacheShardBits(capacity);
-  }
-  return std::make_shared<ClockCache>(capacity, num_shard_bits,
-                                      strict_capacity_limit);
-}
+
 
 }  // namespace rocksdb
 

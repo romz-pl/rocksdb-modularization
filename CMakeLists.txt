@@ -478,7 +478,7 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
-    cache
+    cache_clock
     crc32
     hash
     io_abstract
@@ -491,7 +491,6 @@ SET( ROCKSDB_COMPONENT_LIBS
 # Main library source code
 
 set(SOURCES
-        cache/clock_cache.cc
         cache/lru_cache.cc
         cache/sharded_cache.cc
         db/builder.cc

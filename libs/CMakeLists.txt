@@ -1,5 +1,6 @@
 
 add_subdirectory( cache )
+add_subdirectory( cache_clock )
 add_subdirectory( coding )
 add_subdirectory( container )
 add_subdirectory( crc32 )

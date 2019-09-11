@@ -1,7 +1,8 @@
-set( LIB_NAME cache )
+set( LIB_NAME cache_clock )
 
 add_library( ${LIB_NAME} STATIC
-    Cache.cpp
+    clock_cache.cpp
+    NewClockCache.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -15,7 +16,7 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
-    statistics
+    cache
     PRIVATE
 )
 
