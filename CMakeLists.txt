@@ -484,7 +484,7 @@ SET( ROCKSDB_COMPONENT_LIBS
     io_abstract
     iterator
     logger_abstract
-    memory_allocator
+    jemalloc
     mutex
     sync_point
 )
@@ -568,7 +568,6 @@ set(SOURCES
         logging/log_buffer.cc
         memory/arena.cc
         memory/concurrent_arena.cc
-        memory/jemalloc_nodump_allocator.cc
         memtable/alloc_tracker.cc
         memtable/hash_linklist_rep.cc
         memtable/hash_skiplist_rep.cc

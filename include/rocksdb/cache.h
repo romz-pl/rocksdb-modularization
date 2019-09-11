@@ -25,7 +25,7 @@
 #include <stdint.h>
 #include <memory>
 #include <string>
-#include "rocksdb/memory_allocator.h"
+#include <rock/memory_allocator/MemoryAllocator.h>
 #include <rock/slice/Slice.h>
 #include "rocksdb/statistics.h"
 #include <rock/status/Status.h>

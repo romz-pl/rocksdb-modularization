@@ -5,15 +5,16 @@
 
 #pragma once
 
+#if defined(ROCKSDB_JEMALLOC) && defined(ROCKSDB_PLATFORM_POSIX)
+
 #include <atomic>
 #include <vector>
 
-#include "port/jemalloc_helper.h"
+#include <rock/jemalloc/jemalloc_helper.h>
 #include <rock/port/port.h>
-#include "rocksdb/memory_allocator.h"
+#include <rock/memory_allocator/MemoryAllocator.h>
 #include "util/thread_local.h"
 
-#if defined(ROCKSDB_JEMALLOC) && defined(ROCKSDB_PLATFORM_POSIX)
 
 #include <sys/mman.h>
 

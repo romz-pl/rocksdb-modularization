@@ -12,7 +12,7 @@
 #include "db/builder.h"
 #include "db/table_properties_collector.h"
 #include <rock/slice/Comparator.h>
-#include "rocksdb/memory_allocator.h"
+#include <rock/memory_allocator/MemoryAllocator.h>
 #include "rocksdb/options.h"
 #include <rock/slice/Slice.h>
 #include "table/block_based/block_builder.h"

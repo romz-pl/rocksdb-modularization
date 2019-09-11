@@ -1,4 +1,4 @@
-#include <rock/memory_allocator/NewJemallocNodumpAllocator.h>
+#include <rock/jemalloc/NewJemallocNodumpAllocator.h>
 
 
 namespace rocksdb {

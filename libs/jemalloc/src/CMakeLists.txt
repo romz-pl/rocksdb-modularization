@@ -1,8 +1,10 @@
-set( LIB_NAME memory_allocator )
+set( LIB_NAME jemalloc )
 
 add_library( ${LIB_NAME} STATIC
-    CustomDeleter.cpp
-    MemoryAllocator.cpp
+    JemallocAllocatorOptions.cpp
+    NewJemallocNodumpAllocator.cpp
+    jemalloc_nodump_allocator.cpp
+    jemalloc_helper.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -16,9 +18,8 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
-    likely
-    posrt
-    status
+    memory_allocator
+    port
     PRIVATE
 )
 
