@@ -21,7 +21,7 @@ int main() { fprintf(stderr, "Please install gflags to run tools\n"); }
 #include "utilities/persistent_cache/persistent_cache_tier.h"
 #include "utilities/persistent_cache/volatile_tier_impl.h"
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include <rock/port/port.h>
 #include "table/block_based/block_builder.h"
 #include "util/gflags_compat.h"

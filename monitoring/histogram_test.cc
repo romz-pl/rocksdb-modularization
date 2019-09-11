@@ -5,7 +5,7 @@
 //
 #include <cmath>
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "monitoring/histogram_windowing.h"
 #include "test_util/testharness.h"
 

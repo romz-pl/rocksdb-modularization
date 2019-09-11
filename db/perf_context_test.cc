@@ -8,7 +8,7 @@
 #include <thread>
 #include <vector>
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "monitoring/instrumented_mutex.h"
 #include "monitoring/perf_context_imp.h"
 #include "monitoring/thread_status_util.h"

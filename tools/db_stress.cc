@@ -44,7 +44,7 @@ int main() {
 #include "db/version_set.h"
 #include "hdfs/env_hdfs.h"
 #include "logging/logging.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "options/options_helper.h"
 #include <rock/port/port.h>
 #include "rocksdb/cache.h"

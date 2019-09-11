@@ -9,6 +9,10 @@ add_library( ${LIB_NAME} STATIC
     StatsLevel.cpp
     Statistics.cpp
     CreateDBStatistics.cpp
+    HistogramBucketMapper.cpp
+    HistogramStat.cpp
+    Histogram.cpp
+    HistogramImpl.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -22,6 +26,7 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
+    port
     status
     PRIVATE
 )

@@ -33,7 +33,7 @@
 #include "db/malloc_stats.h"
 #include "db/version_set.h"
 #include "hdfs/env_hdfs.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "monitoring/statistics.h"
 #include "options/cf_options.h"
 #include <rock/port/port.h>

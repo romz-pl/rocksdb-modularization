@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <mutex>
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "monitoring/iostats_context_imp.h"
 #include <rock/port/port.h>
 #include <rock/sync_point/sync_point.h>

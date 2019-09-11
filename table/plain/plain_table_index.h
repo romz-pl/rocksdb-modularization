@@ -12,7 +12,7 @@
 
 #include "db/dbformat.h"
 #include "memory/arena.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "options/cf_options.h"
 #include "rocksdb/options.h"
 #include <rock/hash/hash.h>

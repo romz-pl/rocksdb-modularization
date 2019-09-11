@@ -13,7 +13,7 @@
 #include <string>
 #include <vector>
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "rocksdb/env.h"
 #include "rocksdb/persistent_cache.h"
 #include <rock/status/Status.h>

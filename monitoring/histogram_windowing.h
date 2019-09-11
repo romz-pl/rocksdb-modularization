@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "rocksdb/env.h"
 
 namespace rocksdb {

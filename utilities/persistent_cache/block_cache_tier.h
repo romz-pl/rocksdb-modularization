@@ -29,7 +29,7 @@
 
 #include "memory/arena.h"
 #include "memtable/skiplist.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include <rock/port/port.h>
 #include <rock/coding/coding.h>
 #include <rock/crc32/crc32c.h>

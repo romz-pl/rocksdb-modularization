@@ -13,7 +13,7 @@ int main() {
 
 #include "db/db_impl/db_impl.h"
 #include "db/dbformat.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "rocksdb/db.h"
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"

@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include <rock/likely/likely.h>
 #include <rock/port/port.h>
 #include "util/core_local.h"

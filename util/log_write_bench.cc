@@ -11,7 +11,7 @@ int main() {
 }
 #else
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "rocksdb/env.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"

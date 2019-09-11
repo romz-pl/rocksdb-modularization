@@ -31,7 +31,7 @@
 #include "table/two_level_iterator.h"
 
 #include "memory/arena.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "monitoring/perf_context_imp.h"
 #include <rock/coding/coding.h>
 #include "util/dynamic_bloom.h"

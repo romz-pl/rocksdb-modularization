@@ -12,7 +12,7 @@
 #include "db/memtable.h"
 #include "memory/arena.h"
 #include "memtable/skiplist.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include <rock/port/port.h>
 #include "rocksdb/memtablerep.h"
 #include <rock/slice/Slice.h>

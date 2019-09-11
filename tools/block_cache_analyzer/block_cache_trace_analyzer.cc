@@ -17,7 +17,7 @@
 #include <random>
 #include <sstream>
 
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include "util/gflags_compat.h"
 
 

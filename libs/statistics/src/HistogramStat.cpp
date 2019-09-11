@@ -1,64 +1,12 @@
-//  Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
-//  This source code is licensed under both the GPLv2 (found in the
-//  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
-//
-// Copyright (c) 2011 The LevelDB Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file. See the AUTHORS file for names of contributors.
+#include <rock/statistics/HistogramStat.h>
 
-#include "monitoring/histogram.h"
-
-#include <cinttypes>
-#include <cassert>
-#include <math.h>
-#include <stdio.h>
-
-#include <rock/port/port.h>
-#include "util/cast_util.h"
-
-#include <rock/numeric_limits/numeric_limits.h>
+#include <rock/statistics/HistogramBucketMapper.h>
 #include <rock/statistics/HistogramData.h>
 
+#include <cinttypes>
+#include <cmath>
+
 namespace rocksdb {
-
-HistogramBucketMapper::HistogramBucketMapper() {
-  // If you change this, you also need to change
-  // size of array buckets_ in HistogramImpl
-  bucketValues_ = {1, 2};
-  valueIndexMap_ = {{1, 0}, {2, 1}};
-  double bucket_val = static_cast<double>(bucketValues_.back());
-  while ((bucket_val = 1.5 * bucket_val) <= static_cast<double>(port::kMaxUint64)) {
-    bucketValues_.push_back(static_cast<uint64_t>(bucket_val));
-    // Extracts two most significant digits to make histogram buckets more
-    // human-readable. E.g., 172 becomes 170.
-    uint64_t pow_of_ten = 1;
-    while (bucketValues_.back() / 10 > 10) {
-      bucketValues_.back() /= 10;
-      pow_of_ten *= 10;
-    }
-    bucketValues_.back() *= pow_of_ten;
-    valueIndexMap_[bucketValues_.back()] = bucketValues_.size() - 1;
-  }
-  maxBucketValue_ = bucketValues_.back();
-  minBucketValue_ = bucketValues_.front();
-}
-
-size_t HistogramBucketMapper::IndexForValue(const uint64_t value) const {
-  if (value >= maxBucketValue_) {
-    return bucketValues_.size() - 1;
-  } else if ( value >= minBucketValue_ ) {
-    std::map<uint64_t, uint64_t>::const_iterator lowerBound =
-      valueIndexMap_.lower_bound(value);
-    if (lowerBound != valueIndexMap_.end()) {
-      return static_cast<size_t>(lowerBound->second);
-    } else {
-      return 0;
-    }
-  } else {
-    return 0;
-  }
-}
 
 namespace {
   const HistogramBucketMapper bucketMapper;
@@ -79,9 +27,11 @@ void HistogramStat::Clear() {
   for (unsigned int b = 0; b < num_buckets_; b++) {
     buckets_[b].store(0, std::memory_order_relaxed);
   }
-};
+}
 
-bool HistogramStat::Empty() const { return num() == 0; }
+bool HistogramStat::Empty() const {
+    return num() == 0;
+}
 
 void HistogramStat::Add(uint64_t value) {
   // This function is designed to be lock free, as it's in the critical path
@@ -110,6 +60,7 @@ void HistogramStat::Add(uint64_t value) {
       sum_squares_.load(std::memory_order_relaxed) + value * value,
       std::memory_order_relaxed);
 }
+
 
 void HistogramStat::Merge(const HistogramStat& other) {
   // This function needs to be performned with the outer lock acquired
@@ -182,6 +133,7 @@ double HistogramStat::StandardDeviation() const {
       static_cast<double>(cur_num * cur_num);
   return sqrt(variance);
 }
+
 std::string HistogramStat::ToString() const {
   uint64_t cur_num = num();
   std::string r;
@@ -239,53 +191,5 @@ void HistogramStat::Data(HistogramData * const data) const {
   data->min = static_cast<double>(min());
 }
 
-void HistogramImpl::Clear() {
-  std::lock_guard<std::mutex> lock(mutex_);
-  stats_.Clear();
-}
 
-bool HistogramImpl::Empty() const {
-  return stats_.Empty();
 }
-
-void HistogramImpl::Add(uint64_t value) {
-  stats_.Add(value);
-}
-
-void HistogramImpl::Merge(const Histogram& other) {
-  if (strcmp(Name(), other.Name()) == 0) {
-    Merge(
-        *static_cast_with_check<const HistogramImpl, const Histogram>(&other));
-  }
-}
-
-void HistogramImpl::Merge(const HistogramImpl& other) {
-  std::lock_guard<std::mutex> lock(mutex_);
-  stats_.Merge(other.stats_);
-}
-
-double HistogramImpl::Median() const {
-  return stats_.Median();
-}
-
-double HistogramImpl::Percentile(double p) const {
-  return stats_.Percentile(p);
-}
-
-double HistogramImpl::Average() const {
-  return stats_.Average();
-}
-
-double HistogramImpl::StandardDeviation() const {
- return stats_.StandardDeviation();
-}
-
-std::string HistogramImpl::ToString() const {
-  return stats_.ToString();
-}
-
-void HistogramImpl::Data(HistogramData * const data) const {
-  stats_.Data(data);
-}
-
-} // namespace levedb

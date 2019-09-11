@@ -18,7 +18,7 @@ int main() {
 #include <vector>
 
 #include "db/db_impl/db_impl.h"
-#include "monitoring/histogram.h"
+#include <rock/statistics/HistogramImpl.h>
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/filter_policy.h"
