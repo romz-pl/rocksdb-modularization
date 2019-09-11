@@ -18,6 +18,7 @@
 #endif
 
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

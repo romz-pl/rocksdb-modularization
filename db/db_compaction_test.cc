@@ -17,6 +17,8 @@
 #include <rock/sync_point/sync_point.h>
 #include "util/concurrent_task_limiter_impl.h"
 
+#include <rock/statistics/CreateDBStatistics.h>
+
 namespace rocksdb {
 
 // SYNC_POINT is not supported in released Windows mode.

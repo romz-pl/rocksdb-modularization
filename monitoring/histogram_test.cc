@@ -9,6 +9,9 @@
 #include "monitoring/histogram_windowing.h"
 #include "test_util/testharness.h"
 
+#include <rock/statistics/HistogramBucketMapper.h>
+#include <rock/statistics/HistogramData.h>
+
 namespace rocksdb {
 
 class HistogramTest : public testing::Test {};

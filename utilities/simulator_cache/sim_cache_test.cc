@@ -8,6 +8,8 @@
 #include "db/db_test_util.h"
 #include <rock/port/stack_trace.h>
 
+#include <rock/statistics/CreateDBStatistics.h>
+
 namespace rocksdb {
 
 class SimCacheTest : public DBTestBase {

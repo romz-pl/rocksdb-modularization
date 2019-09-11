@@ -18,6 +18,7 @@
 #include "table/block_based/flush_block_policy.h"
 
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

@@ -13,6 +13,8 @@
 #include <rock/port/stack_trace.h>
 #include "rocksdb/sst_file_manager.h"
 
+#include <rock/statistics/CreateDBStatistics.h>
+
 namespace rocksdb {
 
 class DBSSTTest : public DBTestBase {

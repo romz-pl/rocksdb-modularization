@@ -12,6 +12,7 @@
 #if !defined(ROCKSDB_LITE)
 #include "rocksdb/utilities/table_properties_collectors.h"
 #include <rock/sync_point/sync_point.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

@@ -15,6 +15,7 @@
 #include "test_util/testutil.h"
 
 #include <rock/slice/ReverseBytewiseComparator.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

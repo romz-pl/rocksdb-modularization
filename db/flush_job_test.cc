@@ -18,6 +18,9 @@
 #include "test_util/testutil.h"
 #include "util/file_reader_writer.h"
 
+#include <rock/statistics/CreateDBStatistics.h>
+#include <rock/statistics/HistogramData.h>
+
 
 namespace rocksdb {
 

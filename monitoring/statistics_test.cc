@@ -9,6 +9,8 @@
 #include "test_util/testutil.h"
 
 #include <rock/statistics/Statistics.h>
+#include <rock/statistics/TickersNameMap.h>
+#include <rock/statistics/HistogramsNameMap.h>
 
 namespace rocksdb {
 

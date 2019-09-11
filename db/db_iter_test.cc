@@ -24,6 +24,7 @@
 
 #include <rock/slice/NewNoopTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

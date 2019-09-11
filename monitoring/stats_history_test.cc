@@ -23,6 +23,7 @@
 #include <rock/sync_point/sync_point.h>
 #include "test_util/testutil.h"
 #include <rock/random/Random.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

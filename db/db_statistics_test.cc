@@ -9,6 +9,8 @@
 #include "monitoring/thread_status_util.h"
 #include <rock/port/stack_trace.h>
 #include <rock/statistics/Statistics.h>
+#include <rock/statistics/CreateDBStatistics.h>
+#include <rock/statistics/HistogramData.h>
 
 namespace rocksdb {
 

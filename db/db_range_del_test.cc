@@ -9,6 +9,7 @@
 #include "utilities/merge_operators.h"
 
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

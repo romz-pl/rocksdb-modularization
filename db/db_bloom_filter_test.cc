@@ -13,6 +13,7 @@
 
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

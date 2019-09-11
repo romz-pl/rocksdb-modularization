@@ -28,6 +28,8 @@
 #include "utilities/blob_db/blob_db_impl.h"
 #include "utilities/blob_db/blob_index.h"
 
+#include <rock/statistics/CreateDBStatistics.h>
+
 namespace rocksdb {
 namespace blob_db {
 

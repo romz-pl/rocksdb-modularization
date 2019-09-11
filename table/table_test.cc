@@ -57,6 +57,7 @@
 #include <rock/slice/EscapeString.h>
 #include <rock/slice/NewNoopTransform.h>
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

@@ -17,6 +17,8 @@
 #include "test_util/testharness.h"
 
 #include <rock/slice/NewCappedPrefixTransform.h>
+#include <rock/statistics/Tickers.h>
+#include <rock/statistics/CreateDBStatistics.h>
 
 namespace rocksdb {
 

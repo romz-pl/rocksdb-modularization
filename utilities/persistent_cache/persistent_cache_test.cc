@@ -16,6 +16,8 @@
 
 #include "utilities/persistent_cache/block_cache_tier.h"
 
+#include <rock/statistics/CreateDBStatistics.h>
+
 namespace rocksdb {
 
 static const double kStressFactor = .125;
