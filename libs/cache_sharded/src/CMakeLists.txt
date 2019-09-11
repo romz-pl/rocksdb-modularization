@@ -1,8 +1,9 @@
-set( LIB_NAME cache_lru )
+set( LIB_NAME cache_sharded )
 
 add_library( ${LIB_NAME} STATIC
-    LRUHandle.cpp
-    LRUHandleTable.cpp
+    CacheShard.cpp
+    ShardedCache.cpp
+    GetDefaultCacheShardBits.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -16,7 +17,9 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
-    cache_sharded
+    cache
+    hash
+    memory_allocator
     PRIVATE
 )
 

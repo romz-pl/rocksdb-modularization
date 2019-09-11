@@ -481,7 +481,6 @@ SET( ROCKSDB_COMPONENT_LIBS
     cache_clock
     cache_lru
     crc32
-    hash
     io_abstract
     iterator
     logger_abstract
@@ -493,7 +492,6 @@ SET( ROCKSDB_COMPONENT_LIBS
 
 set(SOURCES
         cache/lru_cache.cc
-        cache/sharded_cache.cc
         db/builder.cc
         db/c.cc
         db/column_family.cc
