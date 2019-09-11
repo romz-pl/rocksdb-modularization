@@ -478,13 +478,13 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
+    cache
     crc32
     hash
     io_abstract
     iterator
     logger_abstract
     jemalloc
-    statistics
     sync_point
 )
 

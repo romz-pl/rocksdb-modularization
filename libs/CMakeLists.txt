@@ -1,4 +1,5 @@
 
+add_subdirectory( cache )
 add_subdirectory( coding )
 add_subdirectory( container )
 add_subdirectory( crc32 )
