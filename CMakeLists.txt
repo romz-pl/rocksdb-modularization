@@ -479,6 +479,7 @@ add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
     cache_clock
+    cache_lru
     crc32
     hash
     io_abstract
