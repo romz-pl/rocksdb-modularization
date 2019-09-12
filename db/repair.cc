@@ -76,7 +76,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/options.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/scoped_arena_iterator.h"
 #include "util/file_reader_writer.h"
 

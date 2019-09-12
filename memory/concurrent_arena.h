@@ -11,7 +11,7 @@
 #include <atomic>
 #include <memory>
 #include <utility>
-#include "memory/allocator.h"
+#include <rock/arena/Allocator.h>
 #include "memory/arena.h"
 #include <rock/likely/likely.h>
 #include <rock/container/CoreLocalArray.h>

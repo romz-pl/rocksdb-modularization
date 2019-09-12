@@ -7,7 +7,7 @@
 
 #include <algorithm>
 
-#include "memory/allocator.h"
+#include <rock/arena/Allocator.h>
 #include <rock/port/port.h>
 #include <rock/slice/Slice.h>
 #include <rock/hash/hash.h>

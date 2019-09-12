@@ -22,7 +22,7 @@
 #include "rocksdb/utilities/debug.h"
 #include "rocksdb/utilities/options_util.h"
 #include "rocksdb/write_batch.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/scoped_arena_iterator.h"
 #include "tools/ldb_cmd_impl.h"
 #include "tools/sst_dump_tool_imp.h"

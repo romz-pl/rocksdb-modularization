@@ -12,7 +12,7 @@
 #include "db/write_controller.h"
 #include "rocksdb/db.h"
 #include <rock/status/Status.h>
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"
 

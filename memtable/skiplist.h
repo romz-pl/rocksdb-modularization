@@ -34,7 +34,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <atomic>
-#include "memory/allocator.h"
+#include <rock/arena/Allocator.h>
 #include <rock/port/port.h>
 #include <rock/random/Random.h>
 

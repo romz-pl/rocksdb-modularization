@@ -1,3 +1,4 @@
+add_subdirectory( arena )
 
 add_subdirectory( cache )
 add_subdirectory( cache_clock )
@@ -31,4 +32,6 @@ add_subdirectory( status )
 add_subdirectory( statistics )
 add_subdirectory( string )
 add_subdirectory( sync_point )
+
+add_subdirectory( write_buffer_manager )
 

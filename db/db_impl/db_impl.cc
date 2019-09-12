@@ -79,7 +79,7 @@
 #include "rocksdb/stats_history.h"
 #include <rock/status/Status.h>
 #include "rocksdb/table.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/block_based/block.h"
 #include "table/block_based/block_based_table_factory.h"
 #include "table/get_context.h"

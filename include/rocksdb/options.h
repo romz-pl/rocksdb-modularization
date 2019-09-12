@@ -22,7 +22,7 @@
 #include "rocksdb/listener.h"
 #include "rocksdb/universal_compaction.h"
 #include "rocksdb/version.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 
 #include <rock/slice/BytewiseComparator.h>
 #include <rock/logger_abstract/InfoLogLevel.h>

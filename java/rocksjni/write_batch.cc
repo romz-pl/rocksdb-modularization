@@ -17,7 +17,7 @@
 #include "rocksdb/memtablerep.h"
 #include <rock/status/Status.h>
 #include "rocksdb/write_batch.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "rocksjni/portal.h"
 #include "rocksjni/writebatchhandlerjnicallback.h"
 #include "table/scoped_arena_iterator.h"

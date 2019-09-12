@@ -9,7 +9,7 @@
 #include <algorithm>
 #include "util/dynamic_bloom.h"
 
-#include "memory/allocator.h"
+#include <rock/arena/Allocator.h>
 
 
 namespace rocksdb {

@@ -31,7 +31,7 @@ int main() {
 #include "rocksdb/memtablerep.h"
 #include "rocksdb/options.h"
 #include <rock/slice/SliceTransform.h>
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "test_util/testutil.h"
 #include "util/gflags_compat.h"
 

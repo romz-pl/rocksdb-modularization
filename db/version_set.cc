@@ -35,7 +35,7 @@
 #include "monitoring/persistent_stats_history.h"
 #include "rocksdb/env.h"
 #include "rocksdb/merge_operator.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/format.h"
 #include "table/get_context.h"
 #include "table/internal_iterator.h"

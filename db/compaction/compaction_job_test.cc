@@ -20,7 +20,7 @@
 #include <rock/cache/Cache.h>
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/mock_table.h"
 #include "test_util/testharness.h"
 #include "test_util/testutil.h"

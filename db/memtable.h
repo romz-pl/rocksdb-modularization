@@ -19,7 +19,7 @@
 #include "db/range_tombstone_fragmenter.h"
 #include "db/read_callback.h"
 #include "db/version_edit.h"
-#include "memory/allocator.h"
+#include <rock/arena/Allocator.h>
 #include "memory/concurrent_arena.h"
 #include "monitoring/instrumented_mutex.h"
 #include "options/cf_options.h"
@@ -28,6 +28,7 @@
 #include "rocksdb/memtablerep.h"
 #include "util/dynamic_bloom.h"
 #include <rock/hash/hash.h>
+#include <rock/arena/AllocTracker.h>
 
 namespace rocksdb {
 

@@ -20,10 +20,12 @@
 #include <cerrno>
 #include <cstddef>
 #include <vector>
-#include "memory/allocator.h"
+#include <rock/arena/Allocator.h>
 
 
 namespace rocksdb {
+
+class AllocTracker;
 
 class Arena : public Allocator {
  public:

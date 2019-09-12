@@ -10,7 +10,7 @@
 
 #include <rock/cache/Cache.h>
 #include "rocksdb/write_batch.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 
 #include "db/column_family.h"
 #include "db/db_impl/db_impl.h"

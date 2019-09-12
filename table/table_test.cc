@@ -33,7 +33,7 @@
 #include "rocksdb/perf_context.h"
 #include <rock/slice/SliceTransform.h>
 #include <rock/statistics/Statistics.h>
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/block_based/block.h"
 #include "table/block_based/block_based_table_builder.h"
 #include "table/block_based/block_based_table_factory.h"

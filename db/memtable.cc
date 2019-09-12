@@ -29,7 +29,7 @@
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/merge_operator.h"
 #include <rock/slice/SliceTransform.h>
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/internal_iterator.h"
 #include "table/iterator_wrapper.h"
 #include "table/merging_iterator.h"

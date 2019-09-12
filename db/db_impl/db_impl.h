@@ -52,7 +52,7 @@
 #include <rock/status/Status.h>
 #include "rocksdb/trace_reader_writer.h"
 #include "rocksdb/transaction_log.h"
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 #include "table/scoped_arena_iterator.h"
 #include "trace_replay/block_cache_tracer.h"
 #include "trace_replay/trace_replay.h"

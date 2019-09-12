@@ -46,7 +46,7 @@
 #include <algorithm>
 #include <atomic>
 #include <type_traits>
-#include "memory/allocator.h"
+#include <rock/arena/Allocator.h>
 #include <rock/likely/likely.h>
 #include <rock/port/port.h>
 #include <rock/slice/Slice.h>

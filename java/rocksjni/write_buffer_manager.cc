@@ -8,7 +8,7 @@
 #include "include/org_rocksdb_WriteBufferManager.h"
 
 #include <rock/cache/Cache.h>
-#include "rocksdb/write_buffer_manager.h"
+#include <rock/write_buffer_manager/WriteBufferManager.h>
 
 /*
  * Class:     org_rocksdb_WriteBufferManager
