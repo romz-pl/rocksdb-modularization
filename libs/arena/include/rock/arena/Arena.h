@@ -1,27 +1,8 @@
-//  Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
-//  This source code is licensed under both the GPLv2 (found in the
-//  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
-//
-// Copyright (c) 2011 The LevelDB Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file. See the AUTHORS file for names of contributors.
-
-// Arena is an implementation of Allocator class. For a request of small size,
-// it allocates a block with pre-defined block size. For a request of big
-// size, it uses malloc to directly get the requested size.
-
 #pragma once
-#ifndef OS_WIN
-#include <sys/mman.h>
-#endif
-#include <assert.h>
-#include <stdint.h>
-#include <cerrno>
-#include <cstddef>
-#include <vector>
+
 #include <rock/arena/Allocator.h>
 
+#include <vector>
 
 namespace rocksdb {
 
@@ -36,6 +17,7 @@ class Arena : public Allocator {
   static const size_t kInlineSize = 2048;
   static const size_t kMinBlockSize;
   static const size_t kMaxBlockSize;
+  static const int kAlignUnit = alignof(max_align_t);
 
   // huge_page_size: if 0, don't use huge page TLB. If > 0 (should set to the
   // supported hugepage size of the system), block allocation will try huge
@@ -122,22 +104,5 @@ class Arena : public Allocator {
   AllocTracker* tracker_;
 };
 
-inline char* Arena::Allocate(size_t bytes) {
-  // The semantics of what to return are a bit messy if we allow
-  // 0-byte allocations, so we disallow them here (we don't need
-  // them for our internal use).
-  assert(bytes > 0);
-  if (bytes <= alloc_bytes_remaining_) {
-    unaligned_alloc_ptr_ -= bytes;
-    alloc_bytes_remaining_ -= bytes;
-    return unaligned_alloc_ptr_;
-  }
-  return AllocateFallback(bytes, false /* unaligned */);
+
 }
-
-// check and adjust the block_size so that the return value is
-//  1. in the range of [kMinBlockSize, kMaxBlockSize].
-//  2. the multiple of align unit.
-extern size_t OptimizeBlockSize(size_t block_size);
-
-}  // namespace rocksdb

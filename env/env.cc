@@ -11,7 +11,7 @@
 
 #include <thread>
 #include "logging/env_logger.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "options/db_options.h"
 #include <rock/port/port.h>
 #include <rock/port/sys_time.h>

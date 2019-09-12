@@ -4,7 +4,7 @@
 //  (found in the LICENSE.Apache file in the root directory).
 //
 #include "db/memtable.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "memtable/inlineskiplist.h"
 #include "rocksdb/memtablerep.h"
 

@@ -8,7 +8,7 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include <rock/iterator/Iterator.h>
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "table/internal_iterator.h"
 #include "table/iterator_wrapper.h"
 

@@ -13,7 +13,7 @@
 #include "db/db_impl/db_impl.h"
 #include "db/merge_context.h"
 #include "db/merge_helper.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "memtable/skiplist.h"
 #include "options/db_options.h"
 #include <rock/slice/Comparator.h>

@@ -24,7 +24,7 @@ int main() {
 
 #include "db/dbformat.h"
 #include "db/memtable.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/port/port.h>
 #include <rock/port/stack_trace.h>
 #include <rock/slice/Comparator.h>

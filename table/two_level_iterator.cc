@@ -9,7 +9,7 @@
 
 #include "table/two_level_iterator.h"
 #include "db/pinned_iterators_manager.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "rocksdb/options.h"
 #include "rocksdb/table.h"
 #include "table/block_based/block.h"

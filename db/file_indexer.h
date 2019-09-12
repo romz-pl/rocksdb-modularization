@@ -12,7 +12,7 @@
 #include <functional>
 #include <limits>
 #include <vector>
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/port/port.h>
 #include <rock/container/autovector.h>
 

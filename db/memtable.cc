@@ -19,7 +19,7 @@
 #include "db/pinned_iterators_manager.h"
 #include "db/range_tombstone_fragmenter.h"
 #include "db/read_callback.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "memory/memory_usage.h"
 #include "monitoring/perf_context_imp.h"
 #include <rock/statistics/StatisticsImpl.h>
@@ -39,6 +39,7 @@
 #include "util/util.h"
 
 #include <rock/mutex/WriteLock.h>
+#include <rock/arena/OptimizeBlockSize.h>
 
 namespace rocksdb {
 

@@ -12,7 +12,7 @@
 #include <vector>
 #include "db/dbformat.h"
 #include "db/pinned_iterators_manager.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "monitoring/perf_context_imp.h"
 #include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>

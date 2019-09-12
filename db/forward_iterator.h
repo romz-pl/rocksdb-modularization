@@ -11,7 +11,7 @@
 #include <queue>
 
 #include "db/dbformat.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "rocksdb/db.h"
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/options.h"

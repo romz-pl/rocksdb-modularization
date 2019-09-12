@@ -9,7 +9,7 @@
 
 #include "memtable/skiplist.h"
 #include <set>
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "rocksdb/env.h"
 #include "test_util/testharness.h"
 #include <rock/hash/hash.h>

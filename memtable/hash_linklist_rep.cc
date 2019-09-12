@@ -10,7 +10,7 @@
 #include <algorithm>
 #include <atomic>
 #include "db/memtable.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "memtable/skiplist.h"
 #include <rock/statistics/HistogramImpl.h>
 #include <rock/port/port.h>

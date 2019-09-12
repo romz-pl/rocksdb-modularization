@@ -13,7 +13,7 @@
 #include <type_traits>
 
 #include "db/memtable.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "memtable/stl_wrappers.h"
 #include <rock/port/port.h>
 #include <rock/mutex/WriteLock.h>

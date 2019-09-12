@@ -486,7 +486,6 @@ SET( ROCKSDB_COMPONENT_LIBS
     iterator
     logger_abstract
     jemalloc
-    sync_point
 )
 
 # Main library source code
@@ -563,7 +562,6 @@ set(SOURCES
         logging/auto_roll_logger.cc
         logging/event_logger.cc
         logging/log_buffer.cc
-        memory/arena.cc
         memory/concurrent_arena.cc
         memtable/hash_linklist_rep.cc
         memtable/hash_skiplist_rep.cc

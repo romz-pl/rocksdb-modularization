@@ -6,7 +6,7 @@
 #pragma once
 
 #include <ctime>
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/port/sys_time.h>
 #include "rocksdb/env.h"
 #include <rock/container/autovector.h>

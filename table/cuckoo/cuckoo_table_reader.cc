@@ -15,7 +15,7 @@
 #include <string>
 #include <utility>
 #include <vector>
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/iterator/Iterator.h>
 #include "rocksdb/table.h"
 #include "table/cuckoo/cuckoo_table_factory.h"

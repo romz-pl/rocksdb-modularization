@@ -9,7 +9,7 @@
 
 #pragma once
 #include "db/version_set.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "options/cf_options.h"
 #include <rock/container/autovector.h>
 

@@ -18,7 +18,7 @@ int main() {
 #include <string>
 #include <map>
 
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "table/cuckoo/cuckoo_table_builder.h"
 #include "table/cuckoo/cuckoo_table_factory.h"
 #include "table/cuckoo/cuckoo_table_reader.h"

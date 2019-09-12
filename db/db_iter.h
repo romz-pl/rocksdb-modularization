@@ -13,7 +13,7 @@
 #include "db/db_impl/db_impl.h"
 #include "db/dbformat.h"
 #include "db/range_del_aggregator.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "options/cf_options.h"
 #include "rocksdb/db.h"
 #include <rock/iterator/Iterator.h>

@@ -27,7 +27,7 @@
 #include "utilities/persistent_cache/block_cache_tier_metadata.h"
 #include "utilities/persistent_cache/persistent_cache_util.h"
 
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "memtable/skiplist.h"
 #include <rock/statistics/HistogramImpl.h>
 #include <rock/port/port.h>

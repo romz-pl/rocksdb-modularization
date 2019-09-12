@@ -30,7 +30,7 @@
 #include "table/plain/plain_table_key_coding.h"
 #include "table/two_level_iterator.h"
 
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/statistics/HistogramImpl.h>
 #include "monitoring/perf_context_imp.h"
 #include <rock/coding/coding.h>

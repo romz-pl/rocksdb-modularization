@@ -1,28 +1,11 @@
-//  Copyright (c) 2011-present, Facebook, Inc.  All rights reserved.
-//  This source code is licensed under both the GPLv2 (found in the
-//  COPYING file in the root directory) and Apache 2.0 License
-//  (found in the LICENSE.Apache file in the root directory).
-//
-// Copyright (c) 2011 The LevelDB Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file. See the AUTHORS file for names of contributors.
+#include <rock/arena/Arena.h>
 
-#include "memory/arena.h"
-#ifdef ROCKSDB_MALLOC_USABLE_SIZE
-#ifdef OS_FREEBSD
-#include <malloc_np.h>
-#else
-#include <malloc.h>
-#endif
-#endif
-#ifndef OS_WIN
-#include <sys/mman.h>
-#endif
-#include <algorithm>
-#include "logging/logging.h"
-#include <rock/port/port.h>
-#include "rocksdb/env.h"
+#include <rock/arena/OptimizeBlockSize.h>
+#include <rock/arena/AllocTracker.h>
 #include <rock/sync_point/sync_point.h>
+
+#include <cassert>
+#include <malloc.h>
 
 namespace rocksdb {
 
@@ -33,20 +16,20 @@ const size_t Arena::kInlineSize;
 
 const size_t Arena::kMinBlockSize = 4096;
 const size_t Arena::kMaxBlockSize = 2u << 30;
-static const int kAlignUnit = alignof(max_align_t);
 
-size_t OptimizeBlockSize(size_t block_size) {
-  // Make sure block_size is in optimal range
-  block_size = std::max(Arena::kMinBlockSize, block_size);
-  block_size = std::min(Arena::kMaxBlockSize, block_size);
-
-  // make sure block_size is the multiple of kAlignUnit
-  if (block_size % kAlignUnit != 0) {
-    block_size = (1 + block_size / kAlignUnit) * kAlignUnit;
+char* Arena::Allocate(size_t bytes) {
+  // The semantics of what to return are a bit messy if we allow
+  // 0-byte allocations, so we disallow them here (we don't need
+  // them for our internal use).
+  assert(bytes > 0);
+  if (bytes <= alloc_bytes_remaining_) {
+    unaligned_alloc_ptr_ -= bytes;
+    alloc_bytes_remaining_ -= bytes;
+    return unaligned_alloc_ptr_;
   }
-
-  return block_size;
+  return AllocateFallback(bytes, false /* unaligned */);
 }
+
 
 Arena::Arena(size_t block_size, AllocTracker* tracker, size_t huge_page_size)
     : kBlockSize(OptimizeBlockSize(block_size)), tracker_(tracker) {
@@ -237,3 +220,4 @@ char* Arena::AllocateNewBlock(size_t block_bytes) {
 }
 
 }  // namespace rocksdb
+

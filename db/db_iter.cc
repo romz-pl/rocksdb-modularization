@@ -18,7 +18,7 @@
 #include "db/pinned_iterators_manager.h"
 #include "file/filename.h"
 #include "logging/logging.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "monitoring/perf_context_imp.h"
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>

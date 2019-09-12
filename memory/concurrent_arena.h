@@ -12,7 +12,7 @@
 #include <memory>
 #include <utility>
 #include <rock/arena/Allocator.h>
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/likely/likely.h>
 #include <rock/container/CoreLocalArray.h>
 

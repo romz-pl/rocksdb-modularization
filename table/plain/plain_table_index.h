@@ -11,7 +11,7 @@
 #include <vector>
 
 #include "db/dbformat.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/statistics/HistogramImpl.h>
 #include "options/cf_options.h"
 #include "rocksdb/options.h"

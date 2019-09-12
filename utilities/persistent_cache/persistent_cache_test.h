@@ -19,7 +19,7 @@
 #include <vector>
 
 #include "db/db_test_util.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/port/port.h>
 #include <rock/cache/Cache.h>
 #include "table/block_based/block_builder.h"

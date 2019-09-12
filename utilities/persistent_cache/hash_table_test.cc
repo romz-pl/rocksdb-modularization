@@ -9,7 +9,7 @@
 #include <string>
 
 #include "db/db_test_util.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "test_util/testharness.h"
 #include <rock/random/Random.h>
 #include "utilities/persistent_cache/hash_table.h"

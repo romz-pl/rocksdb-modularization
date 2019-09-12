@@ -14,7 +14,7 @@
 #include <utility>
 #include <vector>
 #include "db/dbformat.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include <rock/cache/Cache.h>
 #include <rock/container/autovector.h>
 

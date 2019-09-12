@@ -13,7 +13,7 @@
 #include <stdint.h>
 
 #include "db/dbformat.h"
-#include "memory/arena.h"
+#include <rock/arena/Arena.h>
 #include "rocksdb/env.h"
 #include <rock/iterator/Iterator.h>
 #include <rock/slice/SliceTransform.h>
