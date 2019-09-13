@@ -7,15 +7,14 @@
 
 #include <stdint.h>
 #include <rock/slice/Slice.h>
+#include <rock/sn/SequenceNumber.h>
+
 
 namespace rocksdb {
 
 // Define all public custom types here.
 
-// Represents a sequence number in a WAL file.
-typedef uint64_t SequenceNumber;
 
-const SequenceNumber kMinUnCommittedSeq = 1;  // 0 is always committed
 
 // User-oriented representation of internal key types.
 enum EntryType {

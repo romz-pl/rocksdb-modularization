@@ -10,9 +10,8 @@
 #pragma once
 #include <string>
 #include <utility>
-#include "rocksdb/db.h"
 #include <rock/slice/Slice.h>
-#include "rocksdb/types.h"
+#include <rock/sn/SequenceNumber.h>
 
 namespace rocksdb {
 
