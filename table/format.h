@@ -22,7 +22,7 @@
 #include <rock/status/Status.h>
 #include "rocksdb/table.h"
 
-#include "memory/memory_allocator.h"
+#include <rock/arena/AllocateBlock.h>
 #include "options/cf_options.h"
 #include <rock/port/port.h>  // noexcept
 #include "table/persistent_cache_options.h"

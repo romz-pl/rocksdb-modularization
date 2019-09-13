@@ -20,7 +20,7 @@
 #endif  // ROCKSDB_MALLOC_USABLE_SIZE
 #include <string>
 
-#include "memory/memory_allocator.h"
+#include <rock/arena/AllocateBlock.h>
 #include "rocksdb/options.h"
 #include "rocksdb/table.h"
 #include <rock/coding/coding.h>

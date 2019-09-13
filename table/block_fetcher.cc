@@ -13,7 +13,7 @@
 #include <string>
 
 #include "logging/logging.h"
-#include "memory/memory_allocator.h"
+#include <rock/arena/AllocateBlock.h>
 #include "monitoring/perf_context_imp.h"
 #include "rocksdb/env.h"
 #include "table/block_based/block.h"

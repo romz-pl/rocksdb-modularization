@@ -8,7 +8,7 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #pragma once
-#include "memory/memory_allocator.h"
+#include <rock/arena/AllocateBlock.h>
 #include "table/block_based/block.h"
 #include "table/block_based/block_type.h"
 #include "table/format.h"

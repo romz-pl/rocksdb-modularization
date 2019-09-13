@@ -14,7 +14,7 @@
 
 #include "block_fetcher.h"
 #include "logging/logging.h"
-#include "memory/memory_allocator.h"
+#include <rock/arena/AllocateBlock.h>
 #include "monitoring/perf_context_imp.h"
 #include <rock/statistics/StatisticsImpl.h>
 #include "rocksdb/env.h"

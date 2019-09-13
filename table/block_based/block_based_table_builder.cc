@@ -41,7 +41,7 @@
 #include "table/format.h"
 #include "table/table_builder.h"
 
-#include "memory/memory_allocator.h"
+#include <rock/arena/AllocateBlock.h>
 #include <rock/coding/coding.h>
 #include "util/compression.h"
 #include <rock/crc32/crc32c.h>

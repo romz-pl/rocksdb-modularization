@@ -5,6 +5,9 @@ add_library( ${LIB_NAME} STATIC
     AllocTracker.cpp
     Arena.cpp
     OptimizeBlockSize.cpp
+    ApproximateMemoryUsage.cpp
+    CacheAllocationPtr.cpp
+    AllocateBlock.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -18,6 +21,7 @@ target_include_directories(
 target_link_libraries(
     ${LIB_NAME}
     PUBLIC
+    memory_allocator
     sync_point
     write_buffer_manager
     PRIVATE

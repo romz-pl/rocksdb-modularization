@@ -20,7 +20,7 @@
 #include "db/range_tombstone_fragmenter.h"
 #include "db/read_callback.h"
 #include <rock/arena/Arena.h>
-#include "memory/memory_usage.h"
+#include <rock/arena/ApproximateMemoryUsage.h>
 #include "monitoring/perf_context_imp.h"
 #include <rock/statistics/StatisticsImpl.h>
 #include <rock/port/port.h>
