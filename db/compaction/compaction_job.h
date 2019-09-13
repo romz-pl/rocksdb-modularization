@@ -37,7 +37,7 @@
 #include "rocksdb/compaction_job_stats.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/transaction_log.h"
 #include "table/scoped_arena_iterator.h"
 #include <rock/container/autovector.h>

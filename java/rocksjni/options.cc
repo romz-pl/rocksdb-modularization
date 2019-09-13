@@ -27,7 +27,7 @@
 #include <rock/slice/Comparator.h>
 #include "rocksdb/convenience.h"
 #include "rocksdb/db.h"
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/options.h"
 #include "rocksdb/rate_limiter.h"

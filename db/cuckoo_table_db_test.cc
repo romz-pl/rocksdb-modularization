@@ -16,6 +16,7 @@
 
 
 #include <rock/string/NumberToString.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
 
 namespace rocksdb {
 

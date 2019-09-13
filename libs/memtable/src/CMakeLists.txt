@@ -5,6 +5,12 @@ add_library( ${LIB_NAME} STATIC
     InlineSkipList.cpp
     KeyHandle.cpp
     MemTableRep.cpp
+    LookupKey.cpp
+    MemTableRepFactory.cpp
+    SkipListFactory.cpp
+    VectorRepFactory.cpp
+    NewHashSkipListRepFactory.cpp
+    NewHashLinkListRepFactory.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )
@@ -19,6 +25,7 @@ target_link_libraries(
     ${LIB_NAME}
     PUBLIC
     arena
+    sn
     PRIVATE
 )
 

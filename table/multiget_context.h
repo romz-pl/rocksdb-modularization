@@ -6,7 +6,7 @@
 #pragma once
 #include <algorithm>
 #include <string>
-#include "db/lookup_key.h"
+#include <rock/memtable/LookupKey.h>
 #include "db/merge_context.h"
 #include "rocksdb/env.h"
 #include <rock/statistics/Statistics.h>

@@ -25,7 +25,7 @@
 #include "options/cf_options.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/memtablerep.h"
+
 #include "util/dynamic_bloom.h"
 #include <rock/hash/hash.h>
 #include <rock/arena/AllocTracker.h>

@@ -39,6 +39,7 @@
 
 #include <rock/string/NumberToString.h>
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
 
 using std::unique_ptr;
 

@@ -12,7 +12,7 @@
 #include <memory>
 #include <string>
 #include <utility>
-#include "db/lookup_key.h"
+#include <rock/memtable/LookupKey.h>
 #include "db/merge_context.h"
 #include "logging/logging.h"
 #include "monitoring/perf_context_imp.h"

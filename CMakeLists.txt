@@ -486,7 +486,6 @@ SET( ROCKSDB_COMPONENT_LIBS
     jemalloc
     logger_abstract
     memtable
-    sn
 )
 
 # Main library source code

@@ -19,7 +19,7 @@
 #include "rocksdb/compaction_filter.h"
 #include <rock/slice/Comparator.h>
 #include "rocksdb/env.h"
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/merge_operator.h"
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>

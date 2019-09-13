@@ -17,6 +17,9 @@
 #include <rock/slice/NewCappedPrefixTransform.h>
 #include <rock/slice/NewNoopTransform.h>
 #include <rock/cache_lru/NewLRUCache.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
+#include <rock/memtable/VectorRepFactory.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
 
 namespace rocksdb {
 

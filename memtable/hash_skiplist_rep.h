@@ -9,7 +9,9 @@
 #pragma once
 #ifndef ROCKSDB_LITE
 #include <rock/slice/SliceTransform.h>
-#include "rocksdb/memtablerep.h"
+
+
+#include <rock/memtable/MemTableRepFactory.h>
 
 namespace rocksdb {
 

@@ -21,7 +21,7 @@
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
 #include <rock/iterator/Iterator.h>
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/merge_operator.h"
 #include "rocksdb/options.h"
 #include "rocksdb/rate_limiter.h"
@@ -51,6 +51,9 @@
 #include <rock/slice/NewNoopTransform.h>
 #include <rock/statistics/CreateDBStatistics.h>
 #include <rock/cache_lru/NewLRUCache.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
+#include <rock/memtable/VectorRepFactory.h>
 
 using rocksdb::BytewiseComparator;
 using rocksdb::Cache;

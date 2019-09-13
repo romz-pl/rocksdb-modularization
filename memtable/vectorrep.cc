@@ -4,7 +4,7 @@
 //  (found in the LICENSE.Apache file in the root directory).
 //
 #ifndef ROCKSDB_LITE
-#include "rocksdb/memtablerep.h"
+
 
 #include <unordered_set>
 #include <set>
@@ -18,6 +18,8 @@
 #include <rock/port/port.h>
 #include <rock/mutex/WriteLock.h>
 #include <rock/mutex/ReadLock.h>
+
+#include <rock/memtable/VectorRepFactory.h>
 
 namespace rocksdb {
 namespace {

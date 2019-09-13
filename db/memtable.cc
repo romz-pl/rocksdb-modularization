@@ -250,23 +250,7 @@ int MemTable::KeyComparator::operator()(const char* prefix_len_key,
   return comparator.CompareKeySeq(a, key);
 }
 
-void MemTableRep::InsertConcurrently(KeyHandle /*handle*/) {
-#ifndef ROCKSDB_LITE
-  throw std::runtime_error("concurrent insert not supported");
-#else
-  abort();
-#endif
-}
 
-Slice MemTableRep::UserKey(const char* key) const {
-  Slice slice = GetLengthPrefixedSlice(key);
-  return Slice(slice.data(), slice.size() - 8);
-}
-
-KeyHandle MemTableRep::Allocate(const size_t len, char** buf) {
-  *buf = allocator_->Allocate(len);
-  return static_cast<KeyHandle>(*buf);
-}
 
 // Encode a suitable internal key target for "target" and return it.
 // Uses *scratch as scratch space, and the returned pointer will point
@@ -1016,14 +1000,7 @@ size_t MemTable::CountSuccessiveMergeEntries(const LookupKey& key) {
   return num_successive_merges;
 }
 
-void MemTableRep::Get(const LookupKey& k, void* callback_args,
-                      bool (*callback_func)(void* arg, const char* entry)) {
-  auto iter = GetDynamicPrefixIterator();
-  for (iter->Seek(k.internal_key(), k.memtable_key().data());
-       iter->Valid() && callback_func(callback_args, iter->key());
-       iter->Next()) {
-  }
-}
+
 
 void MemTable::RefLogContainingPrepSection(uint64_t log) {
   assert(log > 0);

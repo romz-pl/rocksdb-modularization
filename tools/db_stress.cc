@@ -72,6 +72,8 @@ int main() {
 #include <rock/statistics/CreateDBStatistics.h>
 #include <rock/cache_lru/NewLRUCache.h>
 #include <rock/cache_clock/NewClockCache.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
+#include <rock/memtable/VectorRepFactory.h>
 
 // SyncPoint is not supported in Released Windows Mode.
 #if !(defined NDEBUG) || !defined(OS_WIN)

@@ -6,7 +6,7 @@
 #include "db/memtable.h"
 #include <rock/arena/Arena.h>
 #include <rock/memtable/InlineSkipList.h>
-#include "rocksdb/memtablerep.h"
+
 
 namespace rocksdb {
 namespace {

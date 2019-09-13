@@ -14,6 +14,7 @@
 #include <rock/slice/NewFixedPrefixTransform.h>
 #include <rock/slice/NewCappedPrefixTransform.h>
 #include <rock/statistics/CreateDBStatistics.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
 
 namespace rocksdb {
 

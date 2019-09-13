@@ -42,7 +42,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
 #include "rocksdb/filter_policy.h"
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/options.h"
 #include "rocksdb/perf_context.h"
 #include "rocksdb/persistent_cache.h"
@@ -82,6 +82,9 @@
 #include <rock/statistics/CreateDBStatistics.h>
 #include <rock/cache_lru/NewLRUCache.h>
 #include <rock/cache_clock/NewClockCache.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
+#include <rock/memtable/VectorRepFactory.h>
 
 #ifdef OS_WIN
 #include <io.h>  // open/close

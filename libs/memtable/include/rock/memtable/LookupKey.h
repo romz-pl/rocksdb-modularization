@@ -58,8 +58,5 @@ class LookupKey {
   void operator=(const LookupKey&);
 };
 
-inline LookupKey::~LookupKey() {
-  if (start_ != space_) delete[] start_;
-}
 
 }  // namespace rocksdb

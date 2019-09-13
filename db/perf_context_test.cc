@@ -14,7 +14,7 @@
 #include "monitoring/thread_status_util.h"
 #include <rock/port/port.h>
 #include "rocksdb/db.h"
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/perf_context.h"
 #include <rock/slice/SliceTransform.h>
 #include "test_util/testharness.h"
@@ -24,6 +24,7 @@
 
 #include <rock/string/ToString.h>
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
 
 bool FLAGS_random_key = false;
 bool FLAGS_use_set_based_memetable = false;

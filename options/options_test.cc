@@ -20,7 +20,7 @@
 #include <rock/port/port.h>
 #include <rock/cache/Cache.h>
 #include "rocksdb/convenience.h"
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/utilities/leveldb_options.h"
 #include "rocksdb/utilities/object_registry.h"
 #include "test_util/testharness.h"

@@ -10,7 +10,7 @@
 #include "db/memtable.h"
 #include "db/range_del_aggregator.h"
 #include <rock/port/stack_trace.h>
-#include "rocksdb/memtablerep.h"
+
 #include <rock/slice/SliceTransform.h>
 
 namespace rocksdb {

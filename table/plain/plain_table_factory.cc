@@ -19,6 +19,9 @@
 #include <rock/string/StringSplit.h>
 #include <rock/string/ParseSizeT.h>
 #include <rock/string/UnescapeOptionString.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
+#include <rock/memtable/VectorRepFactory.h>
 
 namespace rocksdb {
 

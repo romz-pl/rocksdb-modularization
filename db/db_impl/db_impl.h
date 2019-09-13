@@ -48,7 +48,7 @@
 #include <rock/port/port.h>
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/memtablerep.h"
+
 #include <rock/status/Status.h>
 #include "rocksdb/trace_reader_writer.h"
 #include "rocksdb/transaction_log.h"

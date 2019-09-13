@@ -74,6 +74,7 @@
 #include <rock/statistics/CreateDBStatistics.h>
 #include <rock/statistics/HistogramData.h>
 #include <rock/cache_lru/LRUCache.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
 
 namespace rocksdb {
 

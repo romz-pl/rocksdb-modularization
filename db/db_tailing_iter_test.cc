@@ -17,6 +17,7 @@
 #include <rock/port/stack_trace.h>
 
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
 
 namespace rocksdb {
 

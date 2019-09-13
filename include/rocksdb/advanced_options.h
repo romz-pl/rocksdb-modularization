@@ -10,8 +10,10 @@
 
 #include <memory>
 
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/universal_compaction.h"
+#include <rock/memtable/MemTableRepFactory.h>
+#include <rock/memtable/SkipListFactory.h>
 
 namespace rocksdb {
 

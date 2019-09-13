@@ -13,7 +13,7 @@
 #include <rock/arena/Arena.h>
 #include <rock/memtable/SkipList.h>
 #include <rock/port/port.h>
-#include "rocksdb/memtablerep.h"
+
 #include <rock/slice/Slice.h>
 #include <rock/slice/SliceTransform.h>
 #include <rock/hash/murmurhash.h>

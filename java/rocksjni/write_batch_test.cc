@@ -16,7 +16,7 @@
 #include "options/cf_options.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
-#include "rocksdb/memtablerep.h"
+
 #include <rock/status/Status.h>
 #include "rocksdb/write_batch.h"
 #include <rock/write_buffer_manager/WriteBufferManager.h>

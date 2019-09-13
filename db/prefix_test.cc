@@ -22,7 +22,7 @@ int main() {
 #include <rock/slice/Comparator.h>
 #include "rocksdb/db.h"
 #include "rocksdb/filter_policy.h"
-#include "rocksdb/memtablerep.h"
+
 #include "rocksdb/perf_context.h"
 #include <rock/slice/SliceTransform.h>
 #include "rocksdb/table.h"
@@ -35,6 +35,8 @@ int main() {
 #include "utilities/merge_operators.h"
 
 #include <rock/slice/NewFixedPrefixTransform.h>
+#include <rock/memtable/NewHashLinkListRepFactory.h>
+#include <rock/memtable/NewHashSkipListRepFactory.h>
 
 using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 

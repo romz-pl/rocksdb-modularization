@@ -8,9 +8,10 @@
 #include <string>
 
 #include <rock/slice/Comparator.h>
-#include "rocksdb/memtablerep.h"
+
 #include <rock/slice/Slice.h>
 #include <rock/coding/coding.h>
+#include <rock/memtable/MemTableRep.h>
 
 namespace rocksdb {
 namespace stl_wrappers {
