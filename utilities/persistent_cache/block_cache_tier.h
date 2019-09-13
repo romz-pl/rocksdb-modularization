@@ -28,7 +28,7 @@
 #include "utilities/persistent_cache/persistent_cache_util.h"
 
 #include <rock/arena/Arena.h>
-#include "memtable/skiplist.h"
+#include <rock/memtable/SkipList.h>
 #include <rock/statistics/HistogramImpl.h>
 #include <rock/port/port.h>
 #include <rock/coding/coding.h>

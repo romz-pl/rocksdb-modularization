@@ -478,14 +478,14 @@ find_package(Threads REQUIRED)
 add_subdirectory( libs )
 
 SET( ROCKSDB_COMPONENT_LIBS
-    arena
     cache_clock
     cache_lru
     crc32
     io_abstract
     iterator
-    logger_abstract
     jemalloc
+    logger_abstract
+    memtable
 )
 
 # Main library source code

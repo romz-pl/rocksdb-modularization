@@ -11,7 +11,7 @@
 #include <atomic>
 #include "db/memtable.h"
 #include <rock/arena/Arena.h>
-#include "memtable/skiplist.h"
+#include <rock/memtable/SkipList.h>
 #include <rock/statistics/HistogramImpl.h>
 #include <rock/port/port.h>
 #include "rocksdb/memtablerep.h"

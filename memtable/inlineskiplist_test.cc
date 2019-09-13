@@ -7,7 +7,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "memtable/inlineskiplist.h"
+#include <rock/memtable/InlineSkipList.h>
 #include <set>
 #include <unordered_set>
 #include "memory/concurrent_arena.h"

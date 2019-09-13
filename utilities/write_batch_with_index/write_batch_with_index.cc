@@ -14,7 +14,7 @@
 #include "db/merge_context.h"
 #include "db/merge_helper.h"
 #include <rock/arena/Arena.h>
-#include "memtable/skiplist.h"
+#include <rock/memtable/SkipList.h>
 #include "options/db_options.h"
 #include <rock/slice/Comparator.h>
 #include <rock/iterator/Iterator.h>
