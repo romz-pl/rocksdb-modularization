@@ -481,6 +481,7 @@ SET( ROCKSDB_COMPONENT_LIBS
     cache_clock
     cache_lru
     crc32
+    dbformat
     io_abstract
     iterator
     jemalloc

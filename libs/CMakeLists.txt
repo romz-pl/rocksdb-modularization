@@ -8,6 +8,8 @@ add_subdirectory( coding )
 add_subdirectory( container )
 add_subdirectory( crc32 )
 
+add_subdirectory( dbformat )
+
 add_subdirectory( hash )
 
 add_subdirectory( io_abstract )
