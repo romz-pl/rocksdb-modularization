@@ -14,7 +14,7 @@
 
 #include "db/db_impl/db_impl.h"
 #include "db/db_test_util.h"
-#include "memtable/hash_skiplist_rep.h"
+#include <rock/memtable/HashSkipListRepFactory.h>
 #include "options/options_parser.h"
 #include <rock/port/port.h>
 #include <rock/port/stack_trace.h>

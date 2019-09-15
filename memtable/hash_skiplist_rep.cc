@@ -5,7 +5,7 @@
 //
 
 #ifndef ROCKSDB_LITE
-#include "memtable/hash_skiplist_rep.h"
+#include <rock/memtable/HashSkipListRepFactory.h>
 
 #include <atomic>
 
