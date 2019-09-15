@@ -20,83 +20,23 @@
 #include <rock/hash/hash.h>
 
 #include <rock/logger_abstract/Info.h>
+#include <rock/memtable/MemtableSkipList.h>
+#include <rock/memtable/Pointer.h>
+#include <rock/memtable/BucketHeader.h>
+#include <rock/memtable/SkipListBucketHeader.h>
+#include <rock/memtable/Node.h>
+
 
 namespace rocksdb {
 namespace {
 
-typedef const char* Key;
-typedef SkipList<Key, const MemTableRep::KeyComparator&> MemtableSkipList;
-typedef std::atomic<void*> Pointer;
 
-// A data structure used as the header of a link list of a hash bucket.
-struct BucketHeader {
-  Pointer next;
-  std::atomic<uint32_t> num_entries;
 
-  explicit BucketHeader(void* n, uint32_t count)
-      : next(n), num_entries(count) {}
 
-  bool IsSkipListBucket() {
-    return next.load(std::memory_order_relaxed) == this;
-  }
 
-  uint32_t GetNumEntries() const {
-    return num_entries.load(std::memory_order_relaxed);
-  }
 
-  // REQUIRES: called from single-threaded Insert()
-  void IncNumEntries() {
-    // Only one thread can do write at one time. No need to do atomic
-    // incremental. Update it with relaxed load and store.
-    num_entries.store(GetNumEntries() + 1, std::memory_order_relaxed);
-  }
-};
 
-// A data structure used as the header of a skip list of a hash bucket.
-struct SkipListBucketHeader {
-  BucketHeader Counting_header;
-  MemtableSkipList skip_list;
 
-  explicit SkipListBucketHeader(const MemTableRep::KeyComparator& cmp,
-                                Allocator* allocator, uint32_t count)
-      : Counting_header(this,  // Pointing to itself to indicate header type.
-                        count),
-        skip_list(cmp, allocator) {}
-};
-
-struct Node {
-  // Accessors/mutators for links.  Wrapped in methods so we can
-  // add the appropriate barriers as necessary.
-  Node* Next() {
-    // Use an 'acquire load' so that we observe a fully initialized
-    // version of the returned Node.
-    return next_.load(std::memory_order_acquire);
-  }
-  void SetNext(Node* x) {
-    // Use a 'release store' so that anybody who reads through this
-    // pointer observes a fully initialized version of the inserted node.
-    next_.store(x, std::memory_order_release);
-  }
-  // No-barrier variants that can be safely used in a few locations.
-  Node* NoBarrier_Next() {
-    return next_.load(std::memory_order_relaxed);
-  }
-
-  void NoBarrier_SetNext(Node* x) { next_.store(x, std::memory_order_relaxed); }
-
-  // Needed for placement new below which is fine
-  Node() {}
-
- private:
-  std::atomic<Node*> next_;
-
-  // Prohibit copying due to the below
-  Node(const Node&) = delete;
-  Node& operator=(const Node&) = delete;
-
- public:
-  char key[1];
-};
 
 // Memory structure of the mem table:
 // It is a hash table, each bucket points to one entry, a linked list or a

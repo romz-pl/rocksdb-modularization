@@ -252,15 +252,7 @@ int MemTable::KeyComparator::operator()(const char* prefix_len_key,
 
 
 
-// Encode a suitable internal key target for "target" and return it.
-// Uses *scratch as scratch space, and the returned pointer will point
-// into this scratch space.
-const char* EncodeKey(std::string* scratch, const Slice& target) {
-  scratch->clear();
-  PutVarint32(scratch, static_cast<uint32_t>(target.size()));
-  scratch->append(target.data(), target.size());
-  return scratch->data();
-}
+
 
 class MemTableIterator : public InternalIterator {
  public:

@@ -29,6 +29,7 @@
 #include "util/dynamic_bloom.h"
 #include <rock/hash/hash.h>
 #include <rock/arena/AllocTracker.h>
+#include <rock/memtable/EncodeKey.h>
 
 namespace rocksdb {
 
@@ -510,6 +511,6 @@ class MemTable {
   MemTable& operator=(const MemTable&);
 };
 
-extern const char* EncodeKey(std::string* scratch, const Slice& target);
+
 
 }  // namespace rocksdb
