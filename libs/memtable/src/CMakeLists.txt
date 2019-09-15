@@ -12,6 +12,7 @@ add_library( ${LIB_NAME} STATIC
     NewHashSkipListRepFactory.cpp
     NewHashLinkListRepFactory.cpp
     HashSkipListRepFactory.cpp
+    HashLinkListRepFactory.cpp
 )
 
 target_compile_options( ${LIB_NAME} PRIVATE -fPIC )

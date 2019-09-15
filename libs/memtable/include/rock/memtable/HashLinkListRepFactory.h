@@ -48,4 +48,5 @@ class HashLinkListRepFactory : public MemTableRepFactory {
 };
 
 }
+
 #endif  // ROCKSDB_LITE

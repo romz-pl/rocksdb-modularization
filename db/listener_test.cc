@@ -10,7 +10,7 @@
 #include "db/write_batch_internal.h"
 #include "file/filename.h"
 #include "logging/logging.h"
-#include "memtable/hash_linklist_rep.h"
+#include <rock/memtable/HashLinkListRepFactory.h>
 #include <rock/statistics/StatisticsImpl.h>
 #include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"

@@ -25,7 +25,7 @@
 #include "db/dbformat.h"
 #include "env/mock_env.h"
 #include "file/filename.h"
-#include "memtable/hash_linklist_rep.h"
+#include <rock/memtable/HashLinkListRepFactory.h>
 #include <rock/cache/Cache.h>
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/convenience.h"
