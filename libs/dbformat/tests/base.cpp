@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
 
-#include <rock/likely/likely.h>
+#include <rock/dbformat/EntryType.h>
 
 
 //
 //
-TEST( likely, constructor )
+TEST( dbformat, constructor )
 {
 
 }
