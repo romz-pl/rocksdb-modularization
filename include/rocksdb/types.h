@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include <rock/slice/Slice.h>
 #include <rock/sn/SequenceNumber.h>
+#include <rock/dbformat/EntryType.h>
 
 
 namespace rocksdb {
@@ -16,16 +17,7 @@ namespace rocksdb {
 
 
 
-// User-oriented representation of internal key types.
-enum EntryType {
-  kEntryPut,
-  kEntryDelete,
-  kEntrySingleDelete,
-  kEntryMerge,
-  kEntryRangeDeletion,
-  kEntryBlobIndex,
-  kEntryOther,
-};
+
 
 // <user key, sequence number, and entry type> tuple.
 struct FullKey {

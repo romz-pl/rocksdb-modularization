@@ -31,6 +31,23 @@
 #include <rock/dbformat/ValueType.h>
 #include <rock/dbformat/kValueTypeForSeek.h>
 #include <rock/dbformat/kValueTypeForSeekForPrev.h>
+#include <rock/dbformat/IsExtendedValueType.h>
+#include <rock/dbformat/kMaxSequenceNumber.h>
+#include <rock/dbformat/IsValueType.h>
+#include <rock/dbformat/kDisableGlobalSequenceNumber.h>
+#include <rock/dbformat/ParsedInternalKey.h>
+#include <rock/dbformat/InternalKeyEncodingLength.h>
+#include <rock/dbformat/PackSequenceAndType.h>
+#include <rock/dbformat/UnPackSequenceAndType.h>
+#include <rock/dbformat/GetEntryType.h>
+#include <rock/dbformat/AppendInternalKey.h>
+#include <rock/dbformat/AppendInternalKeyFooter.h>
+#include <rock/dbformat/ParseInternalKey.h>
+#include <rock/dbformat/ExtractUserKeyAndStripTimestamp.h>
+#include <rock/dbformat/StripTimestampFromUserKey.h>
+#include <rock/dbformat/ExtractInternalKeyFooter.h>
+#include <rock/dbformat/ExtractValueType.h>
+
 
 namespace rocksdb {
 
@@ -40,99 +57,6 @@ class InternalKey;
 
 
 
-// Checks whether a type is an inline value type
-// (i.e. a type used in memtable skiplist and sst file datablock).
-inline bool IsValueType(ValueType t) {
-  return t <= kTypeMerge || t == kTypeSingleDeletion || t == kTypeBlobIndex;
-}
-
-// Checks whether a type is from user operation
-// kTypeRangeDeletion is in meta block so this API is separated from above
-inline bool IsExtendedValueType(ValueType t) {
-  return IsValueType(t) || t == kTypeRangeDeletion;
-}
-
-// We leave eight bits empty at the bottom so a type and sequence#
-// can be packed together into 64-bits.
-static const SequenceNumber kMaxSequenceNumber = ((0x1ull << 56) - 1);
-
-static const SequenceNumber kDisableGlobalSequenceNumber = port::kMaxUint64;
-
-// The data structure that represents an internal key in the way that user_key,
-// sequence number and type are stored in separated forms.
-struct ParsedInternalKey {
-  Slice user_key;
-  SequenceNumber sequence;
-  ValueType type;
-
-  ParsedInternalKey()
-      : sequence(kMaxSequenceNumber)  // Make code analyzer happy
-  {}  // Intentionally left uninitialized (for speed)
-  ParsedInternalKey(const Slice& u, const SequenceNumber& seq, ValueType t)
-      : user_key(u), sequence(seq), type(t) {}
-  std::string DebugString(bool hex = false) const;
-
-  void clear() {
-    user_key.clear();
-    sequence = 0;
-    type = kTypeDeletion;
-  }
-};
-
-// Return the length of the encoding of "key".
-inline size_t InternalKeyEncodingLength(const ParsedInternalKey& key) {
-  return key.user_key.size() + 8;
-}
-
-// Pack a sequence number and a ValueType into a uint64_t
-extern uint64_t PackSequenceAndType(uint64_t seq, ValueType t);
-
-// Given the result of PackSequenceAndType, store the sequence number in *seq
-// and the ValueType in *t.
-extern void UnPackSequenceAndType(uint64_t packed, uint64_t* seq, ValueType* t);
-
-EntryType GetEntryType(ValueType value_type);
-
-// Append the serialization of "key" to *result.
-extern void AppendInternalKey(std::string* result,
-                              const ParsedInternalKey& key);
-// Serialized internal key consists of user key followed by footer.
-// This function appends the footer to *result, assuming that *result already
-// contains the user key at the end.
-extern void AppendInternalKeyFooter(std::string* result, SequenceNumber s,
-                                    ValueType t);
-
-// Attempt to parse an internal key from "internal_key".  On success,
-// stores the parsed data in "*result", and returns true.
-//
-// On error, returns false, leaves "*result" in an undefined state.
-extern bool ParseInternalKey(const Slice& internal_key,
-                             ParsedInternalKey* result);
-
-
-
-inline Slice ExtractUserKeyAndStripTimestamp(const Slice& internal_key,
-                                             size_t ts_sz) {
-  assert(internal_key.size() >= 8 + ts_sz);
-  return Slice(internal_key.data(), internal_key.size() - 8 - ts_sz);
-}
-
-inline Slice StripTimestampFromUserKey(const Slice& user_key, size_t ts_sz) {
-  assert(user_key.size() >= ts_sz);
-  return Slice(user_key.data(), user_key.size() - ts_sz);
-}
-
-inline uint64_t ExtractInternalKeyFooter(const Slice& internal_key) {
-  assert(internal_key.size() >= 8);
-  const size_t n = internal_key.size();
-  return DecodeFixed64(internal_key.data() + n - 8);
-}
-
-inline ValueType ExtractValueType(const Slice& internal_key) {
-  uint64_t num = ExtractInternalKeyFooter(internal_key);
-  unsigned char c = num & 0xff;
-  return static_cast<ValueType>(c);
-}
 
 // A comparator for internal keys that uses a specified comparator for
 // the user key portion and breaks ties by decreasing sequence number.
@@ -239,18 +163,7 @@ inline int InternalKeyComparator::Compare(const InternalKey& a,
   return Compare(a.Encode(), b.Encode());
 }
 
-inline bool ParseInternalKey(const Slice& internal_key,
-                             ParsedInternalKey* result) {
-  const size_t n = internal_key.size();
-  if (n < 8) return false;
-  uint64_t num = DecodeFixed64(internal_key.data() + n - 8);
-  unsigned char c = num & 0xff;
-  result->sequence = num >> 8;
-  result->type = static_cast<ValueType>(c);
-  assert(result->type <= ValueType::kMaxValue);
-  result->user_key = Slice(internal_key.data(), n - 8);
-  return IsExtendedValueType(result->type);
-}
+
 
 // Update the sequence number in the internal key.
 // Guarantees not to invalidate ikey.data().

@@ -22,30 +22,9 @@ namespace rocksdb {
 
 
 
-uint64_t PackSequenceAndType(uint64_t seq, ValueType t) {
-  assert(seq <= kMaxSequenceNumber);
-  assert(IsExtendedValueType(t));
-  return (seq << 8) | t;
-}
 
-EntryType GetEntryType(ValueType value_type) {
-  switch (value_type) {
-    case kTypeValue:
-      return kEntryPut;
-    case kTypeDeletion:
-      return kEntryDelete;
-    case kTypeSingleDeletion:
-      return kEntrySingleDelete;
-    case kTypeMerge:
-      return kEntryMerge;
-    case kTypeRangeDeletion:
-      return kEntryRangeDeletion;
-    case kTypeBlobIndex:
-      return kEntryBlobIndex;
-    default:
-      return kEntryOther;
-  }
-}
+
+
 
 bool ParseFullKey(const Slice& internal_key, FullKey* fkey) {
   ParsedInternalKey ikey;
@@ -58,23 +37,11 @@ bool ParseFullKey(const Slice& internal_key, FullKey* fkey) {
   return true;
 }
 
-void UnPackSequenceAndType(uint64_t packed, uint64_t* seq, ValueType* t) {
-  *seq = packed >> 8;
-  *t = static_cast<ValueType>(packed & 0xff);
 
-  assert(*seq <= kMaxSequenceNumber);
-  assert(IsExtendedValueType(*t));
-}
 
-void AppendInternalKey(std::string* result, const ParsedInternalKey& key) {
-  result->append(key.user_key.data(), key.user_key.size());
-  PutFixed64(result, PackSequenceAndType(key.sequence, key.type));
-}
 
-void AppendInternalKeyFooter(std::string* result, SequenceNumber s,
-                             ValueType t) {
-  PutFixed64(result, PackSequenceAndType(s, t));
-}
+
+
 
 std::string ParsedInternalKey::DebugString(bool hex) const {
   char buf[50];
